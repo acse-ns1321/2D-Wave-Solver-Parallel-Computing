@@ -1,0 +1,66 @@
+
+# mpiexec: MPI Program startup
+
+
+# mpiexec: Running in job 5191353.pbs at Thu 24 Feb 12:08:52 GMT 2022
+# mpiexec: Fabric configuration:
+# mpiexec: node class CX3
+# mpiexec: libfabric provider verbs
+# mpiexec: libfabric inferface eth0
+# mpiexec: MPI-IO configuration on / gpfs
+# mpiexec: full path to program is /rds/general/user/ns1321/home/MPI_ASSESSMENT/output_dirichlet_500x500
+# mpiexec: program arguments are: 
+# mpiexec: 32 ranks allocated via PBS select
+# mpiexec: 1 OpenMP threads / rank allocated by PBS select
+# mpiexec: 16 ranks per node
+# mpiexec: There are 256 cores/node. 16 will be used for this job
+# mpiexec: Job has shared use of the allocated nodes. Disabling process-pinning
+# mpiexec: Node is shared. Disabling process pinning
+# mpiexec: machinefile configured as:
+cx3-1-15.cx3.hpc.ic.ac.uk:16
+cx3-1-9.cx3.hpc.ic.ac.uk:16
+#
+# mpiexec: Checking all nodes are ONLINE using ping:
+# mpiexec: All nodes appear ONLINE
+# mpiexec: Checking all nodes are ONLINE using ssh:
+# cx3-1-15.cx3.hpc.ic.ac.uk : # cx3-1-9.cx3.hpc.ic.ac.uk : # mpiexec: Dynamic linking for /rds/general/user/ns1321/home/MPI_ASSESSMENT/output_dirichlet_500x500:
+	linux-vdso.so.1 (0x00007fff91d77000)
+	libmpicxx.so.12 => /apps/mpi/intel/2019.6.166/lib/libmpicxx.so.12 (0x0000148df460d000)
+	libmpifort.so.12 => /apps/mpi/intel/2019.6.166/lib/libmpifort.so.12 (0x0000148df424f000)
+	libmpi.so.12 => /apps/mpi/intel/2019.6.166/lib/release/libmpi.so.12 (0x0000148df31b5000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x0000148df2fb1000)
+	librt.so.1 => /lib64/librt.so.1 (0x0000148df2da8000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000148df2b88000)
+	libstdc++.so.6 => /lib64/libstdc++.so.6 (0x0000148df27f3000)
+	libm.so.6 => /lib64/libm.so.6 (0x0000148df2471000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x0000148df2259000)
+	libc.so.6 => /lib64/libc.so.6 (0x0000148df1e97000)
+	libfabric.so.1 => /apps/mpi/intel/2019.6.166/libfabric/lib/libfabric.so.1 (0x0000148df1c52000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000148df482d000)
+# mpiexec: launch started at Thu 24 Feb 12:08:53 GMT 2022
+# mpiexec: launching program...
+# mpiexec: /rds/general/user/ns1321/home/MPI_ASSESSMENT/output_dirichlet_500x500 
+# mpiexec: PROGRAM OUTPUT FOLLOWS
+(cx3-1-15.cx3.hpc.ic.ac.uk:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+(cx3-1-9.cx3.hpc.ic.ac.uk:16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31)
+
+ -----------------------------------------------------
+ SIMULATION PARAMETERS  
+ -----------------------------------------------------
+ Domain Size : 500 X 500
+ Total number of processors 32
+ Total Time : 30s. Total Iterations : 14970
+ Boundary Type ( 0 = Dirichlit, 1 = Neumann, 2 = Periodic) : 0
+------------------------------------------------------
+
+
+ -----------------------------------------------------
+ TIMING ANALYSIS RESULTS 
+ -----------------------------------------------------
+ Time spech by a process to setup the domain : 0.000144964
+ Time spent by a process to create MPI Data Types : 0.000298398
+ Time spent by a process to carry out MPI communications : 2.154e-05
+ Time spent by a process to finish a set of inner iterations : 2.333e-05
+ Time spent by a process to finish a set of edge iterations :  8.9e-07
+Total time for a processor is : 0.847718s. 
+# mpiexec: finished at Thu 24 Feb 12:08:57 GMT 2022

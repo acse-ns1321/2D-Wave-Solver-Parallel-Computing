@@ -1,0 +1,3337 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red0\green128\blue0;\red96\green64\blue32;\rede0\green128\blue0;\red128\green0\blue0;\red128\green96\blue32;\red0\green32\blue128;\red0\green128\blue128;\red255\green0\blue255;\red0\green0\blue0;\red112\green0\blue112;\red255\green0\blue0;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\paperw11900\paperh16840\margl1800\margr1800\margt1440\margb1440\gutter0\ltrsect}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext50 Code Example 9;}
+{\s50\li3600\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext51 Code Example 10;}
+{\s51\li3960\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext52 Code Example 11;}
+{\s52\li4320\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 12;}
+{\s53\li4680\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext53 Code Example 13;}
+{\s60\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext61 List Continue 0;}
+{\s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext62 List Continue 1;}
+{\s62\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext63 List Continue 2;}
+{\s63\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext64 List Continue 3;}
+{\s64\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext65 List Continue 4;}
+{\s65\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext66 List Continue 5;}
+{\s66\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext67 List Continue 6;}
+{\s67\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext68 List Continue 7;}
+{\s68\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext69 List Continue 8;}
+{\s69\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext70 List Continue 9;}
+{\s70\li3600\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext71 List Continue 10;}
+{\s71\li3960\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext72 List Continue 11;}
+{\s72\li4320\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 12;}
+{\s73\li4680\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext73 List Continue 13;}
+{\s80\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext81 DescContinue 0;}
+{\s81\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext82 DescContinue 1;}
+{\s82\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext83 DescContinue 2;}
+{\s83\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext84 DescContinue 3;}
+{\s84\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext85 DescContinue 4;}
+{\s85\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext86 DescContinue 5;}
+{\s86\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext87 DescContinue 6;}
+{\s87\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext88 DescContinue 7;}
+{\s88\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext89 DescContinue 8;}
+{\s89\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext90 DescContinue 9;}
+{\s90\li3600\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext91 DescContinue 10;}
+{\s91\li3960\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext92 DescContinue 11;}
+{\s92\li4320\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 12;}
+{\s93\li4680\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext93 DescContinue 13;}
+{\s100\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext101 LatexTOC 0;}
+{\s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext102 LatexTOC 1;}
+{\s102\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext103 LatexTOC 2;}
+{\s103\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext104 LatexTOC 3;}
+{\s104\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext105 LatexTOC 4;}
+{\s105\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext106 LatexTOC 5;}
+{\s106\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext107 LatexTOC 6;}
+{\s107\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext108 LatexTOC 7;}
+{\s108\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext109 LatexTOC 8;}
+{\s109\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext110 LatexTOC 9;}
+{\s110\li3600\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext111 LatexTOC 10;}
+{\s111\li3960\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext112 LatexTOC 11;}
+{\s112\li4320\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 12;}
+{\s113\li4680\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext113 LatexTOC 13;}
+{\s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext121 \sautoupd List Bullet 0;}
+{\s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext122 \sautoupd List Bullet 1;}
+{\s122\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext123 \sautoupd List Bullet 2;}
+{\s123\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext124 \sautoupd List Bullet 3;}
+{\s124\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext125 \sautoupd List Bullet 4;}
+{\s125\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext126 \sautoupd List Bullet 5;}
+{\s126\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext127 \sautoupd List Bullet 6;}
+{\s127\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext128 \sautoupd List Bullet 7;}
+{\s128\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext129 \sautoupd List Bullet 8;}
+{\s129\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext130 \sautoupd List Bullet 9;}
+{\s130\fi-360\li3960\widctlpar\jclisttab\tx3960{\*\pn \pnlvlbody\ilvl0\ls11\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext131 \sautoupd List Bullet 10;}
+{\s131\fi-360\li4320\widctlpar\jclisttab\tx4320{\*\pn \pnlvlbody\ilvl0\ls12\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext132 \sautoupd List Bullet 11;}
+{\s132\fi-360\li4680\widctlpar\jclisttab\tx4680{\*\pn \pnlvlbody\ilvl0\ls13\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 12;}
+{\s133\fi-360\li5040\widctlpar\jclisttab\tx5040{\*\pn \pnlvlbody\ilvl0\ls14\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext133 \sautoupd List Bullet 13;}
+{\s140\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext141 \sautoupd List Enum 0;}
+{\s141\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext142 \sautoupd List Enum 1;}
+{\s142\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext143 \sautoupd List Enum 2;}
+{\s143\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext144 \sautoupd List Enum 3;}
+{\s144\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext145 \sautoupd List Enum 4;}
+{\s145\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext146 \sautoupd List Enum 5;}
+{\s146\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext147 \sautoupd List Enum 6;}
+{\s147\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext148 \sautoupd List Enum 7;}
+{\s148\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext149 \sautoupd List Enum 8;}
+{\s149\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext150 \sautoupd List Enum 9;}
+{\s150\fi-360\li3960\widctlpar\fs20\cgrid \sbasedon0 \snext151 \sautoupd List Enum 10;}
+{\s151\fi-360\li4320\widctlpar\fs20\cgrid \sbasedon0 \snext152 \sautoupd List Enum 11;}
+{\s152\fi-360\li4680\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 12;}
+{\s153\fi-360\li5040\widctlpar\fs20\cgrid \sbasedon0 \snext153 \sautoupd List Enum 13;}
+}
+{\info 
+{\title {\comment MPI_Assessment  {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Version 1.0 \par
+}}MPI_Assessment}
+{\comment Generated by doxygen1.9.3.}
+{\creatim \yr2022\mo2\dy25\hr14\min27\sec49}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt MPI_Assessment}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version Version 1.0\par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt Fri Feb 25 2022 }}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Index\par \pard\plain 
+{\tc \v Class Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Class List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the classes, structs, unions and interfaces with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b Domain< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b MPI_Data< T >} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABS \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b TimingTest} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all documented files with brief descriptions:}
+{
+\par
+\pard\plain \s101\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b AS/{\b Domain.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b Domain.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAB \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b Main.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b MPIDatatype.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAD \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b MPIDatatype.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAE \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b Parameters.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b SerialWaveSolver.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b TimingTest.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAH \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b TimingTest.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b WaveSolver.cpp} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAJ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b AS/{\b WaveSolver.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Class Documentation{\tc \v Class Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Domain< T > Class Template Reference\par \pard\plain 
+{\tc\tcl2 \v Domain< T >}
+{\xe \v Domain< T >}
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b Domain} (int n_i, int n_j)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b allocatePointers} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b createSubDomains} (int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b setSubDomainSize} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b findNeighbours} ()\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b id_to_index} (int id, int &id_row, int &id_column)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b id_from_index} (int id_row, int id_column)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b swapGridPointers} (T **&subDomain2D_1, T **&subDomain2D_2, T **&subDomain2D_3, T *&subDomain1D_1, T *&subDomain1D_2, T *&subDomain1D_3)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b printsubDomain} ({\b Domain}< T > *Dom)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T * {\b old_grid_1d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T * {\b current_grid_1d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T * {\b new_grid_1d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T ** {\b old_grid_2d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T ** {\b current_grid_2d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+T ** {\b new_grid_2d}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_imax}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_jmax}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_i}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_j}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_rows}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b sub_cols}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b global_imax}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b global_jmax}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b global_i}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b global_j}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int * {\b start_row}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int * {\b num_rows}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int * {\b start_column}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int * {\b num_columns}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b neighbours} [4]\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<class T>\par
+class Domain< T >\par
+}
+\par
+{
+Definition at line {\b 11} of file {\b Domain.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v Domain\:Domain< T >}
+{\xe \v Domain< T >\:Domain}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > {\b Domain}< T >{\b ::Domain}}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 17} of file {\b Domain.cpp}.}\par
+}
+{\xe \v Domain\:Domain< T >}
+{\xe \v Domain< T >\:Domain}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > {\b Domain}< T >{\b ::Domain} (int  {\i n_i}, int  {\i n_j})}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 41} of file {\b Domain.cpp}.}\par
+}
+{\xe \v ~Domain\:Domain< T >}
+{\xe \v Domain< T >\:~Domain}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > {\b Domain}< T >::~{\b Domain}}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 47} of file {\b Domain.cpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v allocatePointers\:Domain< T >}
+{\xe \v Domain< T >\:allocatePointers}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::allocatePointers}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 62} of file {\b Domain.cpp}.}\par
+}
+{\xe \v createSubDomains\:Domain< T >}
+{\xe \v Domain< T >\:createSubDomains}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::createSubDomains (int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 112} of file {\b Domain.cpp}.}\par
+}
+{\xe \v findNeighbours\:Domain< T >}
+{\xe \v Domain< T >\:findNeighbours}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::findNeighbours}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 194} of file {\b Domain.cpp}.}\par
+}
+{\xe \v id_from_index\:Domain< T >}
+{\xe \v Domain< T >\:id_from_index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::id_from_index (int  {\i id_row}, int  {\i id_column})}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 289} of file {\b Domain.cpp}.}\par
+}
+{\xe \v id_to_index\:Domain< T >}
+{\xe \v Domain< T >\:id_to_index}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::id_to_index (int  {\i id}, int &  {\i id_row}, int &  {\i id_column})}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 282} of file {\b Domain.cpp}.}\par
+}
+{\xe \v printsubDomain\:Domain< T >}
+{\xe \v Domain< T >\:printsubDomain}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::printsubDomain ({\b Domain}< T > *  {\i Dom})}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 301} of file {\b Domain.cpp}.}\par
+}
+{\xe \v setSubDomainSize\:Domain< T >}
+{\xe \v Domain< T >\:setSubDomainSize}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::setSubDomainSize}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 138} of file {\b Domain.cpp}.}\par
+}
+{\xe \v swapGridPointers\:Domain< T >}
+{\xe \v Domain< T >\:swapGridPointers}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b Domain}< T >::swapGridPointers (T **&  {\i subDomain2D_1}, T **&  {\i subDomain2D_2}, T **&  {\i subDomain2D_3}, T *&  {\i subDomain1D_1}, T *&  {\i subDomain1D_2}, T *&  {\i subDomain1D_3})}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 89} of file {\b Domain.cpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v current_grid_1d\:Domain< T >}
+{\xe \v Domain< T >\:current_grid_1d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T* {\b Domain}< T >::current_grid_1d}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 32} of file {\b Domain.h}.}\par
+}
+{\xe \v current_grid_2d\:Domain< T >}
+{\xe \v Domain< T >\:current_grid_2d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T** {\b Domain}< T >::current_grid_2d}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 36} of file {\b Domain.h}.}\par
+}
+{\xe \v global_i\:Domain< T >}
+{\xe \v Domain< T >\:global_i}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::global_i}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 59} of file {\b Domain.h}.}\par
+}
+{\xe \v global_imax\:Domain< T >}
+{\xe \v Domain< T >\:global_imax}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::global_imax}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 56} of file {\b Domain.h}.}\par
+}
+{\xe \v global_j\:Domain< T >}
+{\xe \v Domain< T >\:global_j}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::global_j}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 60} of file {\b Domain.h}.}\par
+}
+{\xe \v global_jmax\:Domain< T >}
+{\xe \v Domain< T >\:global_jmax}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::global_jmax}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 57} of file {\b Domain.h}.}\par
+}
+{\xe \v neighbours\:Domain< T >}
+{\xe \v Domain< T >\:neighbours}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::neighbours[4]}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 85} of file {\b Domain.h}.}\par
+}
+{\xe \v new_grid_1d\:Domain< T >}
+{\xe \v Domain< T >\:new_grid_1d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T* {\b Domain}< T >::new_grid_1d}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b Domain.h}.}\par
+}
+{\xe \v new_grid_2d\:Domain< T >}
+{\xe \v Domain< T >\:new_grid_2d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T** {\b Domain}< T >::new_grid_2d}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 37} of file {\b Domain.h}.}\par
+}
+{\xe \v num_columns\:Domain< T >}
+{\xe \v Domain< T >\:num_columns}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int* {\b Domain}< T >::num_columns}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 66} of file {\b Domain.h}.}\par
+}
+{\xe \v num_rows\:Domain< T >}
+{\xe \v Domain< T >\:num_rows}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int* {\b Domain}< T >::num_rows}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 64} of file {\b Domain.h}.}\par
+}
+{\xe \v old_grid_1d\:Domain< T >}
+{\xe \v Domain< T >\:old_grid_1d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T* {\b Domain}< T >::old_grid_1d}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b Domain.h}.}\par
+}
+{\xe \v old_grid_2d\:Domain< T >}
+{\xe \v Domain< T >\:old_grid_2d}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > T** {\b Domain}< T >::old_grid_2d}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 35} of file {\b Domain.h}.}\par
+}
+{\xe \v start_column\:Domain< T >}
+{\xe \v Domain< T >\:start_column}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int* {\b Domain}< T >::start_column}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 65} of file {\b Domain.h}.}\par
+}
+{\xe \v start_row\:Domain< T >}
+{\xe \v Domain< T >\:start_row}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int* {\b Domain}< T >::start_row}}
+\par
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 63} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_cols\:Domain< T >}
+{\xe \v Domain< T >\:sub_cols}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_cols}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 48} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_i\:Domain< T >}
+{\xe \v Domain< T >\:sub_i}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_i}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 44} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_imax\:Domain< T >}
+{\xe \v Domain< T >\:sub_imax}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_imax}}
+\par
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 41} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_j\:Domain< T >}
+{\xe \v Domain< T >\:sub_j}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_j}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 45} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_jmax\:Domain< T >}
+{\xe \v Domain< T >\:sub_jmax}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_jmax}}
+\par
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 42} of file {\b Domain.h}.}\par
+}
+{\xe \v sub_rows\:Domain< T >}
+{\xe \v Domain< T >\:sub_rows}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > int {\b Domain}< T >::sub_rows}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 47} of file {\b Domain.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/Domain.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/Domain.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MPI_Data< T > Class Template Reference\par \pard\plain 
+{\tc\tcl2 \v MPI_Data< T >}
+{\xe \v MPI_Data< T >}
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b CreateMPI_Types} ({\b Domain}< T > &Dom)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b send_data} ({\b Domain}< T > &Dom, MPI_Datatype MDataType, int neigh_to_send, MPI_Request *request)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b recv_data} ({\b Domain}< T > &Dom, MPI_Datatype MDataType, int neigh_to_receive, MPI_Request *request)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Left_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Right_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Top_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Bottom_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Left_Ghost_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Right_Ghost_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Top_Ghost_Type}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+MPI_Datatype {\b Bottom_Ghost_Type}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+template<class T>\par
+class MPI_Data< T >\par
+}
+\par
+{
+Definition at line {\b 9} of file {\b MPIDatatype.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Constructor & Destructor Documentation\par
+\pard\plain 
+{\xe \v MPI_Data\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:MPI_Data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > {\b MPI_Data}< T >{\b ::MPI_Data}}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 12} of file {\b MPIDatatype.cpp}.}\par
+}
+{\xe \v ~MPI_Data\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:~MPI_Data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > {\b MPI_Data}< T >::~{\b MPI_Data}}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b MPIDatatype.cpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v CreateMPI_Types\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:CreateMPI_Types}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b MPI_Data}< T >::CreateMPI_Types ({\b Domain}< T > &  {\i Dom})}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 66} of file {\b MPIDatatype.cpp}.}\par
+}
+{\xe \v recv_data\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:recv_data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b MPI_Data}< T >::recv_data ({\b Domain}< T > &  {\i Dom}, MPI_Datatype  {\i MDataType}, int  {\i neigh_to_receive}, MPI_Request *  {\i request})}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 56} of file {\b MPIDatatype.cpp}.}\par
+}
+{\xe \v send_data\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:send_data}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > void {\b MPI_Data}< T >::send_data ({\b Domain}< T > &  {\i Dom}, MPI_Datatype  {\i MDataType}, int  {\i neigh_to_send}, MPI_Request *  {\i request})}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 48} of file {\b MPIDatatype.cpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v Bottom_Ghost_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Bottom_Ghost_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Bottom_Ghost_Type}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Bottom_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Bottom_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Bottom_Type}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Left_Ghost_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Left_Ghost_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Left_Ghost_Type}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Left_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Left_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Left_Type}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Right_Ghost_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Right_Ghost_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Right_Ghost_Type}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Right_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Right_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Right_Type}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Top_Ghost_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Top_Ghost_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Top_Ghost_Type}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b MPIDatatype.h}.}\par
+}
+{\xe \v Top_Type\:MPI_Data< T >}
+{\xe \v MPI_Data< T >\:Top_Type}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+template<class T > MPI_Datatype {\b MPI_Data}< T >::Top_Type}}
+\par
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 25} of file {\b MPIDatatype.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/MPIDatatype.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/MPIDatatype.cpp\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TimingTest Class Reference\par \pard\plain 
+{\tc\tcl2 \v TimingTest}
+{\xe \v TimingTest}
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Member Functions\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_domain_setup} (int id, int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_MPI_Create_setup} (int id, int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_MPI_comms} (int id, int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_inner_iterations} (int id, int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_edge_iterations} (int id, int p)\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+void {\b timing_total} (int id, int p, int imax, int jmax)\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Public Attributes\par
+\pard\plain 
+
+{
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b domain_setup_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b total_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b mpi_create_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b mpi_comms_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b inner_iterations_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+vector< double > {\b edge_iterations_time}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b time_MPI_create}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b time_total}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b domain_setup}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b time_MPI_comms}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b time_inner_iterations}\par
+\pard\plain \s120\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+chrono::duration< double > {\b time_edge_iterations}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {
+Definition at line {\b 7} of file {\b TimingTest.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Function Documentation\par
+\pard\plain 
+{\xe \v timing_domain_setup\:TimingTest}
+{\xe \v TimingTest\:timing_domain_setup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_domain_setup (int  {\i id}, int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 10} of file {\b TimingTest.cpp}.}\par
+}
+{\xe \v timing_edge_iterations\:TimingTest}
+{\xe \v TimingTest\:timing_edge_iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_edge_iterations (int  {\i id}, int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 63} of file {\b TimingTest.cpp}.}\par
+}
+{\xe \v timing_inner_iterations\:TimingTest}
+{\xe \v TimingTest\:timing_inner_iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_inner_iterations (int  {\i id}, int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 81} of file {\b TimingTest.cpp}.}\par
+}
+{\xe \v timing_MPI_comms\:TimingTest}
+{\xe \v TimingTest\:timing_MPI_comms}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_MPI_comms (int  {\i id}, int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 45} of file {\b TimingTest.cpp}.}\par
+}
+{\xe \v timing_MPI_Create_setup\:TimingTest}
+{\xe \v TimingTest\:timing_MPI_Create_setup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_MPI_Create_setup (int  {\i id}, int  {\i p})}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b TimingTest.cpp}.}\par
+}
+{\xe \v timing_total\:TimingTest}
+{\xe \v TimingTest\:timing_total}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+void TimingTest::timing_total (int  {\i id}, int  {\i p}, int  {\i imax}, int  {\i jmax})}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 99} of file {\b TimingTest.cpp}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Member Data Documentation\par
+\pard\plain 
+{\xe \v domain_setup\:TimingTest}
+{\xe \v TimingTest\:domain_setup}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration< double> TimingTest::domain_setup}}
+\par
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 31} of file {\b TimingTest.h}.}\par
+}
+{\xe \v domain_setup_time\:TimingTest}
+{\xe \v TimingTest\:domain_setup_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::domain_setup_time}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 11} of file {\b TimingTest.h}.}\par
+}
+{\xe \v edge_iterations_time\:TimingTest}
+{\xe \v TimingTest\:edge_iterations_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::edge_iterations_time}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 27} of file {\b TimingTest.h}.}\par
+}
+{\xe \v inner_iterations_time\:TimingTest}
+{\xe \v TimingTest\:inner_iterations_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::inner_iterations_time}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 23} of file {\b TimingTest.h}.}\par
+}
+{\xe \v mpi_comms_time\:TimingTest}
+{\xe \v TimingTest\:mpi_comms_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::mpi_comms_time}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 20} of file {\b TimingTest.h}.}\par
+}
+{\xe \v mpi_create_time\:TimingTest}
+{\xe \v TimingTest\:mpi_create_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::mpi_create_time}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 17} of file {\b TimingTest.h}.}\par
+}
+{\xe \v time_edge_iterations\:TimingTest}
+{\xe \v TimingTest\:time_edge_iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration< double> TimingTest::time_edge_iterations}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 34} of file {\b TimingTest.h}.}\par
+}
+{\xe \v time_inner_iterations\:TimingTest}
+{\xe \v TimingTest\:time_inner_iterations}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration< double> TimingTest::time_inner_iterations}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 33} of file {\b TimingTest.h}.}\par
+}
+{\xe \v time_MPI_comms\:TimingTest}
+{\xe \v TimingTest\:time_MPI_comms}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration<double> TimingTest::time_MPI_comms}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 32} of file {\b TimingTest.h}.}\par
+}
+{\xe \v time_MPI_create\:TimingTest}
+{\xe \v TimingTest\:time_MPI_create}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration< double> TimingTest::time_MPI_create}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 29} of file {\b TimingTest.h}.}\par
+}
+{\xe \v time_total\:TimingTest}
+{\xe \v TimingTest\:time_total}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+chrono::duration<double> TimingTest::time_total}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 30} of file {\b TimingTest.h}.}\par
+}
+{\xe \v total_time\:TimingTest}
+{\xe \v TimingTest\:total_time}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+vector<double> TimingTest::total_time}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s61\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line {\b 14} of file {\b TimingTest.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this class was generated from the following files:{\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/TimingTest.h\par
+\pard\plain \s121\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+AS/TimingTest.cpp\par
+}
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Domain.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/Domain.cpp}
+{\xe \v AS/Domain.cpp}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf21 #define _USE_MATH_DEFINES}\par
+00003 \par
+00004 {\cf21 #include <mpi.h>}\par
+00005 {\cf21 #include <iostream>}\par
+00006 {\cf21 #include <cstdlib>}\par
+00007 {\cf21 #include <time.h>}\par
+00008 {\cf21 #include <vector>}\par
+00009 {\cf21 #include <cmath>}\par
+00010 \par
+00011 {\cf21 #include "Domain.h"}\par
+00012 \par
+00013 {\cf17 using namespace }std;\par
+00014 \par
+00015 \par
+00016 {\cf17 template} <{\cf17 class} T>\par
+00017 Domain<T>::Domain()\par
+00018 \{\par
+00019     {\cf20 //------------------------------------------------------------------------------|}\par
+00020     {\cf20 //          CREATE DOMAIN}\par
+00021     {\cf20 //------------------------------------------------------------------------------|}\par
+00022     {\cf20 // assign pointers to null}\par
+00023     {\cf20 // 1-D Arrays }\par
+00024     T* old_grid_1d = {\cf17 nullptr};\par
+00025     T* grid_1d = {\cf17 nullptr};\par
+00026     T* new_grid_1d = {\cf17 nullptr};\par
+00027     {\cf20 // 2-D Arrays}\par
+00028     T** old_2d = {\cf17 nullptr};\par
+00029     T** grid_2d = {\cf17 nullptr};\par
+00030     T** new_2d = {\cf17 nullptr};\par
+00031 \par
+00032 \par
+00033     {\cf20 // Subdomain Divisions}\par
+00034     this->start_row = {\cf17 new} {\cf18 int}[p];\par
+00035     this->num_rows = {\cf17 new} {\cf18 int}[p];\par
+00036     this->start_column = {\cf17 new} {\cf18 int}[p];\par
+00037     this->num_columns = {\cf17 new} {\cf18 int}[p];\par
+00038 \}\par
+00039 \par
+00040 {\cf17 template} <{\cf17 class} T>\par
+00041 Domain<T>::Domain({\cf18 int} n_i, {\cf18 int} n_j)\par
+00042 \{\par
+00043     allocatePointers();\par
+00044 \}\par
+00045 \par
+00046 {\cf17 template} <{\cf17 class} T>\par
+00047  Domain<T>::~Domain()\par
+00048 \{\par
+00049     {\cf20 // 1-D Arrays }\par
+00050     {\cf17 delete}[] old_grid_1d;\par
+00051     {\cf17 delete}[] current_grid_1d;\par
+00052     {\cf17 delete}[] new_grid_1d;\par
+00053 \par
+00054     {\cf20 // 2-D Arrays}\par
+00055     {\cf17 delete}[] old_grid_2d;\par
+00056     {\cf17 delete}[] current_grid_2d;\par
+00057     {\cf17 delete}[] new_grid_2d;\par
+00058 \}\par
+00059  \par
+00060 \par
+00061  {\cf17 template} <{\cf17 class} T>\par
+00062 {\cf18 void} Domain<T>::allocatePointers()\par
+00063 \{\par
+00064     {\cf20 //cout <<" process " << id << " sub_imax " << this->sub_imax << " sub_jmax " << sub_jmax << endl;}\par
+00065 \par
+00066     {\cf20 // Allocate memory to the pointers and initialize to zero }\par
+00067     old_grid_1d = {\cf17 new} T[sub_imax * sub_jmax]\{0\};     {\cf20 // set to total elements}\par
+00068     current_grid_1d = {\cf17 new} T[sub_imax * sub_jmax]\{0\};\par
+00069     new_grid_1d = {\cf17 new} T[sub_imax * sub_jmax]\{0\};\par
+00070 \par
+00071     old_grid_2d = {\cf17 new} T * [sub_imax];           {\cf20 // set to total number of rows}\par
+00072     current_grid_2d = {\cf17 new} T * [sub_imax];\par
+00073     new_grid_2d = {\cf17 new} T * [sub_imax];\par
+00074 \par
+00075 \par
+00076 \par
+00077     {\cf20 // point the 2D array to the 1D array for the domain}\par
+00078     {\cf19 for} ({\cf18 int} i = 0; i < sub_imax; i++)\par
+00079     \{\par
+00080         old_grid_2d[i] = &old_grid_1d[i * sub_jmax];            {\cf20 // set to total number of rows}\par
+00081         current_grid_2d[i] = &current_grid_1d[i * sub_jmax];\par
+00082         new_grid_2d[i] = &new_grid_1d[i * sub_jmax];\par
+00083     \}\par
+00084     \par
+00085 \}\par
+00086 \par
+00087 \par
+00088 {\cf17 template} <{\cf17 class} T>\par
+00089 {\cf18 void} Domain<T>::swapGridPointers(T**&subDomain2D_1, T**&subDomain2D_2, T**& subDomain2D_3, T * & subDomain1D_1, T*& subDomain1D_2, T*& subDomain1D_3)\par
+00090 \{\par
+00091     {\cf20 // swap the grid pointers of a 2-D grid using a swap variable}\par
+00092     T** swap1 = subDomain2D_1;\par
+00093     subDomain2D_1 = subDomain2D_2;\par
+00094     subDomain2D_2 = subDomain2D_3;\par
+00095     subDomain2D_3 = swap1;\par
+00096 \par
+00097     {\cf20 // swap the grid pointers of a 1-D grid using a swap variable}\par
+00098     T* swap2 = subDomain1D_1;\par
+00099     subDomain1D_1 = subDomain1D_2;\par
+00100     subDomain1D_2 = subDomain1D_3;\par
+00101     subDomain1D_3 = swap2;\par
+00102 \par
+00103 \}\par
+00104 \par
+00105 \par
+00106 \par
+00107 \par
+00108 {\cf20 //------------------------------------------------------------------------------------------------------}\par
+00109 {\cf20 //                              FIND SUBDOMAINS }\par
+00110 {\cf20 //------------------------------------------------------------------------------------------------------}\par
+00111 {\cf17 template} <{\cf17 class} T>\par
+00112 {\cf18 void} Domain<T>::createSubDomains({\cf18 int} p)\par
+00113 \{\par
+00114     {\cf18 int} min_gap = p;\par
+00115     {\cf18 int} top = sqrt(p) + 1;\par
+00116     {\cf19 for} ({\cf18 int} i = 1; i <= top; i++)\par
+00117     \{\par
+00118         {\cf19 if} (p % i == 0)\par
+00119         \{\par
+00120             {\cf18 int} gap = abs(p / i - i);\par
+00121             {\cf19 if} (gap < min_gap)\par
+00122             \{\par
+00123                 min_gap = gap;\par
+00124                 this->sub_rows = i;\par
+00125                 this->sub_cols = p / i;\par
+00126             \}\par
+00127         \}\par
+00128         \par
+00129     \}\par
+00130 \par
+00131 \par
+00132     {\cf20 /*if (id == 0)}\par
+00133 {\cf20         cout << "Divide " << p << " into " << this->sub_rows << " by " << this->sub_cols << " grid" << endl;*/}\par
+00134 \par
+00135 \}\par
+00136 \par
+00137 {\cf17 template} <{\cf17 class} T>\par
+00138 {\cf18 void} Domain<T>::setSubDomainSize()\par
+00139 \{\par
+00140     {\cf20 // default processor variables}\par
+00141     num_rows = {\cf17 new} {\cf18 int}[sub_rows]\{\};\par
+00142     start_row = {\cf17 new} {\cf18 int}[sub_rows]\{\};\par
+00143     num_columns = {\cf17 new} {\cf18 int}[sub_cols]\{\};\par
+00144     start_column = {\cf17 new} {\cf18 int}[sub_cols]\{\};\par
+00145 \par
+00146     {\cf18 int} start_r = 0;\par
+00147     {\cf19 for} ({\cf18 int} k = 0; k < this->sub_rows; k++)\par
+00148     \{\par
+00149         {\cf20 // Dividing the rows among the processes}\par
+00150         num_rows[k] = (this->global_jmax - start_r) / (this->sub_rows-k);\par
+00151         start_row[k] = start_r; {\cf20 // set the first start point as 0}\par
+00152 \par
+00153         {\cf20 // incrementing start point to the next start}\par
+00154         start_r += num_rows[k];\par
+00155     \}\par
+00156     {\cf20 //cout << "process " << id <<  "  id / sub_cols" << id / sub_cols << endl;}\par
+00157     {\cf20 //cout << "process "<< id << " num_rows " << num_rows[id /sub_cols] << " start_row " << start_row[id / sub_cols] << endl;}\par
+00158 \par
+00159     {\cf18 int} start_c = 0;\par
+00160     {\cf19 for} ({\cf18 int} k = 0; k < this->sub_cols; k++)\par
+00161     \{\par
+00162         {\cf20 // Dividing the columns among the processes}\par
+00163         num_columns[k] =(this->global_imax - start_c) / (this->sub_cols-k);\par
+00164         start_column[k] = start_c;\par
+00165 \par
+00166         start_c += num_columns[k];\par
+00167     \}\par
+00168 \par
+00169     {\cf20 //cout << "process " << id << " num_columns " << num_columns[id%sub_cols ] << " start_column " << start_column[id % sub_cols] << endl;}\par
+00170     {\cf20 //cout << "process" << id << " num_rows " << num_rows[id /sub_cols] << " start_row " << start_row[id / sub_cols] << endl;}\par
+00171     \par
+00172     {\cf20 // With padding the maximum value of the subdomain is incremented by 2}\par
+00173     this->sub_imax = this->num_rows[{\cf18 id} / sub_cols] + 2;\par
+00174     this->sub_jmax = this->num_columns[{\cf18 id} % sub_cols] + 2;\par
+00175 \par
+00176     {\cf20 // Set subdomain variables to processor indices}\par
+00177     this->sub_i = {\cf18 id} / sub_cols;\par
+00178     this->sub_j = {\cf18 id} % sub_cols;\par
+00179 \par
+00180     {\cf20 /*cout << "Process id : " << id << "sub_i " << this->sub_i << " this->sub_j " << this->sub_j<< endl;*/}\par
+00181     \par
+00182     {\cf20 // Set Global domain parameters }\par
+00183     this->global_i = start_row[{\cf18 id} / sub_cols];\par
+00184     this->global_j = start_column[{\cf18 id} % sub_cols];\par
+00185 \par
+00186     {\cf20 //cout << " process " << id << " global_i " << this->global_i << " global_j " << this->global_j << endl;}\par
+00187     {\cf20 //cout << " For process " << id << " num_rows " << this->num_rows[id % sub_cols] << "num_columns " << this->num_columns[id / sub_cols]<<" Local Start i, j " << this->sub_i <<" "<< this->sub_j << " Global Start i, j " << this->global_i << " " << this->global_j << endl;}\par
+00188         \par
+00189 \par
+00190 \}\par
+00191 \par
+00192 \par
+00193 {\cf17 template} <{\cf17 class} T>\par
+00194 {\cf18 void} Domain<T>::findNeighbours()\par
+00195 \{\par
+00196 \par
+00197     {\cf20 // set the neighbour array to -1}\par
+00198     {\cf19 for}({\cf18 int} i = 0; i < 4; i++)\par
+00199     \{\par
+00200         neighbours[i] = -1;\par
+00201     \}\par
+00202 \par
+00203     \par
+00204         {\cf20 // Loop on left and right of the current processor position}\par
+00205         {\cf19 for} ({\cf18 int} i = -1; i <= 1; i++)\par
+00206         \{\par
+00207             {\cf20 // Loop on top and bottom of the current processor position}\par
+00208             {\cf19 for} ({\cf18 int} j = -1; j <= 1; j++)\par
+00209             \{\par
+00210                 {\cf20 //------------------------------------------------------------------------------|}\par
+00211                 {\cf20 // PERIODIC NEIGHBOURS}\par
+00212                 {\cf20 //------------------------------------------------------------------------------|}\par
+00213                 {\cf19 if} (boundary == 2) {\cf20 // If the boubdary is periodic}\par
+00214                 \{\par
+00215                     {\cf20 // so we dont go negative we add sub_cols and sub_rows to the numbers}\par
+00216                     {\cf18 int} neigh_i = (this->sub_j + i + this->sub_cols) % this->sub_cols;\par
+00217                     {\cf18 int} neigh_j = (this->sub_i + j + this->sub_rows) % this->sub_rows;\par
+00218                     {\cf18 int} neigh_id = neigh_i + neigh_j * this->sub_cols;\par
+00219 \par
+00220                     {\cf19 if} (neigh_id != {\cf18 id})\par
+00221                     \{\par
+00222                         {\cf19 if} (i == -1 && j == 0) {\cf20 // left neighbour}\par
+00223                         \{\par
+00224                             this->neighbours[0] = neigh_id;\par
+00225                         \}\par
+00226                         {\cf19 else} {\cf19 if} (i == 0 && j == -1) {\cf20 // top neighbour}\par
+00227                         \{\par
+00228                             this->neighbours[1] = neigh_id;\par
+00229                         \}\par
+00230                         {\cf19 else} {\cf19 if} (i == 1 && j == 0) {\cf20 // right neighbour}\par
+00231                         \{\par
+00232                             this->neighbours[2] = neigh_id;\par
+00233                         \}\par
+00234                         {\cf19 else} {\cf19 if} (i == 0 && j == 1) {\cf20 // bottom neighbour}\par
+00235                         \{\par
+00236                             this->neighbours[3] = neigh_id;\par
+00237                         \}\par
+00238                     \}\par
+00239                 \}\par
+00240                 {\cf19 else}\par
+00241                 \{\par
+00242                     {\cf20 //------------------------------------------------------------------------------|}\par
+00243                     {\cf20 // NON PERIODIC NEIGHBOURS}\par
+00244                     {\cf20 //------------------------------------------------------------------------------|}\par
+00245                     {\cf20 // Find potential neighbours}\par
+00246                     {\cf18 int} neigh_i = this->sub_j + i; {\cf20 // Find  left and right neighbours}\par
+00247                     {\cf18 int} neigh_j = this->sub_i + j; {\cf20 // Find  top and bottom neighbours}\par
+00248 \par
+00249                     {\cf20 // If found neighbours exist (ie they are non-negative), find the neightbour id }\par
+00250                     {\cf19 if} (neigh_i >= 0 && neigh_i < this->sub_cols && neigh_j >= 0 && neigh_j < this->sub_rows)\par
+00251                     \{\par
+00252                         {\cf18 int} neigh_id = neigh_i + neigh_j * this->sub_cols;\par
+00253                         {\cf19 if} (neigh_id != {\cf18 id})\par
+00254                         \{\par
+00255                             {\cf19 if} (i == -1 && j == 0) {\cf20 // left neighbour}\par
+00256                             \{\par
+00257                                 this->neighbours[0] = neigh_id;\par
+00258                             \}\par
+00259                             {\cf19 else} {\cf19 if} (i == 0 && j == -1) {\cf20 // top neighbour}\par
+00260                             \{\par
+00261                                 this->neighbours[1] = neigh_id;\par
+00262                             \}\par
+00263                             {\cf19 else} {\cf19 if} (i == 1 && j == 0) {\cf20 // right neighbour}\par
+00264                             \{\par
+00265                                 this->neighbours[2] = neigh_id;\par
+00266                             \}\par
+00267                             {\cf19 else} {\cf19 if} (i == 0 && j == 1) {\cf20 // bottom neighbour}\par
+00268                             \{\par
+00269                                 this->neighbours[3] = neigh_id;\par
+00270                             \}\par
+00271 \par
+00272                         \}\par
+00273                     \}\par
+00274                 \}\par
+00275             \}\par
+00276         \}\par
+00277 \par
+00278 \}\par
+00279 \par
+00280 \par
+00281 {\cf17 template} <{\cf17 class} T>\par
+00282 {\cf18 void} Domain<T>:: id_to_index({\cf18 int} {\cf18 id}, {\cf18 int}& id_row, {\cf18 int}& id_column) \par
+00283 \{\par
+00284     id_column = {\cf18 id} % sub_cols;\par
+00285     id_row = {\cf18 id} / sub_cols;\par
+00286 \}\par
+00287 \par
+00288 {\cf17 template} <{\cf17 class} T>\par
+00289 {\cf18 int} Domain<T>:: id_from_index({\cf18 int} id_row, {\cf18 int} id_column)\par
+00290 \{\par
+00291     {\cf19 if} (id_row >= sub_rows || id_row < 0)\par
+00292         {\cf19 return} -1;\par
+00293     {\cf19 if} (id_column >= sub_cols || id_column < 0)\par
+00294         {\cf19 return} -1;\par
+00295 \par
+00296     {\cf19 return} id_row * sub_cols + id_column;\par
+00297 \}\par
+00298 \par
+00299 \par
+00300 {\cf17 template} <{\cf17 class} T>\par
+00301 {\cf18 void} Domain<T>::printsubDomain(Domain<T>* Dom)\par
+00302 \{\par
+00303     cout << {\cf22 " Dom->sub_imax"} << Dom->sub_imax << {\cf22 " Dom->sub_jmax "}<< Dom->sub_jmax << endl;\par
+00304     cout << endl;\par
+00305     cout << {\cf22 " CURRENT GRID"} << endl;\par
+00306     {\cf19 for} ({\cf18 int} i = 0; i < Dom->sub_imax; i++)\par
+00307     \{\par
+00308         {\cf19 for} ({\cf18 int} j = 0; j < Dom->sub_jmax; j++)\par
+00309         \{\par
+00310             cout << Dom->current_grid_2d[i][j] << {\cf22 " "};\par
+00311         \}\par
+00312         cout << endl;\par
+00313     \}\par
+00314     cout << endl;\par
+00315 \par
+00316     cout << endl;\par
+00317     {\cf20 //cout << " NEW GRID" << endl;}\par
+00318     {\cf20 //for (int i = 0; i < Dom->sub_imax; i++)}\par
+00319     {\cf20 //\{}\par
+00320     {\cf20 //  for (int j = 0; j < Dom->sub_jmax; j++)}\par
+00321     {\cf20 //  \{}\par
+00322     {\cf20 //      cout << Dom->new_grid_2d[i][j] << " ";}\par
+00323     {\cf20 //  \}}\par
+00324     {\cf20 //  cout << endl;}\par
+00325     {\cf20 //\}}\par
+00326     {\cf20 //cout << endl;}\par
+00327     {\cf20 //cout << endl;}\par
+00328 \par
+00329     {\cf20 //cout << " OLD GRID" << endl;}\par
+00330     {\cf20 //for (int i = 0; i < Dom->sub_imax; i++)}\par
+00331     {\cf20 //\{}\par
+00332     {\cf20 //  for (int j = 0; j < Dom->sub_jmax; j++)}\par
+00333     {\cf20 //  \{}\par
+00334     {\cf20 //      cout << Dom->new_grid_2d[i][j] << " ";}\par
+00335     {\cf20 //  \}}\par
+00336     {\cf20 //  cout << endl;}\par
+00337     {\cf20 //\}}\par
+00338     {\cf20 //cout << endl;}\par
+00339 \}\par
+00340 \par
+00341 \par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Domain.h\par \pard\plain 
+{\tc\tcl2 \v AS/Domain.h}
+{\xe \v AS/Domain.h}
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 {\cf21 #include <iostream>}\par
+00003 {\cf21 #include <cstdlib>}\par
+00004 {\cf21 #include <time.h>}\par
+00005 {\cf21 #include <vector>}\par
+00006 \par
+00007 {\cf21 #include "Parameters.h"}\par
+00008 \par
+00009 \par
+00010 {\cf17 template} <{\cf17 class} T>\par
+00011 {\cf17 class }Domain\par
+00012 \{\par
+00013 {\cf17 public}:\par
+00014 \par
+00015     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00016     {\cf20 // CONSTRUCTORS AND DESTRUCTORS                                                                 |}\par
+00017     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00018     {\cf20 // constructor that assigns pointers}\par
+00019     Domain();\par
+00020     {\cf20 // constructor that allocates data}\par
+00021     Domain({\cf18 int} n_i, {\cf18 int} n_j);\par
+00022     {\cf20 // destructor that prevents memory leaks in the matrix}\par
+00023     ~Domain();\par
+00024 \par
+00025 \par
+00026     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00027     {\cf20 // LOCAL SUBDOMAIN GRID VARIABLES                                                               |}\par
+00028     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00029     {\cf20 // Class variables that are pointers to 1-D and 2_D arrays of 3 required sub domains}\par
+00030     {\cf20 // 1-D Arrays }\par
+00031     T* old_grid_1d;\par
+00032     T* current_grid_1d;\par
+00033     T* new_grid_1d;\par
+00034     {\cf20 // 2-D Arrays}\par
+00035     T** old_grid_2d;\par
+00036     T** current_grid_2d;\par
+00037     T** new_grid_2d;\par
+00038 \par
+00039     {\cf20 // Sub Domain Parameters------------------------------------------------------------------------|}\par
+00040     {\cf20 // Variables that define maximum size of sub domain}\par
+00041     {\cf18 int} sub_imax;\par
+00042     {\cf18 int} sub_jmax;\par
+00043     {\cf20 // Varibales that define the indexing on the sub domain}\par
+00044     {\cf18 int} sub_i;\par
+00045     {\cf18 int} sub_j;\par
+00046     {\cf20 // Parametris that define the subdivision of the grid}\par
+00047     {\cf18 int} sub_rows;\par
+00048     {\cf18 int} sub_cols;\par
+00049 \par
+00050 \par
+00051     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00052     {\cf20 // GLOBAL SUBDOMAIN GRID VARIABLES                                                              |}\par
+00053     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00054     {\cf20 // Global Domain Parameters  --------------------------------}\par
+00055     {\cf20 // Variables that define maximum size of global domain}\par
+00056     {\cf18 int} global_imax;\par
+00057     {\cf18 int} global_jmax;\par
+00058     {\cf20 // Varibales that define the indexing on the global domain}\par
+00059     {\cf18 int} global_i;\par
+00060     {\cf18 int} global_j;\par
+00061 \par
+00062     {\cf20 // Allocate the number of start rows and num-rows }\par
+00063     {\cf18 int}* start_row;\par
+00064     {\cf18 int}* num_rows ;\par
+00065     {\cf18 int}* start_column ;\par
+00066     {\cf18 int}* num_columns;\par
+00067 \par
+00068     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00069     {\cf20 // GRID FUNCTIONS TO CREATE AND SET DOMAIN PARAMERETS                                           |}\par
+00070     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00071 \par
+00072     {\cf20 // class method to allocate the data in the domain and sub domains}\par
+00073     {\cf18 void} allocatePointers();\par
+00074 \par
+00075     {\cf20 // Create Sub Domains}\par
+00076     {\cf18 void} createSubDomains({\cf18 int} p);\par
+00077 \par
+00078     {\cf20 // Class function that sets the subdomain sizes}\par
+00079     {\cf18 void} setSubDomainSize();\par
+00080 \par
+00081     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00082     {\cf20 // GLOBAL SUBDOMAIN GRID VARIABLES                                                              |}\par
+00083     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00084     {\cf20 // Array to store the neighbours for this process}\par
+00085     {\cf18 int} neighbours[4];\par
+00086 \par
+00087     {\cf20 // Class function that finds neighbours of the processes}\par
+00088     {\cf18 void} findNeighbours();\par
+00089 \par
+00090     {\cf20 // Class functions to convert indices from local to global domains and vice-versa}\par
+00091     {\cf18 void} id_to_index({\cf18 int} {\cf18 id}, {\cf18 int}& id_row, {\cf18 int}& id_column);\par
+00092     {\cf18 int} id_from_index({\cf18 int} id_row, {\cf18 int} id_column);\par
+00093 \par
+00094     {\cf20 // Function to swap pointers of grid - used after each time step}\par
+00095     {\cf18 void} swapGridPointers(T**& subDomain2D_1, T**& subDomain2D_2, T**& subDomain2D_3, T*& subDomain1D_1, T*& subDomain1D_2, T*& subDomain1D_3);\par
+00096 \par
+00097     {\cf20 // Functions to print the indiviual process's domain}\par
+00098     {\cf18 void} printsubDomain(Domain<T>* Dom);\par
+00099 \};\par
+00100 \par
+00101 {\cf17 template} {\cf17 class }Domain<double>;\par
+00102 {\cf17 template} {\cf17 class }Domain<int>;\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Main.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/Main.cpp}
+{\xe \v AS/Main.cpp}
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf21 #include <iostream>}\par
+00003 {\cf21 #include <mpi.h>}\par
+00004 {\cf21 #include <cstdlib>}\par
+00005 {\cf21 #include <chrono>} \par
+00006 {\cf21 #include <sstream>}\par
+00007 {\cf21 #include <fstream>}\par
+00008 \par
+00009 {\cf21 #include <string>}\par
+00010 {\cf21 #include "Parameters.h"}\par
+00011 {\cf21 #include "WaveSolver.h"}\par
+00012 \par
+00013 {\cf21 #include "MPIDatatype.h"}\par
+00014 {\cf21 #include "TimingTest.h"}\par
+00015 \par
+00016 {\cf17 using namespace }std;\par
+00017 \par
+00018 {\cf20 //----------------------------------------------------------------------------------------------------------------|}\par
+00019 {\cf20 //  DECLARING SOFTWARE PARAMETERS FOR USE IN MAIN}\par
+00020 {\cf20 //----------------------------------------------------------------------------------------------------------------|}\par
+00021 {\cf20 // Declaring processor parameters }\par
+00022 {\cf18 int} id, p;\par
+00023 {\cf18 int} tag_num = 0;\par
+00024 \par
+00025 {\cf20 // Declaring spatial grid parameters}\par
+00026 {\cf18 int} imax, jmax ;\par
+00027 {\cf18 double} y_max, x_max, dx, dy;\par
+00028 \par
+00029 {\cf20 // Declaring time stepping parameters}\par
+00030 {\cf18 double} t_max;\par
+00031 {\cf18 double} t , dt;\par
+00032 \par
+00033 {\cf20 // Declaring parameters to print output to file}\par
+00034 {\cf18 double} t_out, dt_out;\par
+00035 \par
+00036 {\cf20 // Declaring wave equation parameters}\par
+00037 {\cf18 double} c;\par
+00038 \par
+00039 {\cf20 // Declaring boundary condition parameters}\par
+00040 {\cf18 int} boundary;                   \par
+00041 {\cf20 //----------------------------------------------------------------------------------------------------------------|}\par
+00042 \par
+00043 {\cf18 int} main({\cf18 int} argc, {\cf18 char}* argv[])\par
+00044 \{\par
+00045     MPI_Init(&argc, &argv);\par
+00046     MPI_Comm_rank(MPI_COMM_WORLD, &{\cf18 id});\par
+00047     MPI_Comm_size(MPI_COMM_WORLD, &p);\par
+00048     srand(time(NULL) + {\cf18 id} * 10);\par
+00049 \par
+00050     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00051     {\cf20 //  READ FROM PARAMETERS TEXT FILE}\par
+00052     {\cf20 // -----------------------------------------------------------------------------------------------------------|}\par
+00053 \par
+00054     fstream file;\par
+00055     file.open({\cf22 "Parameters.txt"}, std::ios::in);\par
+00056     {\cf20 // If file is open, read the text in the file and write it out}\par
+00057     {\cf19 if} (file.is_open())\par
+00058     \{\par
+00059         std::string line;\par
+00060         {\cf20 // Skip the first line with instructions}\par
+00061         getline(file, line);\par
+00062 \par
+00063         {\cf20 // Store variables}\par
+00064         file >> imax >> jmax >> x_max >> y_max >> t >> t_max >> dt_out >> c >> boundary ;\par
+00065     \}\par
+00066 \par
+00067     {\cf20 // Close file}\par
+00068     file.close();\par
+00069     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00070     {\cf20 //============================================================================================================|}\par
+00071     {\cf20 // START TIMING FOR WHOLE PROCESS}\par
+00072     {\cf20 //============================================================================================================|}\par
+00073     {\cf17 auto} time_total_start = chrono::high_resolution_clock::now();\par
+00074 \par
+00075     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00076     {\cf20 // Ceate a domain object}\par
+00077     {\cf17 auto}* domain_instance = {\cf17 new} Domain<double>();\par
+00078     {\cf20 // Setup Timing Test object}\par
+00079     {\cf17 auto}* Timer = {\cf17 new} TimingTest;\par
+00080 \par
+00081     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00082     {\cf20 // Set global parameters to our domain}\par
+00083     domain_instance->global_imax = imax;\par
+00084     domain_instance->global_jmax = jmax;\par
+00085 \par
+00086     {\cf20 //============================================================================================================|}\par
+00087     {\cf20 // START TIMING FOR DOMAIN DECOMPOSITION}\par
+00088     {\cf20 //============================================================================================================|}\par
+00089      {\cf17 auto} time_domain_start = chrono::high_resolution_clock::now();\par
+00090     {\cf20 //============================================================================================================|}\par
+00091     \par
+00092     {\cf20 // Find the dimeansions of the sub-domain}\par
+00093     domain_instance->createSubDomains(p);\par
+00094 \par
+00095     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00096     {\cf20 // Allocate the pointers for all the grids}\par
+00097     domain_instance->setSubDomainSize();\par
+00098 \par
+00099     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00100     {\cf20 // Allocate memory to the process domains}\par
+00101     domain_instance->allocatePointers();\par
+00102 \par
+00103     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00104     {\cf20 // Set Initial Disturbance}\par
+00105     setInitialDisturbance(*domain_instance);\par
+00106     {\cf20 //fillSubDomainsWithProcessId(*domain_instance);}\par
+00107 \par
+00108 \par
+00109     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00110     {\cf20 // Find the neighbours of the process}\par
+00111     domain_instance->findNeighbours();\par
+00112 \par
+00113     {\cf20 //============================================================================================================|}\par
+00114     {\cf17 auto} time_domain_end = std::chrono::high_resolution_clock::now();\par
+00115     Timer->domain_setup = time_domain_end - time_domain_start;\par
+00116     {\cf17 auto} count_domain_setup = Timer->domain_setup.count();\par
+00117     Timer->domain_setup_time.push_back(count_domain_setup);\par
+00118     {\cf20 //cout << "Domain Setup Time for process " <<  id << " is " << count_domain_setup << "s " << endl;}\par
+00119     {\cf20 //Timer->timing_domain_setup(id, p);}\par
+00120     {\cf20 //============================================================================================================|}\par
+00121 \par
+00122     \par
+00123 \par
+00124     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00125     {\cf20 // Calculate time stepping parameters}\par
+00126     dt = 0.1 * min(dx, dy) / c;\par
+00127 \par
+00128     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00129     {\cf20 // Set output count and iteration paramters}\par
+00130     {\cf18 int} out_cnt = 0, it = 0;\par
+00131 \par
+00132     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00133     {\cf20 // Output Initial Disturbance to file and update the time counters}\par
+00134     grid_to_file(*domain_instance, out_cnt, boundary);\par
+00135     out_cnt++;\par
+00136     t_out += dt_out;\par
+00137 \par
+00138 \par
+00139     {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00140     {\cf20 //  MPI DATATYPES FOR COMMUNICATIONS}\par
+00141     {\cf20 // -----------------------------------------------------------------------------------------------------------|}\par
+00142     {\cf20 //============================================================================================================|}\par
+00143     {\cf20 // START TIMING FOR MPI DATATYPES}\par
+00144     {\cf20 //============================================================================================================|}\par
+00145     {\cf17 auto} time_MPI_create_start = chrono::high_resolution_clock::now();\par
+00146     {\cf20 //============================================================================================================|}\par
+00147 \par
+00148     {\cf20 // Create instance of MPI_Data class to access MPI Datatypes and send and receive functions}\par
+00149     MPI_Data<double>* MData = {\cf17 new} MPI_Data<double>();\par
+00150 \par
+00151     {\cf20 // Create MPI Data Types}\par
+00152     MData->CreateMPI_Types(*domain_instance);\par
+00153 \par
+00154     {\cf20 // Setup requests for non-blocking communications}\par
+00155     MPI_Request* request_list;\par
+00156     request_list = {\cf17 nullptr};\par
+00157 \par
+00158 \par
+00159     {\cf20 //============================================================================================================|}\par
+00160     {\cf17 auto} time_MPI_create_end = std::chrono::high_resolution_clock::now();\par
+00161     Timer->time_MPI_create = time_MPI_create_end - time_MPI_create_start;\par
+00162     Timer->mpi_create_time.push_back(Timer->time_MPI_create.count());\par
+00163     {\cf20 //cout << "MPI Create Time for process " <<  id << " is " << time_MPI_create.count() << "s " << endl;}\par
+00164     {\cf20 //Timer->timing_MPI_Create_setup(id, p);}\par
+00165     {\cf20 //============================================================================================================|}\par
+00166 \par
+00167 \par
+00168 \par
+00169     {\cf19 while} (t < t_max)\par
+00170     \{\par
+00171         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00172         {\cf20 //      START MPI COMMUNICATIONS}\par
+00173         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00174     \par
+00175         {\cf20 // Setup counter for requests}\par
+00176         {\cf18 int} count = 0;\par
+00177 \par
+00178         {\cf20 // Initialize with 8 requests - 4 forr send and 4 for receive for each process}\par
+00179         request_list = {\cf17 new} MPI_Request[8 * p];\par
+00180 \par
+00181         {\cf20 //============================================================================================================|}\par
+00182         {\cf20 // START TIMING FOR MPI COMMUNICATIONS}\par
+00183         {\cf20 //============================================================================================================|}\par
+00184         {\cf17 auto} time_MPI_comms_start = chrono::high_resolution_clock::now();\par
+00185         {\cf20 //============================================================================================================|}\par
+00186         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00187         {\cf20 // Do MPI Communications between the processes to send and receive boundary data}\par
+00188         doMPICommunications(*domain_instance, *MData, count, request_list);\par
+00189 \par
+00190 \par
+00191         {\cf20 //============================================================================================================|}\par
+00192         {\cf17 auto} time_MPI_comms_end = std::chrono::high_resolution_clock::now();\par
+00193         Timer->time_MPI_comms = time_MPI_comms_end - time_MPI_comms_start;\par
+00194         Timer->mpi_comms_time.push_back(Timer->time_MPI_comms.count());\par
+00195         {\cf20 //cout << "MPI Ccommunication Time for process " <<  id << " is " << time_MPI_comms.count() << "s " << endl;}\par
+00196         {\cf20 //Timer->timing_MPI_comms(id, p);}\par
+00197         {\cf20 //============================================================================================================|}\par
+00198 \par
+00199 \par
+00200         {\cf20 //============================================================================================================|}\par
+00201         {\cf20 // START TIMING FOR  INNER ITERATIONS}\par
+00202         {\cf20 //============================================================================================================|}\par
+00203         {\cf17 auto} time_inner_iterations_start = chrono::high_resolution_clock::now();\par
+00204 \par
+00205         {\cf20 // Do Iterations for the Inner Domain of the process grid}\par
+00206         doInnerIterations(*domain_instance);\par
+00207 \par
+00208         {\cf20 //============================================================================================================|}\par
+00209         {\cf17 auto} time_inner_iterations_end = std::chrono::high_resolution_clock::now();\par
+00210         Timer->time_inner_iterations = time_inner_iterations_end - time_inner_iterations_start;\par
+00211         Timer->inner_iterations_time.push_back(Timer->time_inner_iterations.count());\par
+00212         {\cf20 //cout << "Average inner iteration time for all process " <<  id << " is " << time_inner_iterations.count() << "s " << endl;}\par
+00213         {\cf20 //Timer->timing_inner_iterations(id, p);*/}\par
+00214         {\cf20 //============================================================================================================|}\par
+00215 \par
+00216 \par
+00217         {\cf20 // Wait for all MPI processes to finish communicating}\par
+00218         MPI_Waitall(count, request_list, MPI_STATUSES_IGNORE);\par
+00219 \par
+00220 \par
+00221 \par
+00222         {\cf20 //============================================================================================================|}\par
+00223         {\cf20 // START TIMING FOR  BOUNDARY SELECTION AND ITERATIONS}\par
+00224         {\cf20 //============================================================================================================|}\par
+00225         {\cf17 auto} time_edge_iterations_start = chrono::high_resolution_clock::now();\par
+00226 \par
+00227         {\cf20 //------------------------------------------------------------------------------------------------------------|}\par
+00228         {\cf20 // If not periodic, set Boundary Conditions depening upon selected input(above)}\par
+00229         {\cf19 if}(boundary != 2) {\cf20 // Used to avoid additional checks, however if its periodic, this is automatically negated}\par
+00230             selectBoundary(*domain_instance, boundary); {\cf20 // This is set to neumann, since boundary = 1 by default}\par
+00231 \par
+00232 \par
+00233         {\cf20 // Do Iterations on the Edgaes}\par
+00234         doBoundaryIterations(*domain_instance);\par
+00235         \par
+00236         {\cf20 //============================================================================================================|}\par
+00237         {\cf17 auto} time_edge_iterations_end = std::chrono::high_resolution_clock::now();\par
+00238         Timer->time_edge_iterations = time_edge_iterations_end - time_edge_iterations_start;\par
+00239         Timer->edge_iterations_time.push_back(Timer->time_edge_iterations.count());\par
+00240         {\cf20 //cout << "Edge iteration time for process " <<  id << " is " << time_edge_iterations.count() << "s " << endl;}\par
+00241         {\cf20 //Timer->timing_edge_iterations(id, p);}\par
+00242         {\cf20 //============================================================================================================|     }\par
+00243 \par
+00244         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00245         {\cf20 // Swap pointers of old grid with new grid and new grid with current grid}\par
+00246         domain_instance->swapGridPointers(domain_instance->old_grid_2d, domain_instance->current_grid_2d, \par
+00247                                           domain_instance->new_grid_2d, domain_instance->old_grid_1d,\par
+00248                                           domain_instance->current_grid_1d, domain_instance->new_grid_1d);\par
+00249         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00250         {\cf20 // Increment time step}\par
+00251         t += dt;\par
+00252         \par
+00253         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00254         {\cf20 // Output the grid contents to files}\par
+00255         {\cf19 if} (t_out <= t)\par
+00256         \{\par
+00257             cout << {\cf22 "output: "} << out_cnt << {\cf22 "\\tt: "} << t << {\cf22 "\\titeration: "} << it << endl;\par
+00258             grid_to_file(*domain_instance, out_cnt, boundary);\par
+00259             out_cnt++;\par
+00260             t_out += dt_out;\par
+00261         \}\par
+00262         \par
+00263         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00264         {\cf20 // Incerement the number of iterations}\par
+00265         it++;\par
+00266         \par
+00267         {\cf20 //---------------------------------------------------------------------------------------------------------|}\par
+00268         {\cf20 // Delete pointer  the request list}\par
+00269         {\cf17 delete}[] request_list;\par
+00270 \par
+00271     \}\par
+00272 \par
+00273 \par
+00274     {\cf20 //============================================================================================================|}\par
+00275     {\cf17 auto} time_total_end = std::chrono::high_resolution_clock::now();\par
+00276     Timer->time_total = time_total_end - time_total_start;\par
+00277     Timer->total_time.push_back(Timer->time_total.count());\par
+00278 \par
+00279     {\cf20 //Timer->timing_total(id, p, imax, jmax);}\par
+00280     {\cf19 if} ({\cf18 id} == 0)\par
+00281     \{\par
+00282         cout << {\cf22 " ---------------------------------------------------------------------------------"} << endl;\par
+00283         cout << {\cf22 " SIMULATION PARAMETERS  "} << endl;\par
+00284         cout << {\cf22 " ---------------------------------------------------------------------------------"} << endl;\par
+00285         cout << {\cf22 " Domain Size : "} << imax << {\cf22 " X "} << jmax << endl;\par
+00286         cout << {\cf22 " Total number of processors "} << p << endl;\par
+00287         cout << {\cf22 " The domain divides into"} << domain_instance->sub_rows << {\cf22 " and "}  << domain_instance->sub_cols << {\cf22 " columns."} << endl;\par
+00288         cout << {\cf22 " Total Time : "} << t_max << {\cf22 "s. Total Iterations : "} << it << endl;\par
+00289         cout << {\cf22 " Boundary Type ( 0 = Dirichlit, 1 = Neumann, 2 = Periodic) : "} << boundary << endl;\par
+00290         cout << {\cf22 "----------------------------------------------------------------------------------"} << endl;\par
+00291         cout << endl;\par
+00292         cout << endl;\par
+00293         cout << {\cf22 " ---------------------------------------------------------------------------------"} << endl;\par
+00294         cout << {\cf22 " TIMING ANALYSIS RESULTS "} << endl;\par
+00295         cout << {\cf22 " ---------------------------------------------------------------------------------"} << endl;\par
+00296         cout << {\cf22 " Time spech by a process to setup the domain : "} << count_domain_setup << endl;\par
+00297         cout << {\cf22 " Time spent by a process to create MPI Data Types : "} << Timer->time_MPI_create.count() << endl;\par
+00298         cout << {\cf22 " Time spent by a process to carry out MPI communications : "} << Timer->time_MPI_comms.count() << endl;\par
+00299         cout << {\cf22 " Time spent by a process to finish a set of inner iterations : "} << Timer->time_inner_iterations.count() << endl;\par
+00300         cout << {\cf22 " Time spent by a process to finish a set of edge iterations :  "} << Timer->time_edge_iterations.count() << endl;\par
+00301         cout << {\cf22 "Total time for a processor is : "} << Timer->time_total.count() << {\cf22 "s. "} << endl;\par
+00302     \}\par
+00303     {\cf20 //============================================================================================================|     }\par
+00304 \par
+00305 \par
+00306     {\cf20 // End MPI Functions}\par
+00307     MPI_Finalize();\par
+00308     {\cf19 return}(0);\par
+00309 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MPIDatatype.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/MPIDatatype.cpp}
+{\xe \v AS/MPIDatatype.cpp}
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf21 #include <vector>}\par
+00003 {\cf21 #include <mpi.h>}\par
+00004 \par
+00005 {\cf21 #include "MPIDatatype.h"}\par
+00006 \par
+00007 {\cf17 using namespace }std;\par
+00008 \par
+00009 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00010 \par
+00011 {\cf17 template} <{\cf17 class} T>\par
+00012 MPI_Data<T>::MPI_Data() \par
+00013 \{\par
+00014     {\cf20 // Set MPI Types for the  cells to null}\par
+00015     MPI_Datatype Left_Type = MPI_DATATYPE_NULL;\par
+00016     MPI_Datatype Right_Type = MPI_DATATYPE_NULL;\par
+00017     MPI_Datatype Top_Type = MPI_DATATYPE_NULL;\par
+00018     MPI_Datatype Bottom_Type = MPI_DATATYPE_NULL;\par
+00019 \par
+00020     {\cf20 // Set MPI Types for the Ghost cells to null}\par
+00021     MPI_Datatype Left_Ghost_Type = MPI_DATATYPE_NULL; \par
+00022     MPI_Datatype Right_Ghost_Type = MPI_DATATYPE_NULL;\par
+00023     MPI_Datatype Top_Ghost_Type = MPI_DATATYPE_NULL;\par
+00024     MPI_Datatype Bottom_Ghost_Type = MPI_DATATYPE_NULL;\par
+00025     \par
+00026 \}\par
+00027 \par
+00028 \par
+00029 {\cf17 template} <{\cf17 class} T>\par
+00030 MPI_Data<T>::~MPI_Data()\par
+00031 \{\par
+00032     {\cf20 // deleting regular datatypes}\par
+00033     MPI_Type_free(&Left_Type);\par
+00034     MPI_Type_free(&Right_Type);\par
+00035     MPI_Type_free(&Top_Type);\par
+00036     MPI_Type_free(&Bottom_Type);\par
+00037 \par
+00038     {\cf20 // deleting ghost datatypes}\par
+00039     MPI_Type_free(&Left_Ghost_Type);\par
+00040     MPI_Type_free(&Right_Ghost_Type);\par
+00041     MPI_Type_free(&Top_Ghost_Type);\par
+00042     MPI_Type_free(&Bottom_Ghost_Type);\par
+00043 \}\par
+00044 \par
+00045 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00046 \par
+00047 {\cf17 template} <{\cf17 class} T>\par
+00048 {\cf18 void} MPI_Data<T>::send_data(Domain<T> &Dom, MPI_Datatype MDataType, {\cf18 int} send_to, MPI_Request* request)\par
+00049 \{\par
+00050     {\cf20 // Function that facilitates the ease of sends the MPI Data Type}\par
+00051     MPI_Isend(Dom.current_grid_1d, 1, MDataType, send_to, tag_num, MPI_COMM_WORLD, request);\par
+00052 \}\par
+00053 \par
+00054 \par
+00055 {\cf17 template} <{\cf17 class} T>\par
+00056 {\cf18 void} MPI_Data<T>::recv_data(Domain<T>& Dom, MPI_Datatype MDataType, {\cf18 int} receive_from, MPI_Request* request)\par
+00057 \{\par
+00058     {\cf20 // Function that facilitates the ease of receives the MPI Data Type}\par
+00059     MPI_Irecv(Dom.current_grid_1d, 1, MDataType, receive_from, tag_num, MPI_COMM_WORLD, request);\par
+00060 \}\par
+00061 \par
+00062 \par
+00063 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00064 \par
+00065 {\cf17 template} <{\cf17 class} T>\par
+00066 {\cf18 void} MPI_Data<T>::CreateMPI_Types(Domain<T>& Dom)\par
+00067 \{\par
+00068 \par
+00069     {\cf20 // Use vectors because we dont explicitly know the lengths}\par
+00070     vector<int> block_lengths;\par
+00071     vector<MPI_Aint> displacements;\par
+00072     MPI_Aint add_start;\par
+00073     vector<MPI_Datatype> typelist;\par
+00074 \par
+00075 \par
+00076     {\cf20 // Resize all lengths of vector to Dom.sub_imax-2}\par
+00077     block_lengths.resize(Dom.sub_imax - 2);\par
+00078     displacements.resize(Dom.sub_imax - 2);\par
+00079     typelist.resize(Dom.sub_imax - 2);\par
+00080 \par
+00081     {\cf20 // Get the address and set the object to the start of the address}\par
+00082     {\cf20 // Explanation: This is done so that we can send the data by referencing the object}\par
+00083     MPI_Get_address(Dom.current_grid_1d, &add_start);\par
+00084 \par
+00085 \par
+00086 \par
+00087     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00088     {\cf20 //  MPI_DATATYPE 1 : LEFT_TYPE MPI - Regular}\par
+00089     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00090     {\cf20 // Set each of the dataType variables}\par
+00091     {\cf20 // to the correct addresses depending on the location}\par
+00092     {\cf20 // in the array}\par
+00093 \par
+00094     {\cf20 // Initialize the variables}\par
+00095     {\cf19 for} ({\cf18 int} i = 0; i < Dom.sub_imax - 2; i++)\par
+00096     \{\par
+00097         typelist[i] = MPI_DOUBLE;\par
+00098         block_lengths[i] = 1;\par
+00099         MPI_Get_address(&Dom.current_grid_2d[i + 1][1], &displacements[i]);\par
+00100         displacements[i] = displacements[i] - add_start;\par
+00101 \par
+00102     \}\par
+00103     {\cf20 // Create the dataType}\par
+00104     MPI_Type_create_struct((Dom.sub_imax - 2), block_lengths.data(), displacements.data(), typelist.data(), &Left_Type);\par
+00105     {\cf20 // Commit to use}\par
+00106     MPI_Type_commit(&Left_Type);\par
+00107 \par
+00108 \par
+00109 \par
+00110     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00111     {\cf20 //  MPI_DATATYPE 2 : LEFT_TYPE MPI - GHOST}\par
+00112     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00113     {\cf19 for} ({\cf18 int} i = 0; i < Dom.sub_imax - 2; i++)\par
+00114     \{\par
+00115         typelist[i] = MPI_DOUBLE;\par
+00116         block_lengths[i] = 1;\par
+00117         MPI_Get_address(&Dom.current_grid_2d[i + 1][0], &displacements[i]);\par
+00118         displacements[i] = displacements[i] - add_start;\par
+00119     \}\par
+00120     {\cf20 // Create the dataType}\par
+00121     MPI_Type_create_struct(Dom.sub_imax - 2, block_lengths.data(), displacements.data(), typelist.data(), &Left_Ghost_Type);\par
+00122     {\cf20 // Commit to use}\par
+00123     MPI_Type_commit(&Left_Ghost_Type);\par
+00124 \par
+00125 \par
+00126 \par
+00127     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00128     {\cf20 //  MPI_DATATYPE 3 :RIGHT_TYPE MPI - Regular}\par
+00129     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00130     {\cf20 // The only difference is that the address to store in the }\par
+00131     {\cf20 // 2D array is [i][Dom.sub_jmax-1]}\par
+00132 \par
+00133     {\cf20 // In+ialize the variables for all the grids}\par
+00134     {\cf19 for} ({\cf18 int} i = 0; i < Dom.sub_imax - 2; i++)\par
+00135     \{\par
+00136         typelist[i] = MPI_DOUBLE;\par
+00137         block_lengths[i] = 1;\par
+00138         MPI_Get_address(&Dom.current_grid_2d[i + 1][Dom.sub_jmax - 2], &displacements[i]);\par
+00139         displacements[i] = displacements[i] - add_start;\par
+00140     \}\par
+00141     {\cf20 // Create the dataType}\par
+00142     {\cf20 // Note: We use .data() because they are vectors}\par
+00143     MPI_Type_create_struct((Dom.sub_imax - 2), block_lengths.data(), displacements.data(), typelist.data(), &Right_Type);\par
+00144     {\cf20 // Commit to use}\par
+00145     MPI_Type_commit(&Right_Type);\par
+00146 \par
+00147 \par
+00148 \par
+00149     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00150     {\cf20 //  MPI_DATATYPE 4 :RIGHT_TYPE MPI - Ghost}\par
+00151     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00152     {\cf20 // Initialize the variables for the ghost right grids}\par
+00153     {\cf19 for} ({\cf18 int} i = 0; i < Dom.sub_imax - 2; i++)\par
+00154     \{\par
+00155         typelist[i] = MPI_DOUBLE;\par
+00156         block_lengths[i] = 1;\par
+00157         MPI_Get_address(&Dom.current_grid_2d[i + 1][Dom.sub_jmax - 1], &displacements[i]);\par
+00158         displacements[i] = displacements[i] - add_start;\par
+00159     \}\par
+00160     {\cf20 // Create the dataType}\par
+00161     {\cf20 // Note: We use .data() because they are vectors}\par
+00162     MPI_Type_create_struct((Dom.sub_imax - 2), block_lengths.data(), displacements.data(), typelist.data(), &Right_Ghost_Type);\par
+00163     {\cf20 // Commit to use}\par
+00164     MPI_Type_commit(&Right_Ghost_Type);\par
+00165 \par
+00166 \par
+00167 \par
+00168     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00169     {\cf20 //  TOP AND BOTTOM}\par
+00170     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00171     {\cf20 // Note: the top and bottom are stored in contiguous memory so dont need }\par
+00172     {\cf20 // to be sent as different types}\par
+00173     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00174 \par
+00175 \par
+00176 \par
+00177     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00178     {\cf20 // MPI_DATATYPE 5 : TOP - REGULAR}\par
+00179     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00180 \par
+00181     {\cf20 // Initialize variables}\par
+00182     typelist[0] = MPI_DOUBLE;\par
+00183     block_lengths[0] = Dom.sub_jmax - 2;\par
+00184     MPI_Get_address(&Dom.current_grid_2d[1][1], &displacements[0]);\par
+00185     displacements[0] = displacements[0] - add_start;\par
+00186     {\cf20 // Create the dataType}\par
+00187     MPI_Type_create_struct(1, block_lengths.data(), displacements.data(), typelist.data(), &Top_Type);\par
+00188     {\cf20 // Commit to use}\par
+00189     MPI_Type_commit(&Top_Type);\par
+00190 \par
+00191 \par
+00192     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00193     {\cf20 // MPI_DATATYPE 6 : TOP - GHOST}\par
+00194     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00195     {\cf20 // Initialize variables}\par
+00196     typelist[0] = MPI_DOUBLE;\par
+00197     block_lengths[0] = Dom.sub_jmax - 2;\par
+00198     MPI_Get_address(&Dom.current_grid_2d[0][1], &displacements[0]);\par
+00199     displacements[0] = displacements[0] - add_start;\par
+00200     {\cf20 // Create the dataType}\par
+00201     MPI_Type_create_struct(1, block_lengths.data(), displacements.data(), typelist.data(), &Top_Ghost_Type);\par
+00202     {\cf20 // Commit to use}\par
+00203     MPI_Type_commit(&Top_Ghost_Type);\par
+00204 \par
+00205 \par
+00206 \par
+00207     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00208     {\cf20 // MPI_DATATYPE 7 : BOTTOM - REGULAR}\par
+00209     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00210     {\cf20 // Initialize variables}\par
+00211     typelist[0] = MPI_DOUBLE;\par
+00212     block_lengths[0] = Dom.sub_jmax - 2;\par
+00213     MPI_Get_address(&Dom.current_grid_2d[Dom.sub_imax - 2][1], &displacements[0]);\par
+00214     displacements[0] = displacements[0] - add_start;\par
+00215     {\cf20 // Create the dataType}\par
+00216     MPI_Type_create_struct(1, block_lengths.data(), displacements.data(), typelist.data(), &Bottom_Type);\par
+00217     {\cf20 // Commit to use}\par
+00218     MPI_Type_commit(&Bottom_Type);\par
+00219 \par
+00220 \par
+00221 \par
+00222 \par
+00223     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00224     {\cf20 // MPI_DATATYPE 8 : BOTTOM - GHOST}\par
+00225     {\cf20 // ------------------------------------------------------------------------------------------------------------------------|}\par
+00226     {\cf20 // Initialize variables}\par
+00227     typelist[0] = MPI_DOUBLE;\par
+00228     block_lengths[0] = Dom.sub_jmax - 2;\par
+00229     MPI_Get_address(&Dom.current_grid_2d[Dom.sub_imax - 1][1], &displacements[0]);\par
+00230     displacements[0] = displacements[0] - add_start;\par
+00231     {\cf20 // Create the dataType}\par
+00232     MPI_Type_create_struct(1, block_lengths.data(), displacements.data(), typelist.data(), &Bottom_Ghost_Type);\par
+00233     {\cf20 // Commit to use}\par
+00234     MPI_Type_commit(&Bottom_Ghost_Type);\par
+00235 \par
+00236 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+MPIDatatype.h\par \pard\plain 
+{\tc\tcl2 \v AS/MPIDatatype.h}
+{\xe \v AS/MPIDatatype.h}
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf21 #pragma once}\par
+00003 {\cf21 #include <mpi.h>}\par
+00004 {\cf21 #include <vector>}\par
+00005 {\cf21 #include "Domain.h"}\par
+00006 \par
+00007 \par
+00008 {\cf17 template} <{\cf17 class} T>\par
+00009 {\cf17 class }MPI_Data\par
+00010 \{\par
+00011 {\cf17 public}:\par
+00012     {\cf20 //---------------------------------------------------------------------------------------------|}\par
+00013     {\cf20 //  CONSTRUCTORS AND DESTRUCTORS                                                               |}\par
+00014     {\cf20 // --------------------------------------------------------------------------------------------|}\par
+00015     {\cf20 // Constructor }\par
+00016     MPI_Data();\par
+00017     {\cf20 // Destructor to avoid explicitly deleting the memory}\par
+00018     ~MPI_Data();\par
+00019 \par
+00020 \par
+00021     {\cf20 //---------------------------------------------------------------------------------------------|}\par
+00022     {\cf20 //  MPI DATATYPES FOR COMMUNICATIONS                                                           |}\par
+00023     {\cf20 // --------------------------------------------------------------------------------------------|}\par
+00024     {\cf20 // MPI TYPES for the regualr rows}\par
+00025     MPI_Datatype Left_Type, Right_Type, Top_Type, Bottom_Type;\par
+00026     {\cf20 // MPI Types for the Ghost rows}\par
+00027     MPI_Datatype Left_Ghost_Type, Right_Ghost_Type, Top_Ghost_Type, Bottom_Ghost_Type;\par
+00028 \par
+00029 \par
+00030     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00031     {\cf20 //  CREATE MPI DATA TYPES                                                                       |}\par
+00032     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00033     {\cf20 // function to create all data types}\par
+00034     {\cf18 void} CreateMPI_Types(Domain<T>& Dom);\par
+00035 \par
+00036     {\cf20 //----------------------------------------------------------------------------------------------|}\par
+00037     {\cf20 // FUNCTIONS FOR COMMUNICATIONS                                                                 |}\par
+00038     {\cf20 // ---------------------------------------------------------------------------------------------|}\par
+00039     {\cf18 void} send_data(Domain<T>& Dom, MPI_Datatype MDataType, {\cf18 int} neigh_to_send, MPI_Request* request);\par
+00040     {\cf18 void} recv_data(Domain<T>& Dom, MPI_Datatype MDataType, {\cf18 int} neigh_to_receive, MPI_Request* request);\par
+00041 \par
+00042 \};\par
+00043 \par
+00044 {\cf17 template} {\cf17 class }MPI_Data<double>;\par
+00045 {\cf17 template} {\cf17 class }MPI_Data<int>;\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Parameters.h\par \pard\plain 
+{\tc\tcl2 \v AS/Parameters.h}
+{\xe \v AS/Parameters.h}
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 \par
+00003 \par
+00004 {\cf20 // Processor Parameters}\par
+00005 {\cf17 extern} {\cf18 int} id, p;\par
+00006 {\cf17 extern} {\cf18 int} tag_num;\par
+00007 \par
+00008 {\cf20 // Domain Parameters - grid and spacing}\par
+00009 {\cf17 extern} {\cf18 int} imax , jmax ;\par
+00010 {\cf17 extern} {\cf18 double} y_max , x_max , dx, dy;\par
+00011 \par
+00012 {\cf20 // Time Stepping Parameters}\par
+00013 {\cf17 extern} {\cf18 double} t_max;\par
+00014 {\cf17 extern} {\cf18 double} t, t_out, dt_out , dt;\par
+00015 \par
+00016 {\cf20 // Wave Equation parameters}\par
+00017 {\cf17 extern} {\cf18 double} c;\par
+00018 \par
+00019 {\cf20 // Boundary Conditions}\par
+00020 {\cf17 extern} {\cf18 int} boundary;\par
+00021 \par
+00022 {\cf20 // Initial Conditions}\par
+00023 {\cf17 extern} {\cf18 int} boundary;\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+SerialWaveSolver.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/SerialWaveSolver.cpp}
+{\xe \v AS/SerialWaveSolver.cpp}
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf20 //#define _USE_MATH_DEFINES}\par
+00002 {\cf20 //}\par
+00003 {\cf20 //#include <iostream>}\par
+00004 {\cf20 //#include <sstream>}\par
+00005 {\cf20 //#include <fstream>}\par
+00006 {\cf20 //#include <vector>}\par
+00007 {\cf20 //#include <cmath>}\par
+00008 {\cf20 //}\par
+00009 {\cf20 //using namespace std;}\par
+00010 {\cf20 //}\par
+00012 {\cf20 }{\cf20 //vector<vector<double>> grid, new_grid, old_grid;}\par
+00013 {\cf20 //int imax = 100, jmax = 100;}\par
+00014 {\cf20 //double t_max = 30.0;}\par
+00015 {\cf20 //double t, t_out = 0.0, dt_out = 0.04, dt;}\par
+00016 {\cf20 //double y_max = 10.0, x_max = 10.0, dx, dy;}\par
+00017 {\cf20 //double c = 1;}\par
+00018 {\cf20 //}\par
+00019 {\cf20 //void grid_to_file(int out)}\par
+00020 {\cf20 //\{}\par
+00021 {\cf20 //  stringstream fname;}\par
+00022 {\cf20 //  fstream f1;}\par
+00023 {\cf20 //  fname << "./output/serial/output" << "_" << out << ".dat";}\par
+00024 {\cf20 //  f1.open(fname.str().c_str(), ios_base::out);}\par
+00025 {\cf20 //  for (int i = 0; i < imax; i++)}\par
+00026 {\cf20 //  \{}\par
+00027 {\cf20 //      for (int j = 0; j < jmax; j++)}\par
+00028 {\cf20 //          f1 << grid[i][j] << "\\t";}\par
+00029 {\cf20 //      f1 << endl;}\par
+00030 {\cf20 //  \}}\par
+00031 {\cf20 //  f1.close();}\par
+00032 {\cf20 //\}}\par
+00033 {\cf20 //}\par
+00034 {\cf20 //void do_iteration(void)}\par
+00035 {\cf20 //\{}\par
+00036 {\cf20 //  //  Updating inner part of the domain}\par
+00037 {\cf20 //  for (int i = 1; i < imax - 1; i++)}\par
+00038 {\cf20 //      for (int j = 1; j < jmax - 1; j++)}\par
+00039 {\cf20 //          new_grid[i][j] = pow(dt * c, 2.0) * ((grid[i + 1][j] - 2.0 * grid[i][j] + grid[i - 1][j]) / pow(dx, 2.0) + (grid[i][j + 1] - 2.0 * grid[i][j] + grid[i][j - 1]) / pow(dy, 2.0)) + 2.0 * grid[i][j] - old_grid[i][j];}\par
+00040 {\cf20 //}\par
+00041 {\cf20 //  // Updating the outer columns of the domain}\par
+00042 {\cf20 //  for (int i = 0; i < imax; i++)}\par
+00043 {\cf20 //  \{}\par
+00044 {\cf20 //      new_grid[i][0] = new_grid[i][1];}\par
+00045 {\cf20 //      new_grid[i][jmax - 1] = new_grid[i][jmax - 2];}\par
+00046 {\cf20 //  \}}\par
+00047 {\cf20 //}\par
+00048 {\cf20 //  // Updating the rows of the domain}\par
+00049 {\cf20 //  for (int j = 0; j < jmax; j++)}\par
+00050 {\cf20 //  \{}\par
+00051 {\cf20 //      new_grid[0][j] = new_grid[1][j];}\par
+00052 {\cf20 //      new_grid[imax - 1][j] = new_grid[imax - 2][j];}\par
+00053 {\cf20 //  \}}\par
+00054 {\cf20 //}\par
+00055 {\cf20 //  // Updating the time-step}\par
+00056 {\cf20 //  t += dt;}\par
+00057 {\cf20 //}\par
+00058 {\cf20 //  old_grid.swap(new_grid); // swap elements of old grid with new grid}\par
+00059 {\cf20 //  old_grid.swap(grid); // }\par
+00060 {\cf20 //\}}\par
+00061 {\cf20 //}\par
+00062 {\cf20 //int main(int argc, char* argv[])}\par
+00063 {\cf20 //\{}\par
+00064 {\cf20 //  old_grid.resize(imax, vector<double>(jmax));}\par
+00065 {\cf20 //  grid.resize(imax, vector<double>(jmax));}\par
+00066 {\cf20 //  new_grid.resize(imax, vector<double>(jmax));}\par
+00067 {\cf20 //}\par
+00068 {\cf20 //  dx = x_max / ((double)imax - 1);}\par
+00069 {\cf20 //  dy = y_max / ((double)imax - 1);}\par
+00070 {\cf20 //}\par
+00071 {\cf20 //  t = 0.0;}\par
+00072 {\cf20 //}\par
+00073 {\cf20 //  dt = 0.1 * min(dx, dy) / c;}\par
+00074 {\cf20 //}\par
+00075 {\cf20 //  int out_cnt = 0, it = 0;}\par
+00076 {\cf20 //}\par
+00077 {\cf20 //  grid_to_file(out_cnt);}\par
+00078 {\cf20 //  out_cnt++;}\par
+00079 {\cf20 //  t_out += dt_out;}\par
+00080 {\cf20 //}\par
+00081 {\cf20 //}\par
+00082 {\cf20 //  //sets half sinusoidal intitial disturbance - this is brute force - it can be done more elegantly}\par
+00083 {\cf20 //  double r_splash = 1.0;}\par
+00084 {\cf20 //  double x_splash = 3.0;}\par
+00085 {\cf20 //  double y_splash = 3.0;}\par
+00086 {\cf20 //  for (int i = 1; i < imax - 1; i++)}\par
+00087 {\cf20 //      for (int j = 1; j < jmax - 1; j++)}\par
+00088 {\cf20 //      \{}\par
+00089 {\cf20 //          double x = dx * i;}\par
+00090 {\cf20 //          double y = dy * j;}\par
+00091 {\cf20 //}\par
+00092 {\cf20 //          double dist = sqrt(pow(x - x_splash, 2.0) + pow(y - y_splash, 2.0));}\par
+00093 {\cf20 //}\par
+00094 {\cf20 //          if (dist < r_splash)}\par
+00095 {\cf20 //          \{}\par
+00096 {\cf20 //              double h = 5.0 * (cos(dist / r_splash * M_PI) + 1.0);}\par
+00097 {\cf20 //}\par
+00098 {\cf20 //              grid[i][j] = h;}\par
+00099 {\cf20 //              old_grid[i][j] = h;}\par
+00100 {\cf20 //          \}}\par
+00101 {\cf20 //      \}}\par
+00102 {\cf20 //}\par
+00103 {\cf20 //  while (t < t_max)}\par
+00104 {\cf20 //  \{}\par
+00105 {\cf20 //      do_iteration();}\par
+00106 {\cf20 //}\par
+00107 {\cf20 //      if (t_out <= t)}\par
+00108 {\cf20 //      \{}\par
+00109 {\cf20 //          cout << "output: " << out_cnt << "\\tt: " << t << "\\titeration: " << it << endl;}\par
+00110 {\cf20 //          grid_to_file(out_cnt);}\par
+00111 {\cf20 //          out_cnt++;}\par
+00112 {\cf20 //          t_out += dt_out;}\par
+00113 {\cf20 //      \}}\par
+00114 {\cf20 //}\par
+00115 {\cf20 //      it++;}\par
+00116 {\cf20 //  \}}\par
+00117 {\cf20 //  return 0;}\par
+00118 {\cf20 //\}}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TimingTest.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/TimingTest.cpp}
+{\xe \v AS/TimingTest.cpp}
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #include <vector>}\par
+00002 {\cf21 #include<iostream>}\par
+00003 \par
+00004 {\cf21 #include "TimingTest.h"}\par
+00005 \par
+00006 {\cf17 using namespace }std;\par
+00007 \par
+00008 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00009 \par
+00010 {\cf18 void} TimingTest::timing_domain_setup({\cf18 int} {\cf18 id}, {\cf18 int} p)\par
+00011 \{\par
+00012     {\cf19 if} ({\cf18 id} == 0)\par
+00013     \{\par
+00014         {\cf18 double} avg_domain_time = 0;\par
+00015         {\cf19 for} ({\cf18 int} i  = 0; i < domain_setup_time.size(); i++)\par
+00016         \{\par
+00017             avg_domain_time += domain_setup_time[i];\par
+00018         \}\par
+00019         avg_domain_time = avg_domain_time / p;\par
+00020 \par
+00021         cout << {\cf22 "The Average Domain Setup Time for all the processes is "} << avg_domain_time << {\cf22 "s. "} << endl;\par
+00022     \}\par
+00023 \}\par
+00024 \par
+00025 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00026 \par
+00027 {\cf18 void} TimingTest::timing_MPI_Create_setup({\cf18 int} {\cf18 id}, {\cf18 int} p)\par
+00028 \{\par
+00029     {\cf19 if} ({\cf18 id} == 0)\par
+00030     \{\par
+00031         {\cf18 double} avg_MPI_Create_time = 0;\par
+00032         {\cf19 for} ({\cf18 int} i = 0; i < mpi_create_time.size(); i++)\par
+00033         \{\par
+00034             avg_MPI_Create_time += mpi_create_time[i];\par
+00035         \}\par
+00036         avg_MPI_Create_time = avg_MPI_Create_time / p;\par
+00037 \par
+00038         cout << {\cf22 "The Average MPI Create Time for all the processes is "} << avg_MPI_Create_time << {\cf22 "s. "} << endl;\par
+00039     \}\par
+00040 \par
+00041 \}\par
+00042 \par
+00043 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00044 \par
+00045 {\cf18 void} TimingTest::timing_MPI_comms({\cf18 int} {\cf18 id}, {\cf18 int} p)\par
+00046 \{\par
+00047     {\cf19 if} ({\cf18 id} == 0)\par
+00048     \{\par
+00049         {\cf18 double} avg_MPI_comms_time = 0;\par
+00050         {\cf19 for} ({\cf18 int} i = 0; i < mpi_comms_time.size(); i++)\par
+00051         \{\par
+00052             avg_MPI_comms_time += mpi_comms_time[i];\par
+00053         \}\par
+00054         avg_MPI_comms_time = avg_MPI_comms_time / p;\par
+00055 \par
+00056         cout << {\cf22 "The Average MPI Communication Time for all the processes is "} << avg_MPI_comms_time << {\cf22 "s. "} << endl;\par
+00057     \}\par
+00058 \par
+00059 \}\par
+00060 \par
+00061 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00062 \par
+00063 {\cf18 void} TimingTest::timing_edge_iterations({\cf18 int} {\cf18 id}, {\cf18 int} p)\par
+00064 \{\par
+00065     {\cf19 if} ({\cf18 id} == 0)\par
+00066     \{\par
+00067         {\cf18 double} avg = 0;\par
+00068         {\cf19 for} ({\cf18 int} i = 0; i < edge_iterations_time.size(); i++)\par
+00069         \{\par
+00070             avg += edge_iterations_time[i];\par
+00071         \}\par
+00072         avg = avg / p;\par
+00073 \par
+00074         cout << {\cf22 "The Average Edge Iteration Time for all the processes is "} << avg << {\cf22 "s. "} << endl;\par
+00075     \}\par
+00076 \par
+00077 \}\par
+00078 \par
+00079 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00080 \par
+00081 {\cf18 void} TimingTest::timing_inner_iterations({\cf18 int} {\cf18 id}, {\cf18 int} p)\par
+00082 \{\par
+00083     {\cf19 if} ({\cf18 id} == 0)\par
+00084     \{\par
+00085         {\cf18 double} avg = 0;\par
+00086         {\cf19 for} ({\cf18 int} i = 0; i < inner_iterations_time.size(); i++)\par
+00087         \{\par
+00088             avg += inner_iterations_time[i];\par
+00089         \}\par
+00090         avg = avg / p;\par
+00091 \par
+00092         cout << {\cf22 "The Average Inner Iteration for all the processes is "} << avg << {\cf22 "s. "} << endl;\par
+00093     \}\par
+00094 \par
+00095 \}\par
+00096 \par
+00097 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+00098 \par
+00099 {\cf18 void} TimingTest::timing_total({\cf18 int} {\cf18 id}, {\cf18 int} p, {\cf18 int} imax, {\cf18 int} jmax)\par
+00100 \{\par
+00101     {\cf19 if} ({\cf18 id} == 0)\par
+00102     \{\par
+00103         {\cf18 double} avg = 0;\par
+00104         {\cf19 for} ({\cf18 int} i = 0; i < this->total_time.size(); i++)\par
+00105         \{\par
+00106             avg += total_time[i];\par
+00107         \}\par
+00108         avg = avg / p;\par
+00109         cout << {\cf22 "The Average Total time for all the processes is "} << avg << {\cf22 "s. "} << endl;\par
+00110     \}\par
+00111 \par
+00112 \}\par
+00113 \par
+00114 {\cf20 // -------------------------------------------------------------------------------------------------------------------------|}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+TimingTest.h\par \pard\plain 
+{\tc\tcl2 \v AS/TimingTest.h}
+{\xe \v AS/TimingTest.h}
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 {\cf21 #include <vector>}\par
+00003 {\cf21 #include <chrono>}\par
+00004 \par
+00005 {\cf17 using namespace }std;\par
+00006 \par
+00007 {\cf17 class }TimingTest\par
+00008 \{\par
+00009 {\cf17 public}:\par
+00010     {\cf20 // Vector to store time spent in setting up the domain for each process and creating MPI_DataTypes}\par
+00011     vector<double> domain_setup_time;\par
+00012 \par
+00013     {\cf20 // Vector to store total run time for all iterations}\par
+00014     vector<double> total_time;\par
+00015 \par
+00016     {\cf20 // Vector to store timings for a single iteration}\par
+00017     vector<double> mpi_create_time;\par
+00018 \par
+00019     {\cf20 // Timing to doMPICommunications}\par
+00020     vector<double> mpi_comms_time;\par
+00021 \par
+00022     {\cf20 // Timing to complete innerIterations}\par
+00023     vector<double> inner_iterations_time;\par
+00024 \par
+00025 \par
+00026     {\cf20 // Timings to complete set boundary conditions and complete outerIterations}\par
+00027     vector<double> edge_iterations_time;\par
+00028 \par
+00029     chrono::duration < double> time_MPI_create;\par
+00030     chrono::duration <double> time_total;\par
+00031     chrono::duration < double> domain_setup;\par
+00032     chrono::duration <double> time_MPI_comms;\par
+00033     chrono::duration < double> time_inner_iterations;\par
+00034     chrono::duration < double> time_edge_iterations;\par
+00035 \par
+00036     {\cf20 //--------------------------------------------------------------------------------|}\par
+00037     {\cf20 //  FUNCTION DEALING TIMING DOMAIN SETUP }\par
+00038     {\cf20 // -------------------------------------------------------------------------------|}\par
+00039     {\cf18 void} timing_domain_setup({\cf18 int} {\cf18 id}, {\cf18 int} p);\par
+00040 \par
+00041 \par
+00042     {\cf20 //--------------------------------------------------------------------------------|}\par
+00043     {\cf20 //  FUNCTIONS DEALING WITH MPI CREATION AND COMMUNICATIONS }\par
+00044     {\cf20 // -------------------------------------------------------------------------------|}\par
+00045     {\cf18 void} timing_MPI_Create_setup({\cf18 int} {\cf18 id}, {\cf18 int} p);\par
+00046 \par
+00047     {\cf18 void} timing_MPI_comms({\cf18 int} {\cf18 id}, {\cf18 int} p);\par
+00048 \par
+00049     {\cf20 //--------------------------------------------------------------------------------|}\par
+00050     {\cf20 //  FUNCTION DEALING TIMING TIME STEP ITERATIONS}\par
+00051     {\cf20 // -------------------------------------------------------------------------------|}\par
+00052 \par
+00053     {\cf18 void} timing_inner_iterations({\cf18 int} {\cf18 id}, {\cf18 int} p);\par
+00054 \par
+00055     {\cf18 void} timing_edge_iterations({\cf18 int} {\cf18 id}, {\cf18 int} p);\par
+00056     {\cf20 //--------------------------------------------------------------------------------|}\par
+00057     {\cf20 //  FUNCTION DEALING TIMING TOTAL TIME FOR ALL PROCESSES }\par
+00058     {\cf20 // -------------------------------------------------------------------------------|}\par
+00059 \par
+00060     {\cf18 void} timing_total({\cf18 int} {\cf18 id}, {\cf18 int} p, {\cf18 int} imax, {\cf18 int} jmax);\par
+00061 \par
+00062 \};\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+WaveSolver.cpp\par \pard\plain 
+{\tc\tcl2 \v AS/WaveSolver.cpp}
+{\xe \v AS/WaveSolver.cpp}
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 \par
+00002 {\cf21 #define _USE_MATH_DEFINES}\par
+00003 {\cf21 #include<iostream>}\par
+00004 {\cf21 #include<string>}\par
+00005 {\cf21 #include<mpi.h>}\par
+00006 {\cf21 #include <sstream>}\par
+00007 {\cf21 #include <fstream>}\par
+00008 {\cf21 #include <cmath>}\par
+00009 \par
+00010 \par
+00011 {\cf21 #include "WaveSolver.h"}\par
+00012 {\cf21 #include "Parameters.h"}\par
+00013 \par
+00014 {\cf17 using namespace }std;\par
+00015 \par
+00016 {\cf18 void} readWaveSolverParameters({\cf18 int} &i , {\cf18 int} &j , {\cf18 double} &x_m, {\cf18 double} &y_m, {\cf18 double} &tee, {\cf18 double} &t_m,{\cf18 double} &dt_o , {\cf18 double} &cee , {\cf18 int} &bo,{\cf18 double} &dist, {\cf18 double} *disturbance_p)\par
+00017 \{\par
+00018 \par
+00019     stringstream data;\par
+00020     data << {\cf22 "Parameters.txt"};\par
+00021     ifstream file;\par
+00022 \par
+00023     {\cf20 // Open Parameters file}\par
+00024     file.open(data.str().c_str(), ios_base::in);\par
+00025 \par
+00026     {\cf20 // Read in value by value}\par
+00027     {\cf19 if} (file.good())\par
+00028     \{\par
+00029         file >> i >> j >> x_m >> y_m >> t >> t_m >> dt_o >> c >> bo >> dist;\par
+00030     \}\par
+00031 \par
+00032     {\cf20 // Initialize distrbance array with 3 parameters(radius, x loc, y loc)}\par
+00033     disturbance_p = {\cf17 new} {\cf18 double}[dist * 3];\par
+00034 \par
+00035     {\cf19 while} (file.good())\par
+00036     \{\par
+00037         {\cf20 // Fill te disturbance array with the 3 parameters}\par
+00038         {\cf19 for} ({\cf18 int} i = 0; i < 3 * dist; i++)\par
+00039         \{\par
+00040             file >> disturbance_p[i];\par
+00041         \}\par
+00042     \}\par
+00043     file.close();\par
+00044     cout << i << j;\par
+00045 \}\par
+00046 \par
+00047 {\cf20 // ------------------------------------------------------------------------------------------------|}\par
+00048 {\cf20 // Select Boundary}\par
+00049 {\cf18 void} selectBoundary(Domain<double> &Dom, {\cf18 int} boundary)\par
+00050 \{\par
+00051     {\cf19 if} (boundary == 0)\par
+00052     \{\par
+00053         dirichlitBoundary(Dom);\par
+00054     \}\par
+00055     {\cf19 if} (boundary == 1)\par
+00056     \{\par
+00057         neumannBouandry(Dom);\par
+00058     \}\par
+00059 \par
+00060 \}\par
+00061 \par
+00062 {\cf20 // Set Dirichlit Boundry Conditions}\par
+00063 {\cf18 void} dirichlitBoundary(Domain<double>& Dom)\par
+00064 \{\par
+00065     {\cf20 // If the left neighbours dont exist}\par
+00066     {\cf19 if} (Dom.neighbours[0] == -1)\par
+00067     \{\par
+00068         {\cf20 // Set left boundaries}\par
+00069         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00070         \{\par
+00071             Dom.current_grid_2d[i][0] = 0;\par
+00072         \}\par
+00073     \}\par
+00074 \par
+00075     {\cf20 // If the right neighbours dont exist}\par
+00076     {\cf19 if} (Dom.neighbours[2] == -1)\par
+00077     \{\par
+00078         {\cf20 // Set right boundaries }\par
+00079         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00080         \{\par
+00081             Dom.current_grid_2d[i][Dom.sub_jmax - 1] = 0;\par
+00082         \}\par
+00083     \}\par
+00084     \par
+00085     {\cf20 //If the top neighbours dont exist}\par
+00086     {\cf19 if} (Dom.neighbours[1] == -1)\par
+00087     \{\par
+00088         {\cf20 // Set top boundaries }\par
+00089         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_jmax - 1; i++)\par
+00090         \{\par
+00091             Dom.current_grid_2d[1][i] = 0;\par
+00092         \}\par
+00093     \}\par
+00094 \par
+00095     {\cf20 // If the bottom neighbours dont exist}\par
+00096     {\cf19 if} (Dom.neighbours[3] == -1)\par
+00097     \{\par
+00098         {\cf20 // Set bottom boundaries}\par
+00099         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_jmax - 1; i++)\par
+00100         \{\par
+00101             Dom.current_grid_2d[Dom.sub_imax - 1][i] = 0;\par
+00102         \}\par
+00103     \}\par
+00104 \}\par
+00105 \par
+00106 {\cf20 // Set Neumann Boundary Conditions}\par
+00107 {\cf18 void} neumannBouandry(Domain<double>& Dom)\par
+00108 \{\par
+00109     \par
+00110     {\cf20 // If the left neighbours dont exist}\par
+00111     {\cf19 if} (Dom.neighbours[0] == -1)\par
+00112     \{\par
+00113         {\cf20 // Set left boundaries}\par
+00114         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00115         \{\par
+00116             Dom.current_grid_2d[i][1] = Dom.current_grid_2d[i][2];\par
+00117         \}\par
+00118     \}\par
+00119 \par
+00120     {\cf20 // If the right neighbours dont exist}\par
+00121     {\cf19 if} (Dom.neighbours[2] == -1)\par
+00122     \{\par
+00123         {\cf20 // Set right boundaries}\par
+00124         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00125         \{\par
+00126             Dom.current_grid_2d[i][Dom.sub_jmax - 1] = Dom.current_grid_2d[i][Dom.sub_jmax - 2];\par
+00127         \}\par
+00128     \}\par
+00129 \par
+00130     {\cf20 //If the top neighbours dont exist}\par
+00131     {\cf19 if} (Dom.neighbours[1] == -1)\par
+00132     \{\par
+00133         {\cf20 // Set top boundaries }\par
+00134         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_jmax - 1; i++)\par
+00135         \{\par
+00136             Dom.current_grid_2d[1][i] = Dom.current_grid_2d[2][i];\par
+00137         \}\par
+00138     \}\par
+00139 \par
+00140     {\cf20 // If the bottom neighbours dont exist}\par
+00141     {\cf19 if} (Dom.neighbours[3] == -1)\par
+00142     \{\par
+00143         {\cf20 // Set bottom boundaries}\par
+00144         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_jmax - 1; i++)\par
+00145         \{\par
+00146             Dom.current_grid_2d[Dom.sub_imax-1][i] = Dom.current_grid_2d[Dom.sub_imax - 2][i];\par
+00147         \}\par
+00148     \}\par
+00149 \}\par
+00150 \par
+00151 \par
+00152 {\cf20 // ------------------------------------------------------------------------------------------------|}\par
+00153 {\cf20 // Create Disturbance}\par
+00154 {\cf18 void} setInitialDisturbance(Domain<double>& Dom)\par
+00155 \{\par
+00156 \par
+00157         {\cf20 // Create an array to store x,y and radius for each disturbance}\par
+00158         {\cf20 // Calculate the grid spacing}\par
+00159         dx = x_max / (Dom.global_imax - 1);\par
+00160         dy = y_max / (Dom.global_jmax - 1);\par
+00161         \par
+00162         {\cf18 double} x_splash = 3;\par
+00163         {\cf18 double} y_splash = 3;\par
+00164         {\cf18 double} r_splash = 1;\par
+00165 \par
+00166         {\cf20 // Start looping on the non-padded region}\par
+00167         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00168         \{\par
+00169             {\cf19 for} ({\cf18 int} j = 1; j < Dom.sub_jmax - 1; j++)\par
+00170             \{\par
+00171 \par
+00172                 {\cf20 // map global to local}\par
+00173                 {\cf18 int} I = (i - 1) + Dom.global_i;\par
+00174                 {\cf18 int} J = (j - 1) + Dom.global_j;\par
+00175 \par
+00176                 {\cf20 // set the grid jumps}\par
+00177                 {\cf18 double} x = dx * I;\par
+00178                 {\cf18 double} y = dy * J;\par
+00179 \par
+00180                 {\cf20 // find the distance of a point from the splash}\par
+00181                 {\cf18 double} dist = sqrt(pow(x - x_splash, 2.0) + pow(y - y_splash, 2.0));\par
+00182                 {\cf18 double} h = 1;\par
+00183 \par
+00184                 {\cf20 // if the distance is within splash range, set the vlaues to calculated h}\par
+00185                 {\cf19 if} (dist < r_splash)\par
+00186                 \{\par
+00187                     {\cf20 // calculate wave height}\par
+00188                     h = 5.0 * (cos(dist / r_splash * M_PI) + 1.0);\par
+00189 \par
+00190                     {\cf20 //cout << " h " << h << " i " << i << " j " << j << " Dom.current_grid_2d[i][j] " << Dom.current_grid_2d[i][j] << endl;}\par
+00191 \par
+00192                     {\cf20 // set the grid values}\par
+00193                     Dom.current_grid_2d[i][j] = h;\par
+00194                     Dom.old_grid_2d[i][j] = h;\par
+00195                 \}\par
+00196 \par
+00197                 {\cf20 /*  if (id == 5)}\par
+00198 {\cf20                     \{}\par
+00199 {\cf20                         cout << " h " << h << " i " << i << " j " << j << " Dom.current_grid_2d[i][j] " << Dom.current_grid_2d[i][j] << endl;}\par
+00200 {\cf20                     \}*/}\par
+00201             \}\par
+00202         \}\par
+00203 \par
+00204     {\cf20 //if (id == 0)}\par
+00205     {\cf20 //\{}\par
+00206     {\cf20 //  cout << " OLD GRID AFTER DISTURBANCE " << endl;}\par
+00207     {\cf20 //  for (int i = 1; i < Dom.sub_imax - 1; i++)}\par
+00208     {\cf20 //  \{}\par
+00209     {\cf20 //      for (int j = 1; j < Dom.sub_jmax - 1; j++)}\par
+00210     {\cf20 //      \{}\par
+00211     {\cf20 //          cout << Dom.old_grid_2d[i][j] << " ";}\par
+00212     {\cf20 //      \}}\par
+00213     {\cf20 //      cout << endl;}\par
+00214     {\cf20 //  \}}\par
+00215     {\cf20 //  cout << endl;}\par
+00216     {\cf20 //\}}\par
+00217 \}\par
+00218 \par
+00219 \par
+00220 {\cf18 void} fillSubDomainsWithProcessId(Domain<double>& Dom)\par
+00221 \{\par
+00222     {\cf19 for} ({\cf18 int} i = 0; i < Dom.sub_imax; i++)\par
+00223     \{\par
+00224         {\cf19 for} ({\cf18 int} j = 0; j < Dom.sub_jmax; j++)\par
+00225         \{\par
+00226             Dom.current_grid_2d[i][j] = id;\par
+00227         \}\par
+00228     \}\par
+00229 \}\par
+00230 \par
+00231 \par
+00232 \par
+00233 \par
+00234 {\cf20 // ------------------------------------------------------------------------------------------------|}\par
+00235 {\cf20 // Function to do the communications}\par
+00236 {\cf18 void} doMPICommunications(Domain<double> &domain_instance,  MPI_Data<double> &MData, {\cf18 int} count, MPI_Request *request_list)\par
+00237 \{\par
+00238 \par
+00239     {\cf20 //--------------------------------------------------------------------------------------------|}\par
+00240     {\cf20 //      SEND FROM REGULAR BOUNDARIES AND RECEIVE INTO GHOST BOUNDARIES}\par
+00241     {\cf20 // -------------------------------------------------------------------------------------------|}\par
+00242     {\cf20 // Send the regualar cells of the sub-domain to the other processes}\par
+00243 \par
+00244     {\cf19 if} (domain_instance.neighbours[0] != -1)\par
+00245     \{\par
+00246         {\cf20 // Receive left data in ghost cells}\par
+00247         MData.recv_data(domain_instance, MData.Left_Ghost_Type, domain_instance.neighbours[0], &request_list[count]);\par
+00248         count++;\par
+00249 \par
+00250         {\cf20 // Send left Data}\par
+00251         MData.send_data(domain_instance, MData.Left_Type, domain_instance.neighbours[0], &request_list[count]);\par
+00252         count++;\par
+00253     \}\par
+00254 \par
+00255 \par
+00256     {\cf19 if} (domain_instance.neighbours[2] != -1)\par
+00257     \{\par
+00258         {\cf20 // Receive right data in ghost cells}\par
+00259         MData.recv_data(domain_instance, MData.Right_Ghost_Type, domain_instance.neighbours[2], &request_list[count]);\par
+00260         count++;\par
+00261 \par
+00262         {\cf20 // Send right data}\par
+00263         MData.send_data(domain_instance, MData.Right_Type, domain_instance.neighbours[2], &request_list[count]);\par
+00264         count++;\par
+00265     \}\par
+00266 \par
+00267         {\cf19 if} (domain_instance.neighbours[1] != -1)\par
+00268         \{\par
+00269             {\cf20 // Receive top data in ghost cells}\par
+00270             MData.recv_data(domain_instance, MData.Top_Ghost_Type, domain_instance.neighbours[1], &request_list[count]);\par
+00271             count++;\par
+00272 \par
+00273             {\cf20 // Send top data}\par
+00274             MData.send_data(domain_instance, MData.Top_Type, domain_instance.neighbours[1], &request_list[count]);\par
+00275             count++;\par
+00276         \}\par
+00277 \par
+00278 \par
+00279         {\cf19 if} (domain_instance.neighbours[3] != -1)\par
+00280         \{\par
+00281             {\cf20 // Receive bottom data in ghost cells}\par
+00282             MData.recv_data(domain_instance, MData.Bottom_Ghost_Type, domain_instance.neighbours[3], &request_list[count]);\par
+00283             count++;\par
+00284 \par
+00285             {\cf20 // Send bottom data}\par
+00286             MData.send_data(domain_instance, MData.Bottom_Type, domain_instance.neighbours[3], &request_list[count]);\par
+00287             count++;\par
+00288         \}\par
+00289 \par
+00290     {\cf19 if}(boundary == 2) \par
+00291     \{       \par
+00292             {\cf20 //--------------------------------------------------------------------------------------------------------------|}\par
+00293             {\cf20 //  ADDITIONAL PERIODIC COMMUNICATIONS ON THE TOP AND BOTTOM}\par
+00294             {\cf20 //--------------------------------------------------------------------------------------------------------------|}\par
+00295             {\cf20 // Send top data}\par
+00296             MData.send_data(domain_instance, MData.Top_Type, domain_instance.neighbours[1], &request_list[count]);\par
+00297             count++;\par
+00298 \par
+00299             {\cf20 // Receive bottom data in ghost cells}\par
+00300             MData.recv_data(domain_instance, MData.Bottom_Ghost_Type, domain_instance.neighbours[1], &request_list[count]);\par
+00301             count++;\par
+00302 \par
+00303             {\cf20 //--------------------------------------------------------------------------------------------------------------|}\par
+00304 \par
+00305             {\cf20 // Receive top data in ghost cells}\par
+00306             MData.recv_data(domain_instance, MData.Top_Ghost_Type, domain_instance.neighbours[1], &request_list[count]);\par
+00307             count++;\par
+00308 \par
+00309             {\cf20 // Send bottom data}\par
+00310             MData.send_data(domain_instance, MData.Bottom_Type, domain_instance.neighbours[3], &request_list[count]);\par
+00311             count++;\par
+00312 \par
+00313     \}\par
+00314     MPI_Waitall(count, request_list, MPI_STATUSES_IGNORE);\par
+00315 \par
+00316 \}\par
+00317 \par
+00318 \par
+00319 {\cf20 // ------------------------------------------------------------------------------------------------|}\par
+00320 {\cf20 // Solve inner domain}\par
+00321 {\cf18 void} doInnerIterations(Domain<double> &Dom) \par
+00322 \{\par
+00323     {\cf20 // Iterate over the innder domain in both i and j directions}\par
+00324     {\cf19 for} ({\cf18 int} i = 2; i < Dom.sub_imax - 1; i++)\par
+00325     \{\par
+00326         {\cf19 for} ({\cf18 int} j = 2; j < Dom.sub_jmax - 1; j++)\par
+00327         \{\par
+00328             {\cf20 // Descretization of equation of the wave for time stepping in the inner domain}\par
+00329             Dom.new_grid_2d[i][j] = pow(dt * c, 2.0) \par
+00330                 * ((Dom.current_grid_2d[i + 1][j] \par
+00331                         - 2.0 * Dom.current_grid_2d[i][j] \par
+00332                         + Dom.current_grid_2d[i - 1][j]) / pow(dx, 2.0)\par
+00333 \par
+00334                 + (Dom.current_grid_2d[i][j + 1] \par
+00335                     - 2.0 * Dom.current_grid_2d[i][j] \par
+00336                     + Dom.current_grid_2d[i][j - 1]) / pow(dy, 2.0)) \par
+00337 \par
+00338                 + 2.0 * Dom.current_grid_2d[i][j] - Dom.old_grid_2d[i][j];\par
+00339         \}\par
+00340     \}\par
+00341 \}\par
+00342 \par
+00343 {\cf20 // Solve outer domain}\par
+00344 {\cf18 void} doBoundaryIterations(Domain<double>& Dom)\par
+00345 \{\par
+00346     {\cf20 // LEFT BOUNDARY}\par
+00347     {\cf19 if} (Dom.neighbours[0] != -1)\par
+00348     \{\par
+00349         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax-1; i++)\par
+00350         \{\par
+00351             Dom.new_grid_2d[i][1] = pow(dt * c, 2.0) * \par
+00352                 ((Dom.current_grid_2d[i + 1][1] \par
+00353                     - 2.0 * Dom.current_grid_2d[i][1] \par
+00354                     + Dom.current_grid_2d[i - 1][1]) / pow(dx, 2.0)\par
+00355 \par
+00356                     + (Dom.current_grid_2d[i][2] \par
+00357                         - 2.0 * Dom.current_grid_2d[i][1] \par
+00358                         + Dom.current_grid_2d[i][0]) / pow(dy, 2.0)) \par
+00359 \par
+00360                 + 2.0 * Dom.current_grid_2d[i][1] - Dom.old_grid_2d[i][1];\par
+00361         \}\par
+00362     \}\par
+00363 \par
+00364     {\cf20 // TOP BOUNDARY}\par
+00365     {\cf19 if} (Dom.neighbours[1] != -1)\par
+00366     \{\par
+00367         {\cf19 for} ({\cf18 int} j = 1; j < Dom.sub_jmax -1; j++)\par
+00368         \{\par
+00369             Dom.new_grid_2d[1][j] = pow(dt * c, 2.0) \par
+00370                 * ((Dom.current_grid_2d[2][j] \par
+00371                     - 2.0 * Dom.current_grid_2d[1][j] \par
+00372                     + Dom.current_grid_2d[0][j]) / pow(dx, 2.0)\par
+00373 \par
+00374                 + (Dom.current_grid_2d[1][j + 1] \par
+00375                     - 2.0 * Dom.current_grid_2d[1][j] \par
+00376                     + Dom.current_grid_2d[1][j - 1]) / pow(dy, 2.0)) \par
+00377 \par
+00378                 + 2.0 * Dom.current_grid_2d[1][j] - Dom.old_grid_2d[1][j];\par
+00379         \}\par
+00380     \}\par
+00381 \par
+00382     {\cf20 // RIGHT BOUNDARY}\par
+00383     {\cf19 if} (Dom.neighbours[2] != -1)\par
+00384     \{\par
+00385         {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00386         \{\par
+00387             Dom.new_grid_2d[i][Dom.sub_jmax-1] = pow(dt * c, 2.0) \par
+00388                 * ((Dom.current_grid_2d[i + 1][Dom.sub_jmax-1] \par
+00389                     - 2.0 * Dom.current_grid_2d[i][Dom.sub_jmax - 1]\par
+00390                     + Dom.current_grid_2d[i - 1][Dom.sub_jmax - 1]) / pow(dx, 2.0) \par
+00391 \par
+00392                 + (Dom.current_grid_2d[i][Dom.sub_jmax - 1] \par
+00393                     - 2.0 * Dom.current_grid_2d[i][Dom.sub_jmax - 1]\par
+00394                     + Dom.current_grid_2d[i][Dom.sub_jmax - 2]) / pow(dy, 2.0)) \par
+00395 \par
+00396                 + 2.0 * Dom.current_grid_2d[i][Dom.sub_jmax - 1] - Dom.old_grid_2d[i][Dom.sub_jmax - 1];\par
+00397         \}\par
+00398 \par
+00399     \}\par
+00400 \par
+00401     {\cf20 // BOTTOM BOUNDARY}\par
+00402     {\cf19 if} (Dom.neighbours[3] != -1)\par
+00403     \{\par
+00404         {\cf19 for} ({\cf18 int} j = 1; j < Dom.sub_jmax-1; j++)\par
+00405         \{\par
+00406             Dom.new_grid_2d[Dom.sub_imax-1][j] = pow(dt * c, 2.0) \par
+00407                 * ((Dom.current_grid_2d[Dom.sub_imax - 1][j] \par
+00408                     - 2.0 * Dom.current_grid_2d[Dom.sub_imax - 1][j]\par
+00409                     + Dom.current_grid_2d[Dom.sub_imax - 2][j]) / pow(dx, 2.0) \par
+00410 \par
+00411                 + (Dom.current_grid_2d[Dom.sub_imax - 1][j + 1]\par
+00412                     - 2.0 * Dom.current_grid_2d[Dom.sub_imax - 1][j]\par
+00413                     + Dom.current_grid_2d[Dom.sub_imax - 1][j - 1]) / pow(dy, 2.0)) \par
+00414 \par
+00415                 + 2.0 * Dom.current_grid_2d[Dom.sub_imax - 1][j] - Dom.old_grid_2d[Dom.sub_imax - 1][j];\par
+00416         \}\par
+00417     \}\par
+00418 \par
+00419 \}\par
+00420 \par
+00421 \par
+00422 {\cf20 // Output files after iterations for postprocessing}\par
+00423 {\cf18 void} grid_to_file(Domain<double>& Dom, {\cf18 int} out, {\cf18 int} boundary)\par
+00424 \{\par
+00425 \par
+00426     {\cf20 // Function that uses fstream to write variable to the file}\par
+00427     stringstream fname;\par
+00428     fstream f1;\par
+00429 \par
+00430     {\cf20 // Outputting into folders according to the boundary condition and number}\par
+00431     {\cf19 if} (boundary == 1)\par
+00432     \{\par
+00433         fname << {\cf22 "./output/neumann/"}<< p <<{\cf22 "_processors/"}<<{\cf22 "output_"} << out << {\cf22 "_id_"} << {\cf18 id}  << {\cf22 ".dat"};\par
+00434     \}\par
+00435     {\cf19 else} {\cf19 if} (boundary == 0)\par
+00436     \{\par
+00437         fname << {\cf22 "./output/dirichlit/"} << p << {\cf22 "_processors/"} << {\cf22 "output_"} << out << {\cf22 "_id_"} << {\cf18 id} << {\cf22 ".dat"};\par
+00438     \}\par
+00439     {\cf19 else} {\cf19 if} (boundary == 2)\par
+00440     \{\par
+00441         fname << {\cf22 "./output/periodic/"} << p << {\cf22 "_processors/"} << {\cf22 "output_"} << out << {\cf22 "_id_"} << {\cf18 id} << {\cf22 ".dat"};\par
+00442     \}\par
+00443 \par
+00444     {\cf20 // Open and write contents of each processor to the respective files}\par
+00445     f1.open(fname.str().c_str(), ios_base::out);\par
+00446 \par
+00447     {\cf19 for} ({\cf18 int} i = 1; i < Dom.sub_imax - 1; i++)\par
+00448     \{\par
+00449         {\cf20 // Writing contents of processsor grid to file}\par
+00450         {\cf19 for} ({\cf18 int} j = 1; j < Dom.sub_jmax - 1; j++)\par
+00451             f1 << Dom.current_grid_2d[i][j] << {\cf22 "\\t"};\par
+00452         f1 << endl;\par
+00453     \}\par
+00454     f1.close();\par
+00455 \}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbkpage
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+WaveSolver.h\par \pard\plain 
+{\tc\tcl2 \v AS/WaveSolver.h}
+{\xe \v AS/WaveSolver.h}
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid 00001 {\cf21 #pragma once}\par
+00002 {\cf21 #define _USE_MATH_DEFINES}\par
+00003 {\cf21 #include "MPIDatatype.h"}\par
+00004 {\cf21 #include "Domain.h"}\par
+00005 \par
+00006 \par
+00007 \par
+00008 {\cf20 //--------------------------------------------------------------------------------|}\par
+00009 {\cf20 //  FUNCTIONS DEALING WITH BOUNDRY CONDITIONS}\par
+00010 {\cf20 // -------------------------------------------------------------------------------|}\par
+00011 {\cf18 void} selectBoundary(Domain<double>& Dom, {\cf18 int} boundary);\par
+00012 \par
+00013 {\cf18 void} dirichlitBoundary(Domain<double>& Dom);\par
+00014 \par
+00015 {\cf18 void} neumannBouandry(Domain<double>& Dom);\par
+00016 \par
+00017 \par
+00018 \par
+00019 {\cf20 //--------------------------------------------------------------------------------|}\par
+00020 {\cf20 //  FUNCTIONS DEALING WITH COMMUNICATIONS}\par
+00021 {\cf20 // -------------------------------------------------------------------------------|}\par
+00022 \par
+00023 {\cf20 // Dirichlit and Neumann Communications-------------------------------------------|}\par
+00024 {\cf18 void} doMPICommunications(Domain<double>& domain_instance, \par
+00025     MPI_Data<double>& MData, {\cf18 int} count, MPI_Request* request_list);\par
+00026 \par
+00027 \par
+00028 {\cf20 //--------------------------------------------------------------------------------|}\par
+00029 {\cf20 // FUNCTION TO SET INITIAL CONDITION}\par
+00030 {\cf20 // -------------------------------------------------------------------------------|}\par
+00031 {\cf18 void} setInitialDisturbance(Domain<double> &Dom);\par
+00032 {\cf20 // Array pointer to store thenumber of splashes}\par
+00033 \par
+00034 \par
+00035 {\cf20 //--------------------------------------------------------------------------------|}\par
+00036 {\cf20 // FUNCTIONS DEALTING WITH TIME STEPPING}\par
+00037 {\cf20 // -------------------------------------------------------------------------------|}\par
+00038 {\cf20 // Solve inner domain}\par
+00039 {\cf18 void} doInnerIterations(Domain<double>&Dom);\par
+00040 \par
+00041 {\cf20 // Solve outer domain}\par
+00042 {\cf18 void} doBoundaryIterations(Domain<double> &Dom);\par
+00043 \par
+00044 \par
+00045 {\cf20 //--------------------------------------------------------------------------------|}\par
+00046 {\cf20 // TEST AND POSTPROCESSING FUNCTIONS }\par
+00047 {\cf20 // -------------------------------------------------------------------------------|}\par
+00048 {\cf18 void} fillSubDomainsWithProcessId(Domain<double>& Dom);\par
+00049 \par
+00050 {\cf18 void} grid_to_file(Domain<double>& Dom, {\cf18 int} out, {\cf18 int} boundary);\par
+}
+
+\pard\plain \sect\sbkpage
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}

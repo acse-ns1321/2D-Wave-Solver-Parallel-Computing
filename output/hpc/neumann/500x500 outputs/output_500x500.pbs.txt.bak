@@ -1,0 +1,8 @@
+#PBS -N output_500x500
+#PBS -l walltime=1:00:00
+#PBS -l select=2:ncpus=32:mpiprocs=32:mem=1GB
+
+module load intel-suite/2019.4
+module load mpi
+
+mpiexec /rds/general/user/ns1321/home/MPI_ASSESSMENT

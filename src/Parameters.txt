@@ -1,0 +1,2 @@
+(Input in this order with single spaces between the numbers)imax jmax x_max y_max t t_max dt_out c boundary(0 = Diriclet, 1 = Neumann, 2 = Periodic) disturbance(x location, y location, radius)
+100 100 10 10 0.0 30.0 0.04 1.0 2 3.0 3.0 1.0

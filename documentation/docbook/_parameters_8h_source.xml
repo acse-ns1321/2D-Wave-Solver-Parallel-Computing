@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__parameters_8h_source" xml:lang="en-US">
+<title>Parameters.h</title>
+<indexterm><primary>AS/Parameters.h</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__parameters_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00002"/>00002 
+<anchor xml:id="__parameters_8h_source_1l00003"/>00003 
+<anchor xml:id="__parameters_8h_source_1l00004"/>00004 <emphasis role="comment">//&#32;Processor&#32;Parameters</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00005"/>00005 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;id,&#32;p;
+<anchor xml:id="__parameters_8h_source_1l00006"/>00006 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;tag_num;
+<anchor xml:id="__parameters_8h_source_1l00007"/>00007 
+<anchor xml:id="__parameters_8h_source_1l00008"/>00008 <emphasis role="comment">//&#32;Domain&#32;Parameters&#32;-&#32;grid&#32;and&#32;spacing</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00009"/>00009 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;imax&#32;,&#32;jmax&#32;;
+<anchor xml:id="__parameters_8h_source_1l00010"/>00010 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;y_max&#32;,&#32;x_max&#32;,&#32;dx,&#32;dy;
+<anchor xml:id="__parameters_8h_source_1l00011"/>00011 
+<anchor xml:id="__parameters_8h_source_1l00012"/>00012 <emphasis role="comment">//&#32;Time&#32;Stepping&#32;Parameters</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00013"/>00013 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;t_max;
+<anchor xml:id="__parameters_8h_source_1l00014"/>00014 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;t,&#32;t_out,&#32;dt_out&#32;,&#32;dt;
+<anchor xml:id="__parameters_8h_source_1l00015"/>00015 
+<anchor xml:id="__parameters_8h_source_1l00016"/>00016 <emphasis role="comment">//&#32;Wave&#32;Equation&#32;parameters</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00017"/>00017 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;c;
+<anchor xml:id="__parameters_8h_source_1l00018"/>00018 
+<anchor xml:id="__parameters_8h_source_1l00019"/>00019 <emphasis role="comment">//&#32;Boundary&#32;Conditions</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00020"/>00020 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;boundary;
+<anchor xml:id="__parameters_8h_source_1l00021"/>00021 
+<anchor xml:id="__parameters_8h_source_1l00022"/>00022 <emphasis role="comment">//&#32;Initial&#32;Conditions</emphasis>
+<anchor xml:id="__parameters_8h_source_1l00023"/>00023 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;boundary;
+</programlisting></section>

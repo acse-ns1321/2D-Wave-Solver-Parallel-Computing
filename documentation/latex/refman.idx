@@ -1,0 +1,140 @@
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{5}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!Domain@{Domain}|hyperpage}{6}
+\indexentry{Domain@{Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{6}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!Domain@{Domain}|hyperpage}{6}
+\indexentry{Domain@{Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{6}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!````~Domain@{$\sim$Domain}|hyperpage}{6}
+\indexentry{````~Domain@{$\sim$Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{6}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!allocatePointers@{allocatePointers}|hyperpage}{6}
+\indexentry{allocatePointers@{allocatePointers}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{6}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!createSubDomains@{createSubDomains}|hyperpage}{6}
+\indexentry{createSubDomains@{createSubDomains}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{6}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!findNeighbours@{findNeighbours}|hyperpage}{7}
+\indexentry{findNeighbours@{findNeighbours}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{7}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!id\_from\_index@{id\_from\_index}|hyperpage}{7}
+\indexentry{id\_from\_index@{id\_from\_index}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{7}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!id\_to\_index@{id\_to\_index}|hyperpage}{7}
+\indexentry{id\_to\_index@{id\_to\_index}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{7}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!printsubDomain@{printsubDomain}|hyperpage}{7}
+\indexentry{printsubDomain@{printsubDomain}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{7}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!setSubDomainSize@{setSubDomainSize}|hyperpage}{7}
+\indexentry{setSubDomainSize@{setSubDomainSize}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{7}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!swapGridPointers@{swapGridPointers}|hyperpage}{8}
+\indexentry{swapGridPointers@{swapGridPointers}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{8}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!current\_grid\_1d@{current\_grid\_1d}|hyperpage}{8}
+\indexentry{current\_grid\_1d@{current\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{8}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!current\_grid\_2d@{current\_grid\_2d}|hyperpage}{8}
+\indexentry{current\_grid\_2d@{current\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{8}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_i@{global\_i}|hyperpage}{8}
+\indexentry{global\_i@{global\_i}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{8}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_imax@{global\_imax}|hyperpage}{8}
+\indexentry{global\_imax@{global\_imax}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{8}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_j@{global\_j}|hyperpage}{9}
+\indexentry{global\_j@{global\_j}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_jmax@{global\_jmax}|hyperpage}{9}
+\indexentry{global\_jmax@{global\_jmax}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!neighbours@{neighbours}|hyperpage}{9}
+\indexentry{neighbours@{neighbours}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!new\_grid\_1d@{new\_grid\_1d}|hyperpage}{9}
+\indexentry{new\_grid\_1d@{new\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!new\_grid\_2d@{new\_grid\_2d}|hyperpage}{9}
+\indexentry{new\_grid\_2d@{new\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!num\_columns@{num\_columns}|hyperpage}{9}
+\indexentry{num\_columns@{num\_columns}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{9}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!num\_rows@{num\_rows}|hyperpage}{10}
+\indexentry{num\_rows@{num\_rows}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!old\_grid\_1d@{old\_grid\_1d}|hyperpage}{10}
+\indexentry{old\_grid\_1d@{old\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!old\_grid\_2d@{old\_grid\_2d}|hyperpage}{10}
+\indexentry{old\_grid\_2d@{old\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!start\_column@{start\_column}|hyperpage}{10}
+\indexentry{start\_column@{start\_column}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!start\_row@{start\_row}|hyperpage}{10}
+\indexentry{start\_row@{start\_row}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_cols@{sub\_cols}|hyperpage}{10}
+\indexentry{sub\_cols@{sub\_cols}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{10}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_i@{sub\_i}|hyperpage}{11}
+\indexentry{sub\_i@{sub\_i}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{11}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_imax@{sub\_imax}|hyperpage}{11}
+\indexentry{sub\_imax@{sub\_imax}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{11}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_j@{sub\_j}|hyperpage}{11}
+\indexentry{sub\_j@{sub\_j}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{11}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_jmax@{sub\_jmax}|hyperpage}{11}
+\indexentry{sub\_jmax@{sub\_jmax}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{11}
+\indexentry{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_rows@{sub\_rows}|hyperpage}{11}
+\indexentry{sub\_rows@{sub\_rows}!Domain$<$ T $>$@{Domain$<$ T $>$}|hyperpage}{11}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{12}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!MPI\_Data@{MPI\_Data}|hyperpage}{12}
+\indexentry{MPI\_Data@{MPI\_Data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{12}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!````~MPI\_Data@{$\sim$MPI\_Data}|hyperpage}{13}
+\indexentry{````~MPI\_Data@{$\sim$MPI\_Data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{13}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!CreateMPI\_Types@{CreateMPI\_Types}|hyperpage}{13}
+\indexentry{CreateMPI\_Types@{CreateMPI\_Types}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{13}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!recv\_data@{recv\_data}|hyperpage}{13}
+\indexentry{recv\_data@{recv\_data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{13}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!send\_data@{send\_data}|hyperpage}{13}
+\indexentry{send\_data@{send\_data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{13}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Bottom\_Ghost\_Type@{Bottom\_Ghost\_Type}|hyperpage}{14}
+\indexentry{Bottom\_Ghost\_Type@{Bottom\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Bottom\_Type@{Bottom\_Type}|hyperpage}{14}
+\indexentry{Bottom\_Type@{Bottom\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Left\_Ghost\_Type@{Left\_Ghost\_Type}|hyperpage}{14}
+\indexentry{Left\_Ghost\_Type@{Left\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Left\_Type@{Left\_Type}|hyperpage}{14}
+\indexentry{Left\_Type@{Left\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Right\_Ghost\_Type@{Right\_Ghost\_Type}|hyperpage}{14}
+\indexentry{Right\_Ghost\_Type@{Right\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Right\_Type@{Right\_Type}|hyperpage}{14}
+\indexentry{Right\_Type@{Right\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{14}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Top\_Ghost\_Type@{Top\_Ghost\_Type}|hyperpage}{15}
+\indexentry{Top\_Ghost\_Type@{Top\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{15}
+\indexentry{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Top\_Type@{Top\_Type}|hyperpage}{15}
+\indexentry{Top\_Type@{Top\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}|hyperpage}{15}
+\indexentry{TimingTest@{TimingTest}|hyperpage}{15}
+\indexentry{TimingTest@{TimingTest}!timing\_domain\_setup@{timing\_domain\_setup}|hyperpage}{16}
+\indexentry{timing\_domain\_setup@{timing\_domain\_setup}!TimingTest@{TimingTest}|hyperpage}{16}
+\indexentry{TimingTest@{TimingTest}!timing\_edge\_iterations@{timing\_edge\_iterations}|hyperpage}{16}
+\indexentry{timing\_edge\_iterations@{timing\_edge\_iterations}!TimingTest@{TimingTest}|hyperpage}{16}
+\indexentry{TimingTest@{TimingTest}!timing\_inner\_iterations@{timing\_inner\_iterations}|hyperpage}{16}
+\indexentry{timing\_inner\_iterations@{timing\_inner\_iterations}!TimingTest@{TimingTest}|hyperpage}{16}
+\indexentry{TimingTest@{TimingTest}!timing\_MPI\_comms@{timing\_MPI\_comms}|hyperpage}{16}
+\indexentry{timing\_MPI\_comms@{timing\_MPI\_comms}!TimingTest@{TimingTest}|hyperpage}{16}
+\indexentry{TimingTest@{TimingTest}!timing\_MPI\_Create\_setup@{timing\_MPI\_Create\_setup}|hyperpage}{16}
+\indexentry{timing\_MPI\_Create\_setup@{timing\_MPI\_Create\_setup}!TimingTest@{TimingTest}|hyperpage}{16}
+\indexentry{TimingTest@{TimingTest}!timing\_total@{timing\_total}|hyperpage}{17}
+\indexentry{timing\_total@{timing\_total}!TimingTest@{TimingTest}|hyperpage}{17}
+\indexentry{TimingTest@{TimingTest}!domain\_setup@{domain\_setup}|hyperpage}{17}
+\indexentry{domain\_setup@{domain\_setup}!TimingTest@{TimingTest}|hyperpage}{17}
+\indexentry{TimingTest@{TimingTest}!domain\_setup\_time@{domain\_setup\_time}|hyperpage}{17}
+\indexentry{domain\_setup\_time@{domain\_setup\_time}!TimingTest@{TimingTest}|hyperpage}{17}
+\indexentry{TimingTest@{TimingTest}!edge\_iterations\_time@{edge\_iterations\_time}|hyperpage}{17}
+\indexentry{edge\_iterations\_time@{edge\_iterations\_time}!TimingTest@{TimingTest}|hyperpage}{17}
+\indexentry{TimingTest@{TimingTest}!inner\_iterations\_time@{inner\_iterations\_time}|hyperpage}{17}
+\indexentry{inner\_iterations\_time@{inner\_iterations\_time}!TimingTest@{TimingTest}|hyperpage}{17}
+\indexentry{TimingTest@{TimingTest}!mpi\_comms\_time@{mpi\_comms\_time}|hyperpage}{18}
+\indexentry{mpi\_comms\_time@{mpi\_comms\_time}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!mpi\_create\_time@{mpi\_create\_time}|hyperpage}{18}
+\indexentry{mpi\_create\_time@{mpi\_create\_time}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!time\_edge\_iterations@{time\_edge\_iterations}|hyperpage}{18}
+\indexentry{time\_edge\_iterations@{time\_edge\_iterations}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!time\_inner\_iterations@{time\_inner\_iterations}|hyperpage}{18}
+\indexentry{time\_inner\_iterations@{time\_inner\_iterations}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!time\_MPI\_comms@{time\_MPI\_comms}|hyperpage}{18}
+\indexentry{time\_MPI\_comms@{time\_MPI\_comms}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!time\_MPI\_create@{time\_MPI\_create}|hyperpage}{18}
+\indexentry{time\_MPI\_create@{time\_MPI\_create}!TimingTest@{TimingTest}|hyperpage}{18}
+\indexentry{TimingTest@{TimingTest}!time\_total@{time\_total}|hyperpage}{19}
+\indexentry{time\_total@{time\_total}!TimingTest@{TimingTest}|hyperpage}{19}
+\indexentry{TimingTest@{TimingTest}!total\_time@{total\_time}|hyperpage}{19}
+\indexentry{total\_time@{total\_time}!TimingTest@{TimingTest}|hyperpage}{19}
+\indexentry{AS/Domain.cpp@{AS/Domain.cpp}|hyperpage}{21}
+\indexentry{AS/Domain.h@{AS/Domain.h}|hyperpage}{25}
+\indexentry{AS/Main.cpp@{AS/Main.cpp}|hyperpage}{26}
+\indexentry{AS/MPIDatatype.cpp@{AS/MPIDatatype.cpp}|hyperpage}{31}
+\indexentry{AS/MPIDatatype.h@{AS/MPIDatatype.h}|hyperpage}{34}
+\indexentry{AS/Parameters.h@{AS/Parameters.h}|hyperpage}{34}
+\indexentry{AS/SerialWaveSolver.cpp@{AS/SerialWaveSolver.cpp}|hyperpage}{35}
+\indexentry{AS/TimingTest.cpp@{AS/TimingTest.cpp}|hyperpage}{36}
+\indexentry{AS/TimingTest.h@{AS/TimingTest.h}|hyperpage}{38}
+\indexentry{AS/WaveSolver.cpp@{AS/WaveSolver.cpp}|hyperpage}{38}
+\indexentry{AS/WaveSolver.h@{AS/WaveSolver.h}|hyperpage}{44}

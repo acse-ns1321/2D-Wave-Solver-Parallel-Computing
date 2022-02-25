@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_timing_test" xml:lang="en-US">
+<title>TimingTest Class Reference</title>
+<indexterm><primary>TimingTest</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_timing_test_1af3798b0bf8b58f843f2d223266ae0882">timing_domain_setup</link> (int id, int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_timing_test_1a0d0180524d7db3bf292105116c8d0ac3">timing_MPI_Create_setup</link> (int id, int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_timing_test_1a463946c60eca9d94d213dd8867858d14">timing_MPI_comms</link> (int id, int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_timing_test_1aea21edf60ba14ac74772972f885d14a4">timing_inner_iterations</link> (int id, int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_timing_test_1ab02ac779be890cbf16727644ecdd712d">timing_edge_iterations</link> (int id, int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_timing_test_1afee6f8f4a47eabe89f1dce51631b5679">timing_total</link> (int id, int p, int imax, int jmax)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1afa384ade3c7656c24746b30732a22cc0">domain_setup_time</link></para>
+</listitem>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1a77ce2c2123f15f23fe5e8b30be44aad4">total_time</link></para>
+</listitem>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1a88ef9483bcf2ffc18ed1568430668bec">mpi_create_time</link></para>
+</listitem>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1ac0f73c6fc3aecdbd5ae6ac9a090b2c36">mpi_comms_time</link></para>
+</listitem>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1a2776b9c9e2d747a54217357998c13b15">inner_iterations_time</link></para>
+</listitem>
+            <listitem><para>vector&lt; double &gt; <link linkend="_class_timing_test_1aa9089d9161913c73ee370afe7a24e443">edge_iterations_time</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1afbac74a66a5793dd7532c99d605e701d">time_MPI_create</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1a3d3d339ecb2f7bd1110fdab7f4fdd6f1">time_total</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1a95cf1ac55ac8060e4ba6a2b773a28d0e">domain_setup</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1ac92d45df0891bbc83818bba690ded146">time_MPI_comms</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1a7a499652171567736d836fc6678b45af">time_inner_iterations</link></para>
+</listitem>
+            <listitem><para>chrono::duration&lt; double &gt; <link linkend="_class_timing_test_1a747eb6de48bcd7c76c36f8286fe7108d">time_edge_iterations</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__timing_test_8h_source_1l00007">7</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_timing_test_1af3798b0bf8b58f843f2d223266ae0882"/><section>
+    <title>timing_domain_setup()</title>
+<indexterm><primary>timing_domain_setup</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_domain_setup</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_domain_setup (int id, int p)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00010">10</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1ab02ac779be890cbf16727644ecdd712d"/><section>
+    <title>timing_edge_iterations()</title>
+<indexterm><primary>timing_edge_iterations</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_edge_iterations</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_edge_iterations (int id, int p)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00063">63</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1aea21edf60ba14ac74772972f885d14a4"/><section>
+    <title>timing_inner_iterations()</title>
+<indexterm><primary>timing_inner_iterations</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_inner_iterations</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_inner_iterations (int id, int p)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00081">81</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a463946c60eca9d94d213dd8867858d14"/><section>
+    <title>timing_MPI_comms()</title>
+<indexterm><primary>timing_MPI_comms</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_MPI_comms</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_MPI_comms (int id, int p)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00045">45</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a0d0180524d7db3bf292105116c8d0ac3"/><section>
+    <title>timing_MPI_Create_setup()</title>
+<indexterm><primary>timing_MPI_Create_setup</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_MPI_Create_setup</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_MPI_Create_setup (int id, int p)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00027">27</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1afee6f8f4a47eabe89f1dce51631b5679"/><section>
+    <title>timing_total()</title>
+<indexterm><primary>timing_total</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>timing_total</secondary></indexterm>
+<para><computeroutput>void TimingTest::timing_total (int id, int p, int imax, int jmax)</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8cpp_source_1l00099">99</link> of file <link linkend="__timing_test_8cpp_source">TimingTest.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_timing_test_1a95cf1ac55ac8060e4ba6a2b773a28d0e"/><section>
+    <title>domain_setup</title>
+<indexterm><primary>domain_setup</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>domain_setup</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt; double&gt; TimingTest::domain_setup</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00031">31</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1afa384ade3c7656c24746b30732a22cc0"/><section>
+    <title>domain_setup_time</title>
+<indexterm><primary>domain_setup_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>domain_setup_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::domain_setup_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00011">11</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1aa9089d9161913c73ee370afe7a24e443"/><section>
+    <title>edge_iterations_time</title>
+<indexterm><primary>edge_iterations_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>edge_iterations_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::edge_iterations_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00027">27</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a2776b9c9e2d747a54217357998c13b15"/><section>
+    <title>inner_iterations_time</title>
+<indexterm><primary>inner_iterations_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>inner_iterations_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::inner_iterations_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00023">23</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1ac0f73c6fc3aecdbd5ae6ac9a090b2c36"/><section>
+    <title>mpi_comms_time</title>
+<indexterm><primary>mpi_comms_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>mpi_comms_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::mpi_comms_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00020">20</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a88ef9483bcf2ffc18ed1568430668bec"/><section>
+    <title>mpi_create_time</title>
+<indexterm><primary>mpi_create_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>mpi_create_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::mpi_create_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00017">17</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a747eb6de48bcd7c76c36f8286fe7108d"/><section>
+    <title>time_edge_iterations</title>
+<indexterm><primary>time_edge_iterations</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>time_edge_iterations</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt; double&gt; TimingTest::time_edge_iterations</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00034">34</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a7a499652171567736d836fc6678b45af"/><section>
+    <title>time_inner_iterations</title>
+<indexterm><primary>time_inner_iterations</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>time_inner_iterations</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt; double&gt; TimingTest::time_inner_iterations</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00033">33</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1ac92d45df0891bbc83818bba690ded146"/><section>
+    <title>time_MPI_comms</title>
+<indexterm><primary>time_MPI_comms</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>time_MPI_comms</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt;double&gt; TimingTest::time_MPI_comms</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00032">32</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1afbac74a66a5793dd7532c99d605e701d"/><section>
+    <title>time_MPI_create</title>
+<indexterm><primary>time_MPI_create</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>time_MPI_create</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt; double&gt; TimingTest::time_MPI_create</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00029">29</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a3d3d339ecb2f7bd1110fdab7f4fdd6f1"/><section>
+    <title>time_total</title>
+<indexterm><primary>time_total</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>time_total</secondary></indexterm>
+<para><computeroutput>chrono::duration&lt;double&gt; TimingTest::time_total</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00030">30</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<anchor xml:id="_class_timing_test_1a77ce2c2123f15f23fe5e8b30be44aad4"/><section>
+    <title>total_time</title>
+<indexterm><primary>total_time</primary><secondary>TimingTest</secondary></indexterm>
+<indexterm><primary>TimingTest</primary><secondary>total_time</secondary></indexterm>
+<para><computeroutput>vector&lt;double&gt; TimingTest::total_time</computeroutput></para><para>
+Definition at line <link linkend="__timing_test_8h_source_1l00014">14</link> of file <link linkend="__timing_test_8h_source">TimingTest.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AS/TimingTest.hAS/TimingTest.cpp</section>
+</section>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_p_i_datatype_8h_source" xml:lang="en-US">
+<title>MPIDatatype.h</title>
+<indexterm><primary>AS/MPIDatatype.h</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__m_p_i_datatype_8h_source_1l00001"/>00001 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;mpi.h&gt;</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;Domain.h&quot;</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00006"/>00006 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00007"/>00007 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00008"/>00008 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">class</emphasis>&#32;T&gt;
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00009"/><link linkend="_class_m_p_i___data">00009</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_m_p_i___data">MPI_Data</link>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00010"/>00010 {
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00011"/>00011 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;CONSTRUCTORS&#32;AND&#32;DESTRUCTORS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Constructor&#32;</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<link linkend="_class_m_p_i___data">MPI_Data</link>();
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Destructor&#32;to&#32;avoid&#32;explicitly&#32;deleting&#32;the&#32;memory</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<link linkend="_class_m_p_i___data">~MPI_Data</link>();
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00019"/>00019 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00020"/>00020 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;MPI&#32;DATATYPES&#32;FOR&#32;COMMUNICATIONS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;MPI&#32;TYPES&#32;for&#32;the&#32;regualr&#32;rows</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;MPI_Datatype&#32;Left_Type,&#32;Right_Type,&#32;Top_Type,&#32;Bottom_Type;
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;MPI&#32;Types&#32;for&#32;the&#32;Ghost&#32;rows</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;MPI_Datatype&#32;Left_Ghost_Type,&#32;Right_Ghost_Type,&#32;Top_Ghost_Type,&#32;Bottom_Ghost_Type;
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00028"/>00028 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00029"/>00029 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="comment">//----------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;CREATE&#32;MPI&#32;DATA&#32;TYPES&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;---------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;function&#32;to&#32;create&#32;all&#32;data&#32;types</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;CreateMPI_Types(<link linkend="_class_domain">Domain&lt;T&gt;</link>&amp;&#32;Dom);
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00035"/>00035 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="comment">//----------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;FUNCTIONS&#32;FOR&#32;COMMUNICATIONS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;---------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;send_data(<link linkend="_class_domain">Domain&lt;T&gt;</link>&amp;&#32;Dom,&#32;MPI_Datatype&#32;MDataType,&#32;<emphasis role="keywordtype">int</emphasis>&#32;neigh_to_send,&#32;MPI_Request*&#32;request);
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;recv_data(<link linkend="_class_domain">Domain&lt;T&gt;</link>&amp;&#32;Dom,&#32;MPI_Datatype&#32;MDataType,&#32;<emphasis role="keywordtype">int</emphasis>&#32;neigh_to_receive,&#32;MPI_Request*&#32;request);
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00041"/>00041 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00042"/>00042 };
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00043"/>00043 
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00044"/>00044 <emphasis role="keyword">template</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_m_p_i___data">MPI_Data&lt;double&gt;</link>;
+<anchor xml:id="__m_p_i_datatype_8h_source_1l00045"/>00045 <emphasis role="keyword">template</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_m_p_i___data">MPI_Data&lt;int&gt;</link>;
+</programlisting></section>

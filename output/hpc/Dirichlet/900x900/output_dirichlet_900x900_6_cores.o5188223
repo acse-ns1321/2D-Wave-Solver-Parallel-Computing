@@ -1,0 +1,13 @@
+
+# mpiexec: MPI Program startup
+
+
+# mpiexec: Running in job 5188223.pbs at Thu 24 Feb 01:04:05 GMT 2022
+# mpiexec: Fabric configuration:
+# mpiexec: node class CX3
+# mpiexec: libfabric provider verbs
+# mpiexec: libfabric inferface eth0
+# mpiexec: MPI-IO configuration on / gpfs
+
+# mpiexec: cannot find program []. Try using the absolute path
+

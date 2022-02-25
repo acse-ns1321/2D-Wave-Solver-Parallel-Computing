@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__main_8cpp_source" xml:lang="en-US">
+<title>Main.cpp</title>
+<indexterm><primary>AS/Main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__main_8cpp_source_1l00001"/>00001 
+<anchor xml:id="__main_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;mpi.h&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;cstdlib&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;chrono&gt;</emphasis>&#32;
+<anchor xml:id="__main_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00008"/>00008 
+<anchor xml:id="__main_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&quot;Parameters.h&quot;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;WaveSolver.h&quot;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00012"/>00012 
+<anchor xml:id="__main_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;MPIDatatype.h&quot;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;TimingTest.h&quot;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00015"/>00015 
+<anchor xml:id="__main_8cpp_source_1l00016"/>00016 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__main_8cpp_source_1l00017"/>00017 
+<anchor xml:id="__main_8cpp_source_1l00018"/>00018 <emphasis role="comment">//----------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00019"/>00019 <emphasis role="comment">//&#32;&#32;DECLARING&#32;SOFTWARE&#32;PARAMETERS&#32;FOR&#32;USE&#32;IN&#32;MAIN</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00020"/>00020 <emphasis role="comment">//----------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00021"/>00021 <emphasis role="comment">//&#32;Declaring&#32;processor&#32;parameters&#32;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00022"/>00022 <emphasis role="keywordtype">int</emphasis>&#32;id,&#32;p;
+<anchor xml:id="__main_8cpp_source_1l00023"/>00023 <emphasis role="keywordtype">int</emphasis>&#32;tag_num&#32;=&#32;0;
+<anchor xml:id="__main_8cpp_source_1l00024"/>00024 
+<anchor xml:id="__main_8cpp_source_1l00025"/>00025 <emphasis role="comment">//&#32;Declaring&#32;spatial&#32;grid&#32;parameters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00026"/>00026 <emphasis role="keywordtype">int</emphasis>&#32;imax,&#32;jmax&#32;;
+<anchor xml:id="__main_8cpp_source_1l00027"/>00027 <emphasis role="keywordtype">double</emphasis>&#32;y_max,&#32;x_max,&#32;dx,&#32;dy;
+<anchor xml:id="__main_8cpp_source_1l00028"/>00028 
+<anchor xml:id="__main_8cpp_source_1l00029"/>00029 <emphasis role="comment">//&#32;Declaring&#32;time&#32;stepping&#32;parameters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00030"/>00030 <emphasis role="keywordtype">double</emphasis>&#32;t_max;
+<anchor xml:id="__main_8cpp_source_1l00031"/>00031 <emphasis role="keywordtype">double</emphasis>&#32;t&#32;,&#32;dt;
+<anchor xml:id="__main_8cpp_source_1l00032"/>00032 
+<anchor xml:id="__main_8cpp_source_1l00033"/>00033 <emphasis role="comment">//&#32;Declaring&#32;parameters&#32;to&#32;print&#32;output&#32;to&#32;file</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00034"/>00034 <emphasis role="keywordtype">double</emphasis>&#32;t_out,&#32;dt_out;
+<anchor xml:id="__main_8cpp_source_1l00035"/>00035 
+<anchor xml:id="__main_8cpp_source_1l00036"/>00036 <emphasis role="comment">//&#32;Declaring&#32;wave&#32;equation&#32;parameters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00037"/>00037 <emphasis role="keywordtype">double</emphasis>&#32;c;
+<anchor xml:id="__main_8cpp_source_1l00038"/>00038 
+<anchor xml:id="__main_8cpp_source_1l00039"/>00039 <emphasis role="comment">//&#32;Declaring&#32;boundary&#32;condition&#32;parameters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00040"/>00040 <emphasis role="keywordtype">int</emphasis>&#32;boundary;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00041"/>00041 <emphasis role="comment">//----------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__main_8cpp_source_1l00043"/>00043 <emphasis role="keywordtype">int</emphasis>&#32;main(<emphasis role="keywordtype">int</emphasis>&#32;argc,&#32;<emphasis role="keywordtype">char</emphasis>*&#32;argv[])
+<anchor xml:id="__main_8cpp_source_1l00044"/>00044 {
+<anchor xml:id="__main_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;MPI_Init(&amp;argc,&#32;&amp;argv);
+<anchor xml:id="__main_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;MPI_Comm_rank(MPI_COMM_WORLD,&#32;&amp;<emphasis role="keywordtype">id</emphasis>);
+<anchor xml:id="__main_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;MPI_Comm_size(MPI_COMM_WORLD,&#32;&amp;p);
+<anchor xml:id="__main_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;srand(time(NULL)&#32;+&#32;<emphasis role="keywordtype">id</emphasis>&#32;*&#32;10);
+<anchor xml:id="__main_8cpp_source_1l00049"/>00049 
+<anchor xml:id="__main_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;READ&#32;FROM&#32;PARAMETERS&#32;TEXT&#32;FILE</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;-----------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00053"/>00053 
+<anchor xml:id="__main_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;fstream&#32;file;
+<anchor xml:id="__main_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;file.open(<emphasis role="stringliteral">&quot;Parameters.txt&quot;</emphasis>,&#32;std::ios::in);
+<anchor xml:id="__main_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;file&#32;is&#32;open,&#32;read&#32;the&#32;text&#32;in&#32;the&#32;file&#32;and&#32;write&#32;it&#32;out</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(file.is_open())
+<anchor xml:id="__main_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__main_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+<anchor xml:id="__main_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Skip&#32;the&#32;first&#32;line&#32;with&#32;instructions</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;getline(file,&#32;line);
+<anchor xml:id="__main_8cpp_source_1l00062"/>00062 
+<anchor xml:id="__main_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Store&#32;variables</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file&#32;&gt;&gt;&#32;imax&#32;&gt;&gt;&#32;jmax&#32;&gt;&gt;&#32;x_max&#32;&gt;&gt;&#32;y_max&#32;&gt;&gt;&#32;t&#32;&gt;&gt;&#32;t_max&#32;&gt;&gt;&#32;dt_out&#32;&gt;&gt;&#32;c&#32;&gt;&gt;&#32;boundary&#32;;
+<anchor xml:id="__main_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__main_8cpp_source_1l00066"/>00066 
+<anchor xml:id="__main_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Close&#32;file</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;file.close();
+<anchor xml:id="__main_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;WHOLE&#32;PROCESS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_total_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00074"/>00074 
+<anchor xml:id="__main_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ceate&#32;a&#32;domain&#32;object</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>*&#32;domain_instance&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_domain">Domain&lt;double&gt;</link>();
+<anchor xml:id="__main_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Setup&#32;Timing&#32;Test&#32;object</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>*&#32;Timer&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_timing_test">TimingTest</link>;
+<anchor xml:id="__main_8cpp_source_1l00080"/>00080 
+<anchor xml:id="__main_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;global&#32;parameters&#32;to&#32;our&#32;domain</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;domain_instance-&gt;global_imax&#32;=&#32;imax;
+<anchor xml:id="__main_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;domain_instance-&gt;global_jmax&#32;=&#32;jmax;
+<anchor xml:id="__main_8cpp_source_1l00085"/>00085 
+<anchor xml:id="__main_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;DOMAIN&#32;DECOMPOSITION</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_domain_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;dimeansions&#32;of&#32;the&#32;sub-domain</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;domain_instance-&gt;createSubDomains(p);
+<anchor xml:id="__main_8cpp_source_1l00094"/>00094 
+<anchor xml:id="__main_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Allocate&#32;the&#32;pointers&#32;for&#32;all&#32;the&#32;grids</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;domain_instance-&gt;setSubDomainSize();
+<anchor xml:id="__main_8cpp_source_1l00098"/>00098 
+<anchor xml:id="__main_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Allocate&#32;memory&#32;to&#32;the&#32;process&#32;domains</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;domain_instance-&gt;allocatePointers();
+<anchor xml:id="__main_8cpp_source_1l00102"/>00102 
+<anchor xml:id="__main_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;Initial&#32;Disturbance</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;setInitialDisturbance(*domain_instance);
+<anchor xml:id="__main_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="comment">//fillSubDomainsWithProcessId(*domain_instance);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00107"/>00107 
+<anchor xml:id="__main_8cpp_source_1l00108"/>00108 
+<anchor xml:id="__main_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;neighbours&#32;of&#32;the&#32;process</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;domain_instance-&gt;findNeighbours();
+<anchor xml:id="__main_8cpp_source_1l00112"/>00112 
+<anchor xml:id="__main_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_domain_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;Timer-&gt;domain_setup&#32;=&#32;time_domain_end&#32;-&#32;time_domain_start;
+<anchor xml:id="__main_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;count_domain_setup&#32;=&#32;Timer-&gt;domain_setup.count();
+<anchor xml:id="__main_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;Timer-&gt;domain_setup_time.push_back(count_domain_setup);
+<anchor xml:id="__main_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;Domain&#32;Setup&#32;Time&#32;for&#32;process&#32;&quot;&#32;&lt;&lt;&#32;&#32;id&#32;&lt;&lt;&#32;&quot;&#32;is&#32;&quot;&#32;&lt;&lt;&#32;count_domain_setup&#32;&lt;&lt;&#32;&quot;s&#32;&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_domain_setup(id,&#32;p);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00121"/>00121 
+<anchor xml:id="__main_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00123"/>00123 
+<anchor xml:id="__main_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;time&#32;stepping&#32;parameters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;dt&#32;=&#32;0.1&#32;*&#32;min(dx,&#32;dy)&#32;/&#32;c;
+<anchor xml:id="__main_8cpp_source_1l00127"/>00127 
+<anchor xml:id="__main_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;output&#32;count&#32;and&#32;iteration&#32;paramters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;out_cnt&#32;=&#32;0,&#32;it&#32;=&#32;0;
+<anchor xml:id="__main_8cpp_source_1l00131"/>00131 
+<anchor xml:id="__main_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Output&#32;Initial&#32;Disturbance&#32;to&#32;file&#32;and&#32;update&#32;the&#32;time&#32;counters</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;grid_to_file(*domain_instance,&#32;out_cnt,&#32;boundary);
+<anchor xml:id="__main_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;out_cnt++;
+<anchor xml:id="__main_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;t_out&#32;+=&#32;dt_out;
+<anchor xml:id="__main_8cpp_source_1l00137"/>00137 
+<anchor xml:id="__main_8cpp_source_1l00138"/>00138 
+<anchor xml:id="__main_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;MPI&#32;DATATYPES&#32;FOR&#32;COMMUNICATIONS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;-----------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;MPI&#32;DATATYPES</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_MPI_create_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00147"/>00147 
+<anchor xml:id="__main_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;instance&#32;of&#32;MPI_Data&#32;class&#32;to&#32;access&#32;MPI&#32;Datatypes&#32;and&#32;send&#32;and&#32;receive&#32;functions</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<link linkend="_class_m_p_i___data">MPI_Data&lt;double&gt;</link>*&#32;MData&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_class_m_p_i___data">MPI_Data&lt;double&gt;</link>();
+<anchor xml:id="__main_8cpp_source_1l00150"/>00150 
+<anchor xml:id="__main_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Create&#32;MPI&#32;Data&#32;Types</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;MData-&gt;CreateMPI_Types(*domain_instance);
+<anchor xml:id="__main_8cpp_source_1l00153"/>00153 
+<anchor xml:id="__main_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Setup&#32;requests&#32;for&#32;non-blocking&#32;communications</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;MPI_Request*&#32;request_list;
+<anchor xml:id="__main_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;request_list&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="__main_8cpp_source_1l00157"/>00157 
+<anchor xml:id="__main_8cpp_source_1l00158"/>00158 
+<anchor xml:id="__main_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_MPI_create_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;Timer-&gt;time_MPI_create&#32;=&#32;time_MPI_create_end&#32;-&#32;time_MPI_create_start;
+<anchor xml:id="__main_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;Timer-&gt;mpi_create_time.push_back(Timer-&gt;time_MPI_create.count());
+<anchor xml:id="__main_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;MPI&#32;Create&#32;Time&#32;for&#32;process&#32;&quot;&#32;&lt;&lt;&#32;&#32;id&#32;&lt;&lt;&#32;&quot;&#32;is&#32;&quot;&#32;&lt;&lt;&#32;time_MPI_create.count()&#32;&lt;&lt;&#32;&quot;s&#32;&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_MPI_Create_setup(id,&#32;p);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00166"/>00166 
+<anchor xml:id="__main_8cpp_source_1l00167"/>00167 
+<anchor xml:id="__main_8cpp_source_1l00168"/>00168 
+<anchor xml:id="__main_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(t&#32;&lt;&#32;t_max)
+<anchor xml:id="__main_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__main_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;START&#32;MPI&#32;COMMUNICATIONS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Setup&#32;counter&#32;for&#32;requests</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;count&#32;=&#32;0;
+<anchor xml:id="__main_8cpp_source_1l00177"/>00177 
+<anchor xml:id="__main_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialize&#32;with&#32;8&#32;requests&#32;-&#32;4&#32;forr&#32;send&#32;and&#32;4&#32;for&#32;receive&#32;for&#32;each&#32;process</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;request_list&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;MPI_Request[8&#32;*&#32;p];
+<anchor xml:id="__main_8cpp_source_1l00180"/>00180 
+<anchor xml:id="__main_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;MPI&#32;COMMUNICATIONS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_MPI_comms_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;MPI&#32;Communications&#32;between&#32;the&#32;processes&#32;to&#32;send&#32;and&#32;receive&#32;boundary&#32;data</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;doMPICommunications(*domain_instance,&#32;*MData,&#32;count,&#32;request_list);
+<anchor xml:id="__main_8cpp_source_1l00189"/>00189 
+<anchor xml:id="__main_8cpp_source_1l00190"/>00190 
+<anchor xml:id="__main_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_MPI_comms_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;time_MPI_comms&#32;=&#32;time_MPI_comms_end&#32;-&#32;time_MPI_comms_start;
+<anchor xml:id="__main_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;mpi_comms_time.push_back(Timer-&gt;time_MPI_comms.count());
+<anchor xml:id="__main_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;MPI&#32;Ccommunication&#32;Time&#32;for&#32;process&#32;&quot;&#32;&lt;&lt;&#32;&#32;id&#32;&lt;&lt;&#32;&quot;&#32;is&#32;&quot;&#32;&lt;&lt;&#32;time_MPI_comms.count()&#32;&lt;&lt;&#32;&quot;s&#32;&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_MPI_comms(id,&#32;p);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00198"/>00198 
+<anchor xml:id="__main_8cpp_source_1l00199"/>00199 
+<anchor xml:id="__main_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;&#32;INNER&#32;ITERATIONS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_inner_iterations_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00204"/>00204 
+<anchor xml:id="__main_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;Iterations&#32;for&#32;the&#32;Inner&#32;Domain&#32;of&#32;the&#32;process&#32;grid</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;doInnerIterations(*domain_instance);
+<anchor xml:id="__main_8cpp_source_1l00207"/>00207 
+<anchor xml:id="__main_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_inner_iterations_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;time_inner_iterations&#32;=&#32;time_inner_iterations_end&#32;-&#32;time_inner_iterations_start;
+<anchor xml:id="__main_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;inner_iterations_time.push_back(Timer-&gt;time_inner_iterations.count());
+<anchor xml:id="__main_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;Average&#32;inner&#32;iteration&#32;time&#32;for&#32;all&#32;process&#32;&quot;&#32;&lt;&lt;&#32;&#32;id&#32;&lt;&lt;&#32;&quot;&#32;is&#32;&quot;&#32;&lt;&lt;&#32;time_inner_iterations.count()&#32;&lt;&lt;&#32;&quot;s&#32;&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_inner_iterations(id,&#32;p);*/</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00215"/>00215 
+<anchor xml:id="__main_8cpp_source_1l00216"/>00216 
+<anchor xml:id="__main_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Wait&#32;for&#32;all&#32;MPI&#32;processes&#32;to&#32;finish&#32;communicating</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MPI_Waitall(count,&#32;request_list,&#32;MPI_STATUSES_IGNORE);
+<anchor xml:id="__main_8cpp_source_1l00219"/>00219 
+<anchor xml:id="__main_8cpp_source_1l00220"/>00220 
+<anchor xml:id="__main_8cpp_source_1l00221"/>00221 
+<anchor xml:id="__main_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;START&#32;TIMING&#32;FOR&#32;&#32;BOUNDARY&#32;SELECTION&#32;AND&#32;ITERATIONS</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_edge_iterations_start&#32;=&#32;chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00226"/>00226 
+<anchor xml:id="__main_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//------------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;not&#32;periodic,&#32;set&#32;Boundary&#32;Conditions&#32;depening&#32;upon&#32;selected&#32;input(above)</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(boundary&#32;!=&#32;2)&#32;<emphasis role="comment">//&#32;Used&#32;to&#32;avoid&#32;additional&#32;checks,&#32;however&#32;if&#32;its&#32;periodic,&#32;this&#32;is&#32;automatically&#32;negated</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;selectBoundary(*domain_instance,&#32;boundary);&#32;<emphasis role="comment">//&#32;This&#32;is&#32;set&#32;to&#32;neumann,&#32;since&#32;boundary&#32;=&#32;1&#32;by&#32;default</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00231"/>00231 
+<anchor xml:id="__main_8cpp_source_1l00232"/>00232 
+<anchor xml:id="__main_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Do&#32;Iterations&#32;on&#32;the&#32;Edgaes</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;doBoundaryIterations(*domain_instance);
+<anchor xml:id="__main_8cpp_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_edge_iterations_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;time_edge_iterations&#32;=&#32;time_edge_iterations_end&#32;-&#32;time_edge_iterations_start;
+<anchor xml:id="__main_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Timer-&gt;edge_iterations_time.push_back(Timer-&gt;time_edge_iterations.count());
+<anchor xml:id="__main_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;Edge&#32;iteration&#32;time&#32;for&#32;process&#32;&quot;&#32;&lt;&lt;&#32;&#32;id&#32;&lt;&lt;&#32;&quot;&#32;is&#32;&quot;&#32;&lt;&lt;&#32;time_edge_iterations.count()&#32;&lt;&lt;&#32;&quot;s&#32;&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_edge_iterations(id,&#32;p);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00243"/>00243 
+<anchor xml:id="__main_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Swap&#32;pointers&#32;of&#32;old&#32;grid&#32;with&#32;new&#32;grid&#32;and&#32;new&#32;grid&#32;with&#32;current&#32;grid</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;domain_instance-&gt;swapGridPointers(domain_instance-&gt;old_grid_2d,&#32;domain_instance-&gt;current_grid_2d,&#32;
+<anchor xml:id="__main_8cpp_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;domain_instance-&gt;new_grid_2d,&#32;domain_instance-&gt;old_grid_1d,
+<anchor xml:id="__main_8cpp_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;domain_instance-&gt;current_grid_1d,&#32;domain_instance-&gt;new_grid_1d);
+<anchor xml:id="__main_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Increment&#32;time&#32;step</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;+=&#32;dt;
+<anchor xml:id="__main_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Output&#32;the&#32;grid&#32;contents&#32;to&#32;files</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(t_out&#32;&lt;=&#32;t)
+<anchor xml:id="__main_8cpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__main_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;output:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;out_cnt&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\tt:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;t&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\titeration:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;it&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grid_to_file(*domain_instance,&#32;out_cnt,&#32;boundary);
+<anchor xml:id="__main_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out_cnt++;
+<anchor xml:id="__main_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t_out&#32;+=&#32;dt_out;
+<anchor xml:id="__main_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__main_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Incerement&#32;the&#32;number&#32;of&#32;iterations</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;it++;
+<anchor xml:id="__main_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__main_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//---------------------------------------------------------------------------------------------------------|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Delete&#32;pointer&#32;&#32;the&#32;request&#32;list</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;request_list;
+<anchor xml:id="__main_8cpp_source_1l00270"/>00270 
+<anchor xml:id="__main_8cpp_source_1l00271"/>00271 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__main_8cpp_source_1l00272"/>00272 
+<anchor xml:id="__main_8cpp_source_1l00273"/>00273 
+<anchor xml:id="__main_8cpp_source_1l00274"/>00274 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00275"/>00275 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;time_total_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="__main_8cpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;Timer-&gt;time_total&#32;=&#32;time_total_end&#32;-&#32;time_total_start;
+<anchor xml:id="__main_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;Timer-&gt;total_time.push_back(Timer-&gt;time_total.count());
+<anchor xml:id="__main_8cpp_source_1l00278"/>00278 
+<anchor xml:id="__main_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;<emphasis role="comment">//Timer-&gt;timing_total(id,&#32;p,&#32;imax,&#32;jmax);</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>&#32;==&#32;0)
+<anchor xml:id="__main_8cpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__main_8cpp_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;---------------------------------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;SIMULATION&#32;PARAMETERS&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;---------------------------------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Domain&#32;Size&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;imax&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;X&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;jmax&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Total&#32;number&#32;of&#32;processors&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;p&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;The&#32;domain&#32;divides&#32;into&quot;</emphasis>&#32;&lt;&lt;&#32;domain_instance-&gt;sub_rows&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;and&#32;&quot;</emphasis>&#32;&#32;&lt;&lt;&#32;domain_instance-&gt;sub_cols&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;columns.&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Total&#32;Time&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;t_max&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;s.&#32;Total&#32;Iterations&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;it&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Boundary&#32;Type&#32;(&#32;0&#32;=&#32;Dirichlit,&#32;1&#32;=&#32;Neumann,&#32;2&#32;=&#32;Periodic)&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;boundary&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;----------------------------------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;---------------------------------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;TIMING&#32;ANALYSIS&#32;RESULTS&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;---------------------------------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Time&#32;spech&#32;by&#32;a&#32;process&#32;to&#32;setup&#32;the&#32;domain&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;count_domain_setup&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Time&#32;spent&#32;by&#32;a&#32;process&#32;to&#32;create&#32;MPI&#32;Data&#32;Types&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Timer-&gt;time_MPI_create.count()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Time&#32;spent&#32;by&#32;a&#32;process&#32;to&#32;carry&#32;out&#32;MPI&#32;communications&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Timer-&gt;time_MPI_comms.count()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Time&#32;spent&#32;by&#32;a&#32;process&#32;to&#32;finish&#32;a&#32;set&#32;of&#32;inner&#32;iterations&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Timer-&gt;time_inner_iterations.count()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;Time&#32;spent&#32;by&#32;a&#32;process&#32;to&#32;finish&#32;a&#32;set&#32;of&#32;edge&#32;iterations&#32;:&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Timer-&gt;time_edge_iterations.count()&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Total&#32;time&#32;for&#32;a&#32;processor&#32;is&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Timer-&gt;time_total.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;s.&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="__main_8cpp_source_1l00302"/>00302 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__main_8cpp_source_1l00303"/>00303 &#32;&#32;&#32;&#32;<emphasis role="comment">//============================================================================================================|&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00304"/>00304 
+<anchor xml:id="__main_8cpp_source_1l00305"/>00305 
+<anchor xml:id="__main_8cpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;End&#32;MPI&#32;Functions</emphasis>
+<anchor xml:id="__main_8cpp_source_1l00307"/>00307 &#32;&#32;&#32;&#32;MPI_Finalize();
+<anchor xml:id="__main_8cpp_source_1l00308"/>00308 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>(0);
+<anchor xml:id="__main_8cpp_source_1l00309"/>00309 }
+</programlisting></section>

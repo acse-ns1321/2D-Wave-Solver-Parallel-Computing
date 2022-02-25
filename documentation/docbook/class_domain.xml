@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_domain" xml:lang="en-US">
+<title>Domain&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>Domain&lt; T &gt;</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_domain_1a13a3edfc9e1f939deccb0507411dd1f9">Domain</link> (int n_i, int n_j)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1ad8e5989110e5d755e5bd8b23889bbf32">allocatePointers</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1aaa8606d387ebcc8acf2fc7aab2112dff">createSubDomains</link> (int p)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1a12b82bd5fc42c754e101eb848f4dce84">setSubDomainSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1abb02e4bd437455876c2f634d28cb30f0">findNeighbours</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1aef2e0d6ddb30efb9baa9bff3e3cc0a99">id_to_index</link> (int id, int &amp;id_row, int &amp;id_column)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a23758a097bc8ec3a7fae1ca0c0b1e222">id_from_index</link> (int id_row, int id_column)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1a662ba761b940d8252d4a04cdf348adbb">swapGridPointers</link> (T **&amp;subDomain2D_1, T **&amp;subDomain2D_2, T **&amp;subDomain2D_3, T *&amp;subDomain1D_1, T *&amp;subDomain1D_2, T *&amp;subDomain1D_3)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_domain_1afe4b522a90035d6678fef37138ab3771">printsubDomain</link> (<link linkend="_class_domain">Domain</link>&lt; T &gt; *Dom)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>T * <link linkend="_class_domain_1ac3aab5c1dfd8494cb956698f4fc2d0dd">old_grid_1d</link></para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_domain_1adfe4f5cf2998b19d4da3cdb2c5b03357">current_grid_1d</link></para>
+</listitem>
+            <listitem><para>T * <link linkend="_class_domain_1a6b9bcd19a747bcf3310815cdb2bea465">new_grid_1d</link></para>
+</listitem>
+            <listitem><para>T ** <link linkend="_class_domain_1aa0af3fdb4d31e5b6ade12a8a23b82b08">old_grid_2d</link></para>
+</listitem>
+            <listitem><para>T ** <link linkend="_class_domain_1aa489676eced291711833ce4731474d7b">current_grid_2d</link></para>
+</listitem>
+            <listitem><para>T ** <link linkend="_class_domain_1a2d6ae554dda5ac23c1f03b1b0b599bd6">new_grid_2d</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a6d12f6b6ab8a7b8d7ded76c99a93a968">sub_imax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a83f1a527f544722b1e5838bfa52d1c6d">sub_jmax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a76f81fcd82e0b4269efb82bb51efd4a7">sub_i</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1aec162c65d209a255a402b68cc7651a67">sub_j</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1afdaa56651f5bbab1f425ff2f212f8457">sub_rows</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a82d751da28729af5f88a3c1f9d6526ef">sub_cols</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1ac83242bdeef8a966e1c1f5c4df5f8500">global_imax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a03cac3d41652baf31d17653b1aff8951">global_jmax</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1aa41235cd497de5c6c3129c356e2844d6">global_i</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a6e0ffd4927c778ab59f700b50139c6e2">global_j</link></para>
+</listitem>
+            <listitem><para>int * <link linkend="_class_domain_1a6bd248dd33bb86776359fdf7de887d50">start_row</link></para>
+</listitem>
+            <listitem><para>int * <link linkend="_class_domain_1a0bde3d7c1ba15555bc7354044c11ac77">num_rows</link></para>
+</listitem>
+            <listitem><para>int * <link linkend="_class_domain_1a295c31b21fd744bae46343a35b2c51a3">start_column</link></para>
+</listitem>
+            <listitem><para>int * <link linkend="_class_domain_1a957853f799ea224587f4af553ab02cd7">num_columns</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_domain_1a526e3845a02c93e515a3665cf7baca33">neighbours</link> [4]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class T&gt;
+class Domain&lt; T &gt;</title></simplesect>
+<para>
+Definition at line <link linkend="__domain_8h_source_1l00011">11</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_domain_1aff5a8b4c86fde01e8ed3a883f7ce4a17"/><section>
+    <title>Domain()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Domain</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>Domain</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_domain">Domain</link>&lt; T &gt;<link linkend="_class_domain">::Domain</link></computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00017">17</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a13a3edfc9e1f939deccb0507411dd1f9"/><section>
+    <title>Domain()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Domain</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>Domain</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_domain">Domain</link>&lt; T &gt;<link linkend="_class_domain">::Domain</link> (int n_i, int n_j)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00041">41</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a959fdd4deb921abbec236f96570fa6d4"/><section>
+    <title>~Domain()</title>
+<indexterm><primary>~Domain</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>~Domain</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_class_domain">Domain</link>&lt; T &gt;::~<link linkend="_class_domain">Domain</link></computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00047">47</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_domain_1ad8e5989110e5d755e5bd8b23889bbf32"/><section>
+    <title>allocatePointers()</title>
+<indexterm><primary>allocatePointers</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>allocatePointers</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::allocatePointers</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00062">62</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aaa8606d387ebcc8acf2fc7aab2112dff"/><section>
+    <title>createSubDomains()</title>
+<indexterm><primary>createSubDomains</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>createSubDomains</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::createSubDomains (int p)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00112">112</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1abb02e4bd437455876c2f634d28cb30f0"/><section>
+    <title>findNeighbours()</title>
+<indexterm><primary>findNeighbours</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>findNeighbours</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::findNeighbours</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00194">194</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a23758a097bc8ec3a7fae1ca0c0b1e222"/><section>
+    <title>id_from_index()</title>
+<indexterm><primary>id_from_index</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>id_from_index</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::id_from_index (int id_row, int id_column)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00289">289</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aef2e0d6ddb30efb9baa9bff3e3cc0a99"/><section>
+    <title>id_to_index()</title>
+<indexterm><primary>id_to_index</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>id_to_index</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::id_to_index (int id, int &amp; id_row, int &amp; id_column)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00282">282</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1afe4b522a90035d6678fef37138ab3771"/><section>
+    <title>printsubDomain()</title>
+<indexterm><primary>printsubDomain</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>printsubDomain</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::printsubDomain (<link linkend="_class_domain">Domain</link>&lt; T &gt; * Dom)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00301">301</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a12b82bd5fc42c754e101eb848f4dce84"/><section>
+    <title>setSubDomainSize()</title>
+<indexterm><primary>setSubDomainSize</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>setSubDomainSize</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::setSubDomainSize</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00138">138</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a662ba761b940d8252d4a04cdf348adbb"/><section>
+    <title>swapGridPointers()</title>
+<indexterm><primary>swapGridPointers</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>swapGridPointers</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_class_domain">Domain</link>&lt; T &gt;::swapGridPointers (T **&amp; subDomain2D_1, T **&amp; subDomain2D_2, T **&amp; subDomain2D_3, T *&amp; subDomain1D_1, T *&amp; subDomain1D_2, T *&amp; subDomain1D_3)</computeroutput></para><para>
+Definition at line <link linkend="__domain_8cpp_source_1l00089">89</link> of file <link linkend="__domain_8cpp_source">Domain.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_domain_1adfe4f5cf2998b19d4da3cdb2c5b03357"/><section>
+    <title>current_grid_1d</title>
+<indexterm><primary>current_grid_1d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>current_grid_1d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T* <link linkend="_class_domain">Domain</link>&lt; T &gt;::current_grid_1d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00032">32</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aa489676eced291711833ce4731474d7b"/><section>
+    <title>current_grid_2d</title>
+<indexterm><primary>current_grid_2d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>current_grid_2d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T** <link linkend="_class_domain">Domain</link>&lt; T &gt;::current_grid_2d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00036">36</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aa41235cd497de5c6c3129c356e2844d6"/><section>
+    <title>global_i</title>
+<indexterm><primary>global_i</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>global_i</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::global_i</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00059">59</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1ac83242bdeef8a966e1c1f5c4df5f8500"/><section>
+    <title>global_imax</title>
+<indexterm><primary>global_imax</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>global_imax</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::global_imax</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00056">56</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a6e0ffd4927c778ab59f700b50139c6e2"/><section>
+    <title>global_j</title>
+<indexterm><primary>global_j</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>global_j</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::global_j</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00060">60</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a03cac3d41652baf31d17653b1aff8951"/><section>
+    <title>global_jmax</title>
+<indexterm><primary>global_jmax</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>global_jmax</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::global_jmax</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00057">57</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a526e3845a02c93e515a3665cf7baca33"/><section>
+    <title>neighbours</title>
+<indexterm><primary>neighbours</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>neighbours</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::neighbours[4]</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00085">85</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a6b9bcd19a747bcf3310815cdb2bea465"/><section>
+    <title>new_grid_1d</title>
+<indexterm><primary>new_grid_1d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>new_grid_1d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T* <link linkend="_class_domain">Domain</link>&lt; T &gt;::new_grid_1d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00033">33</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a2d6ae554dda5ac23c1f03b1b0b599bd6"/><section>
+    <title>new_grid_2d</title>
+<indexterm><primary>new_grid_2d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>new_grid_2d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T** <link linkend="_class_domain">Domain</link>&lt; T &gt;::new_grid_2d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00037">37</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a957853f799ea224587f4af553ab02cd7"/><section>
+    <title>num_columns</title>
+<indexterm><primary>num_columns</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>num_columns</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int* <link linkend="_class_domain">Domain</link>&lt; T &gt;::num_columns</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00066">66</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a0bde3d7c1ba15555bc7354044c11ac77"/><section>
+    <title>num_rows</title>
+<indexterm><primary>num_rows</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>num_rows</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int* <link linkend="_class_domain">Domain</link>&lt; T &gt;::num_rows</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00064">64</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1ac3aab5c1dfd8494cb956698f4fc2d0dd"/><section>
+    <title>old_grid_1d</title>
+<indexterm><primary>old_grid_1d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>old_grid_1d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T* <link linkend="_class_domain">Domain</link>&lt; T &gt;::old_grid_1d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00031">31</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aa0af3fdb4d31e5b6ade12a8a23b82b08"/><section>
+    <title>old_grid_2d</title>
+<indexterm><primary>old_grid_2d</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>old_grid_2d</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T** <link linkend="_class_domain">Domain</link>&lt; T &gt;::old_grid_2d</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00035">35</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a295c31b21fd744bae46343a35b2c51a3"/><section>
+    <title>start_column</title>
+<indexterm><primary>start_column</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>start_column</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int* <link linkend="_class_domain">Domain</link>&lt; T &gt;::start_column</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00065">65</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a6bd248dd33bb86776359fdf7de887d50"/><section>
+    <title>start_row</title>
+<indexterm><primary>start_row</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>start_row</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int* <link linkend="_class_domain">Domain</link>&lt; T &gt;::start_row</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00063">63</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a82d751da28729af5f88a3c1f9d6526ef"/><section>
+    <title>sub_cols</title>
+<indexterm><primary>sub_cols</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_cols</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_cols</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00048">48</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a76f81fcd82e0b4269efb82bb51efd4a7"/><section>
+    <title>sub_i</title>
+<indexterm><primary>sub_i</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_i</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_i</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00044">44</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a6d12f6b6ab8a7b8d7ded76c99a93a968"/><section>
+    <title>sub_imax</title>
+<indexterm><primary>sub_imax</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_imax</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_imax</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00041">41</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1aec162c65d209a255a402b68cc7651a67"/><section>
+    <title>sub_j</title>
+<indexterm><primary>sub_j</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_j</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_j</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00045">45</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1a83f1a527f544722b1e5838bfa52d1c6d"/><section>
+    <title>sub_jmax</title>
+<indexterm><primary>sub_jmax</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_jmax</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_jmax</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00042">42</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<anchor xml:id="_class_domain_1afdaa56651f5bbab1f425ff2f212f8457"/><section>
+    <title>sub_rows</title>
+<indexterm><primary>sub_rows</primary><secondary>Domain&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>Domain&lt; T &gt;</primary><secondary>sub_rows</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>int <link linkend="_class_domain">Domain</link>&lt; T &gt;::sub_rows</computeroutput></para><para>
+Definition at line <link linkend="__domain_8h_source_1l00047">47</link> of file <link linkend="__domain_8h_source">Domain.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+AS/Domain.hAS/Domain.cpp</section>
+</section>

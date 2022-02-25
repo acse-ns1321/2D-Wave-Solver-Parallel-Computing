@@ -1,0 +1,197 @@
+\hypertarget{class_m_p_i___data}{}\doxysection{MPI\+\_\+\+Data\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_m_p_i___data}\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_m_p_i___data_aa2a90ea007a8cf163ac9b78ebc7827c1}{Create\+MPI\+\_\+\+Types}} (\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&Dom)
+\item 
+void \mbox{\hyperlink{class_m_p_i___data_a6b6d697a7c4b38e1e401b4366f28599a}{send\+\_\+data}} (\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&Dom, MPI\+\_\+\+Datatype MData\+Type, int neigh\+\_\+to\+\_\+send, MPI\+\_\+\+Request $\ast$request)
+\item 
+void \mbox{\hyperlink{class_m_p_i___data_a621723b0d26482dfb851dfe90d448c13}{recv\+\_\+data}} (\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&Dom, MPI\+\_\+\+Datatype MData\+Type, int neigh\+\_\+to\+\_\+receive, MPI\+\_\+\+Request $\ast$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_a8237c32ef7d0c58ebde81e050dc0a46c}{Left\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_ae29e3cf9723ceb6c6bc05ad7dcfaa85f}{Right\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_ad12e51caf0cab8132612049e4c1ce4cf}{Top\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_af04781807b033d818ad6e0cfd00f31c5}{Bottom\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_ad5b1c04d76f93a9b3e74bf93384c655c}{Left\+\_\+\+Ghost\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_acdb2380b8c57d18cb4e4d2125ab2c2a1}{Right\+\_\+\+Ghost\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_aa0dd66d724a54574a0dfbf37ff9229dc}{Top\+\_\+\+Ghost\+\_\+\+Type}}
+\item 
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data_aeff5795e880ed70fb34c234a6e009050}{Bottom\+\_\+\+Ghost\+\_\+\+Type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class MPI\+\_\+\+Data$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00009}{9}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_m_p_i___data_a21a4979771bf974b4fc878d318e7c4bd}\label{class_m_p_i___data_a21a4979771bf974b4fc878d318e7c4bd}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!MPI\_Data@{MPI\_Data}}
+\index{MPI\_Data@{MPI\_Data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MPI\_Data()}{MPI\_Data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\mbox{\hyperlink{class_m_p_i___data}{\+::\+MPI\+\_\+\+Data}}}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_m_p_i_datatype_8cpp_source}{MPIDatatype.\+cpp}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_a4d11da26833da85eff1d86c26944ed39}\label{class_m_p_i___data_a4d11da26833da85eff1d86c26944ed39}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!````~MPI\_Data@{$\sim$MPI\_Data}}
+\index{````~MPI\_Data@{$\sim$MPI\_Data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MPI\_Data()}{~MPI\_Data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_m_p_i_datatype_8cpp_source}{MPIDatatype.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_p_i___data_aa2a90ea007a8cf163ac9b78ebc7827c1}\label{class_m_p_i___data_aa2a90ea007a8cf163ac9b78ebc7827c1}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!CreateMPI\_Types@{CreateMPI\_Types}}
+\index{CreateMPI\_Types@{CreateMPI\_Types}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{CreateMPI\_Types()}{CreateMPI\_Types()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Create\+MPI\+\_\+\+Types (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&}]{Dom }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{_m_p_i_datatype_8cpp_source}{MPIDatatype.\+cpp}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_a621723b0d26482dfb851dfe90d448c13}\label{class_m_p_i___data_a621723b0d26482dfb851dfe90d448c13}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!recv\_data@{recv\_data}}
+\index{recv\_data@{recv\_data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{recv\_data()}{recv\_data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::recv\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&}]{Dom,  }\item[{MPI\+\_\+\+Datatype}]{MData\+Type,  }\item[{int}]{neigh\+\_\+to\+\_\+receive,  }\item[{MPI\+\_\+\+Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{_m_p_i_datatype_8cpp_source}{MPIDatatype.\+cpp}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_a6b6d697a7c4b38e1e401b4366f28599a}\label{class_m_p_i___data_a6b6d697a7c4b38e1e401b4366f28599a}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!send\_data@{send\_data}}
+\index{send\_data@{send\_data}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{send\_data()}{send\_data()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::send\+\_\+data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ \&}]{Dom,  }\item[{MPI\+\_\+\+Datatype}]{MData\+Type,  }\item[{int}]{neigh\+\_\+to\+\_\+send,  }\item[{MPI\+\_\+\+Request $\ast$}]{request }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{_m_p_i_datatype_8cpp_source}{MPIDatatype.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_m_p_i___data_aeff5795e880ed70fb34c234a6e009050}\label{class_m_p_i___data_aeff5795e880ed70fb34c234a6e009050}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Bottom\_Ghost\_Type@{Bottom\_Ghost\_Type}}
+\index{Bottom\_Ghost\_Type@{Bottom\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Bottom\_Ghost\_Type}{Bottom\_Ghost\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Bottom\+\_\+\+Ghost\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00027}{27}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_af04781807b033d818ad6e0cfd00f31c5}\label{class_m_p_i___data_af04781807b033d818ad6e0cfd00f31c5}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Bottom\_Type@{Bottom\_Type}}
+\index{Bottom\_Type@{Bottom\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Bottom\_Type}{Bottom\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Bottom\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00025}{25}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_ad5b1c04d76f93a9b3e74bf93384c655c}\label{class_m_p_i___data_ad5b1c04d76f93a9b3e74bf93384c655c}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Left\_Ghost\_Type@{Left\_Ghost\_Type}}
+\index{Left\_Ghost\_Type@{Left\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Left\_Ghost\_Type}{Left\_Ghost\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Left\+\_\+\+Ghost\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00027}{27}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_a8237c32ef7d0c58ebde81e050dc0a46c}\label{class_m_p_i___data_a8237c32ef7d0c58ebde81e050dc0a46c}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Left\_Type@{Left\_Type}}
+\index{Left\_Type@{Left\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Left\_Type}{Left\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Left\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00025}{25}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_acdb2380b8c57d18cb4e4d2125ab2c2a1}\label{class_m_p_i___data_acdb2380b8c57d18cb4e4d2125ab2c2a1}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Right\_Ghost\_Type@{Right\_Ghost\_Type}}
+\index{Right\_Ghost\_Type@{Right\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Right\_Ghost\_Type}{Right\_Ghost\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Right\+\_\+\+Ghost\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00027}{27}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_ae29e3cf9723ceb6c6bc05ad7dcfaa85f}\label{class_m_p_i___data_ae29e3cf9723ceb6c6bc05ad7dcfaa85f}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Right\_Type@{Right\_Type}}
+\index{Right\_Type@{Right\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Right\_Type}{Right\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Right\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00025}{25}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_aa0dd66d724a54574a0dfbf37ff9229dc}\label{class_m_p_i___data_aa0dd66d724a54574a0dfbf37ff9229dc}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Top\_Ghost\_Type@{Top\_Ghost\_Type}}
+\index{Top\_Ghost\_Type@{Top\_Ghost\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Top\_Ghost\_Type}{Top\_Ghost\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Top\+\_\+\+Ghost\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00027}{27}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+\mbox{\Hypertarget{class_m_p_i___data_ad12e51caf0cab8132612049e4c1ce4cf}\label{class_m_p_i___data_ad12e51caf0cab8132612049e4c1ce4cf}} 
+\index{MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}!Top\_Type@{Top\_Type}}
+\index{Top\_Type@{Top\_Type}!MPI\_Data$<$ T $>$@{MPI\_Data$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Top\_Type}{Top\_Type}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+MPI\+\_\+\+Datatype \mbox{\hyperlink{class_m_p_i___data}{MPI\+\_\+\+Data}}$<$ T $>$\+::\+Top\+\_\+\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_m_p_i_datatype_8h_source_l00025}{25}} of file \mbox{\hyperlink{_m_p_i_datatype_8h_source}{MPIDatatype.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+AS/MPIDatatype.\+h\item 
+AS/MPIDatatype.\+cpp\end{DoxyCompactItemize}

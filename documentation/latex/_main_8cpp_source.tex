@@ -1,0 +1,315 @@
+\hypertarget{_main_8cpp_source}{}\doxysection{Main.\+cpp}
+\label{_main_8cpp_source}\index{AS/Main.cpp@{AS/Main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <mpi.h>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <chrono>} }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}Parameters.h"{}}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}WaveSolver.h"{}}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include "{}MPIDatatype.h"{}}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include "{}TimingTest.h"{}}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00016}00016 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00018}00018 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00019}00019 \textcolor{comment}{//  DECLARING SOFTWARE PARAMETERS FOR USE IN MAIN}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00020}00020 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00021}00021 \textcolor{comment}{// Declaring processor parameters }}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00022}00022 \textcolor{keywordtype}{int} id, p;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00023}00023 \textcolor{keywordtype}{int} tag\_num = 0;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00025}00025 \textcolor{comment}{// Declaring spatial grid parameters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00026}00026 \textcolor{keywordtype}{int} imax, jmax ;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00027}00027 \textcolor{keywordtype}{double} y\_max, x\_max, dx, dy;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00029}00029 \textcolor{comment}{// Declaring time stepping parameters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00030}00030 \textcolor{keywordtype}{double} t\_max;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00031}00031 \textcolor{keywordtype}{double} t , dt;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00033}00033 \textcolor{comment}{// Declaring parameters to print output to file}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00034}00034 \textcolor{keywordtype}{double} t\_out, dt\_out;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00036}00036 \textcolor{comment}{// Declaring wave equation parameters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00037}00037 \textcolor{keywordtype}{double} c;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00039}00039 \textcolor{comment}{// Declaring boundary condition parameters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00040}00040 \textcolor{keywordtype}{int} boundary;                   }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00041}00041 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00043}00043 \textcolor{keywordtype}{int} main(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}* argv[])}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00044}00044 \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00045}00045     MPI\_Init(\&argc, \&argv);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00046}00046     MPI\_Comm\_rank(MPI\_COMM\_WORLD, \&\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00047}00047     MPI\_Comm\_size(MPI\_COMM\_WORLD, \&p);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00048}00048     srand(time(NULL) + \textcolor{keywordtype}{id} * 10);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00050}00050     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00051}00051     \textcolor{comment}{//  READ FROM PARAMETERS TEXT FILE}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00052}00052     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00054}00054     fstream file;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00055}00055     file.open(\textcolor{stringliteral}{"{}Parameters.txt"{}}, std::ios::in);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00056}00056     \textcolor{comment}{// If file is open, read the text in the file and write it out}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00057}00057     \textcolor{keywordflow}{if} (file.is\_open())}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00058}00058     \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00059}00059         std::string line;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00060}00060         \textcolor{comment}{// Skip the first line with instructions}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00061}00061         getline(file, line);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00063}00063         \textcolor{comment}{// Store variables}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00064}00064         file >> imax >> jmax >> x\_max >> y\_max >> t >> t\_max >> dt\_out >> c >> boundary ;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00065}00065     \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00067}00067     \textcolor{comment}{// Close file}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00068}00068     file.close();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00069}00069     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00070}00070     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00071}00071     \textcolor{comment}{// START TIMING FOR WHOLE PROCESS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00072}00072     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00073}00073     \textcolor{keyword}{auto} time\_total\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00075}00075     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00076}00076     \textcolor{comment}{// Ceate a domain object}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00077}00077     \textcolor{keyword}{auto}* domain\_instance = \textcolor{keyword}{new} \mbox{\hyperlink{class_domain}{Domain<double>}}();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00078}00078     \textcolor{comment}{// Setup Timing Test object}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00079}00079     \textcolor{keyword}{auto}* Timer = \textcolor{keyword}{new} \mbox{\hyperlink{class_timing_test}{TimingTest}};}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00081}00081     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00082}00082     \textcolor{comment}{// Set global parameters to our domain}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00083}00083     domain\_instance-\/>global\_imax = imax;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00084}00084     domain\_instance-\/>global\_jmax = jmax;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00086}00086     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00087}00087     \textcolor{comment}{// START TIMING FOR DOMAIN DECOMPOSITION}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00088}00088     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00089}00089      \textcolor{keyword}{auto} time\_domain\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00090}00090     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00091}00091     }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00092}00092     \textcolor{comment}{// Find the dimeansions of the sub-\/domain}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00093}00093     domain\_instance-\/>createSubDomains(p);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00095}00095     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00096}00096     \textcolor{comment}{// Allocate the pointers for all the grids}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00097}00097     domain\_instance-\/>setSubDomainSize();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00098}00098 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00099}00099     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00100}00100     \textcolor{comment}{// Allocate memory to the process domains}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00101}00101     domain\_instance-\/>allocatePointers();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00103}00103     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00104}00104     \textcolor{comment}{// Set Initial Disturbance}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00105}00105     setInitialDisturbance(*domain\_instance);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00106}00106     \textcolor{comment}{//fillSubDomainsWithProcessId(*domain\_instance);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00109}00109     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00110}00110     \textcolor{comment}{// Find the neighbours of the process}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00111}00111     domain\_instance-\/>findNeighbours();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00113}00113     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00114}00114     \textcolor{keyword}{auto} time\_domain\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00115}00115     Timer-\/>domain\_setup = time\_domain\_end -\/ time\_domain\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00116}00116     \textcolor{keyword}{auto} count\_domain\_setup = Timer-\/>domain\_setup.count();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00117}00117     Timer-\/>domain\_setup\_time.push\_back(count\_domain\_setup);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00118}00118     \textcolor{comment}{//cout << "{}Domain Setup Time for process "{} <<  id << "{} is "{} << count\_domain\_setup << "{}s "{} << endl;}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00119}00119     \textcolor{comment}{//Timer-\/>timing\_domain\_setup(id, p);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00120}00120     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00122}00122     }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00124}00124     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00125}00125     \textcolor{comment}{// Calculate time stepping parameters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00126}00126     dt = 0.1 * min(dx, dy) / c;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00128}00128     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00129}00129     \textcolor{comment}{// Set output count and iteration paramters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00130}00130     \textcolor{keywordtype}{int} out\_cnt = 0, it = 0;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00132}00132     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00133}00133     \textcolor{comment}{// Output Initial Disturbance to file and update the time counters}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00134}00134     grid\_to\_file(*domain\_instance, out\_cnt, boundary);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00135}00135     out\_cnt++;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00136}00136     t\_out += dt\_out;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00139}00139     \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00140}00140     \textcolor{comment}{//  MPI DATATYPES FOR COMMUNICATIONS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00141}00141     \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00142}00142     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00143}00143     \textcolor{comment}{// START TIMING FOR MPI DATATYPES}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00144}00144     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00145}00145     \textcolor{keyword}{auto} time\_MPI\_create\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00146}00146     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00148}00148     \textcolor{comment}{// Create instance of MPI\_Data class to access MPI Datatypes and send and receive functions}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00149}00149     \mbox{\hyperlink{class_m_p_i___data}{MPI\_Data<double>}}* MData = \textcolor{keyword}{new} \mbox{\hyperlink{class_m_p_i___data}{MPI\_Data<double>}}();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00151}00151     \textcolor{comment}{// Create MPI Data Types}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00152}00152     MData-\/>CreateMPI\_Types(*domain\_instance);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00154}00154     \textcolor{comment}{// Setup requests for non-\/blocking communications}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00155}00155     MPI\_Request* request\_list;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00156}00156     request\_list = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00158}00158 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00159}00159     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00160}00160     \textcolor{keyword}{auto} time\_MPI\_create\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00161}00161     Timer-\/>time\_MPI\_create = time\_MPI\_create\_end -\/ time\_MPI\_create\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00162}00162     Timer-\/>mpi\_create\_time.push\_back(Timer-\/>time\_MPI\_create.count());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00163}00163     \textcolor{comment}{//cout << "{}MPI Create Time for process "{} <<  id << "{} is "{} << time\_MPI\_create.count() << "{}s "{} << endl;}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00164}00164     \textcolor{comment}{//Timer-\/>timing\_MPI\_Create\_setup(id, p);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00165}00165     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00169}00169     \textcolor{keywordflow}{while} (t < t\_max)}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00170}00170     \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00171}00171         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00172}00172         \textcolor{comment}{//      START MPI COMMUNICATIONS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00173}00173         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00174}00174     }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00175}00175         \textcolor{comment}{// Setup counter for requests}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00176}00176         \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00178}00178         \textcolor{comment}{// Initialize with 8 requests -\/ 4 forr send and 4 for receive for each process}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00179}00179         request\_list = \textcolor{keyword}{new} MPI\_Request[8 * p];}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00181}00181         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00182}00182         \textcolor{comment}{// START TIMING FOR MPI COMMUNICATIONS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00183}00183         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00184}00184         \textcolor{keyword}{auto} time\_MPI\_comms\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00185}00185         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00186}00186         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00187}00187         \textcolor{comment}{// Do MPI Communications between the processes to send and receive boundary data}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00188}00188         doMPICommunications(*domain\_instance, *MData, count, request\_list);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00191}00191         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00192}00192         \textcolor{keyword}{auto} time\_MPI\_comms\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00193}00193         Timer-\/>time\_MPI\_comms = time\_MPI\_comms\_end -\/ time\_MPI\_comms\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00194}00194         Timer-\/>mpi\_comms\_time.push\_back(Timer-\/>time\_MPI\_comms.count());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00195}00195         \textcolor{comment}{//cout << "{}MPI Ccommunication Time for process "{} <<  id << "{} is "{} << time\_MPI\_comms.count() << "{}s "{} << endl;}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00196}00196         \textcolor{comment}{//Timer-\/>timing\_MPI\_comms(id, p);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00197}00197         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00198}00198 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00199}00199 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00200}00200         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00201}00201         \textcolor{comment}{// START TIMING FOR  INNER ITERATIONS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00202}00202         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00203}00203         \textcolor{keyword}{auto} time\_inner\_iterations\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00204}00204 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00205}00205         \textcolor{comment}{// Do Iterations for the Inner Domain of the process grid}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00206}00206         doInnerIterations(*domain\_instance);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00208}00208         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00209}00209         \textcolor{keyword}{auto} time\_inner\_iterations\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00210}00210         Timer-\/>time\_inner\_iterations = time\_inner\_iterations\_end -\/ time\_inner\_iterations\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00211}00211         Timer-\/>inner\_iterations\_time.push\_back(Timer-\/>time\_inner\_iterations.count());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00212}00212         \textcolor{comment}{//cout << "{}Average inner iteration time for all process "{} <<  id << "{} is "{} << time\_inner\_iterations.count() << "{}s "{} << endl;}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00213}00213         \textcolor{comment}{//Timer-\/>timing\_inner\_iterations(id, p);*/}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00214}00214         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00217}00217         \textcolor{comment}{// Wait for all MPI processes to finish communicating}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00218}00218         MPI\_Waitall(count, request\_list, MPI\_STATUSES\_IGNORE);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00219}00219 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00220}00220 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00222}00222         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00223}00223         \textcolor{comment}{// START TIMING FOR  BOUNDARY SELECTION AND ITERATIONS}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00224}00224         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00225}00225         \textcolor{keyword}{auto} time\_edge\_iterations\_start = chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00227}00227         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00228}00228         \textcolor{comment}{// If not periodic, set Boundary Conditions depening upon selected input(above)}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00229}00229         \textcolor{keywordflow}{if}(boundary != 2) \textcolor{comment}{// Used to avoid additional checks, however if its periodic, this is automatically negated}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00230}00230             selectBoundary(*domain\_instance, boundary); \textcolor{comment}{// This is set to neumann, since boundary = 1 by default}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00233}00233         \textcolor{comment}{// Do Iterations on the Edgaes}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00234}00234         doBoundaryIterations(*domain\_instance);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00235}00235         }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00236}00236         \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00237}00237         \textcolor{keyword}{auto} time\_edge\_iterations\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00238}00238         Timer-\/>time\_edge\_iterations = time\_edge\_iterations\_end -\/ time\_edge\_iterations\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00239}00239         Timer-\/>edge\_iterations\_time.push\_back(Timer-\/>time\_edge\_iterations.count());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00240}00240         \textcolor{comment}{//cout << "{}Edge iteration time for process "{} <<  id << "{} is "{} << time\_edge\_iterations.count() << "{}s "{} << endl;}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00241}00241         \textcolor{comment}{//Timer-\/>timing\_edge\_iterations(id, p);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00242}00242         \textcolor{comment}{//============================================================================================================|     }}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00244}00244         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00245}00245         \textcolor{comment}{// Swap pointers of old grid with new grid and new grid with current grid}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00246}00246         domain\_instance-\/>swapGridPointers(domain\_instance-\/>old\_grid\_2d, domain\_instance-\/>current\_grid\_2d, }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00247}00247                                           domain\_instance-\/>new\_grid\_2d, domain\_instance-\/>old\_grid\_1d,}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00248}00248                                           domain\_instance-\/>current\_grid\_1d, domain\_instance-\/>new\_grid\_1d);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00249}00249         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00250}00250         \textcolor{comment}{// Increment time step}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00251}00251         t += dt;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00252}00252         }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00253}00253         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00254}00254         \textcolor{comment}{// Output the grid contents to files}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00255}00255         \textcolor{keywordflow}{if} (t\_out <= t)}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00256}00256         \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00257}00257             cout << \textcolor{stringliteral}{"{}output: "{}} << out\_cnt << \textcolor{stringliteral}{"{}\(\backslash\)tt: "{}} << t << \textcolor{stringliteral}{"{}\(\backslash\)titeration: "{}} << it << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00258}00258             grid\_to\_file(*domain\_instance, out\_cnt, boundary);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00259}00259             out\_cnt++;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00260}00260             t\_out += dt\_out;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00261}00261         \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00262}00262         }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00263}00263         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00264}00264         \textcolor{comment}{// Incerement the number of iterations}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00265}00265         it++;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00266}00266         }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00267}00267         \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00268}00268         \textcolor{comment}{// Delete pointer  the request list}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00269}00269         \textcolor{keyword}{delete}[] request\_list;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00271}00271     \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00272}00272 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00273}00273 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00274}00274     \textcolor{comment}{//============================================================================================================|}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00275}00275     \textcolor{keyword}{auto} time\_total\_end = std::chrono::high\_resolution\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00276}00276     Timer-\/>time\_total = time\_total\_end -\/ time\_total\_start;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00277}00277     Timer-\/>total\_time.push\_back(Timer-\/>time\_total.count());}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00278}00278 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00279}00279     \textcolor{comment}{//Timer-\/>timing\_total(id, p, imax, jmax);}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00280}00280     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == 0)}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00281}00281     \{}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00282}00282         cout << \textcolor{stringliteral}{"{} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00283}00283         cout << \textcolor{stringliteral}{"{} SIMULATION PARAMETERS  "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00284}00284         cout << \textcolor{stringliteral}{"{} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00285}00285         cout << \textcolor{stringliteral}{"{} Domain Size : "{}} << imax << \textcolor{stringliteral}{"{} X "{}} << jmax << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00286}00286         cout << \textcolor{stringliteral}{"{} Total number of processors "{}} << p << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00287}00287         cout << \textcolor{stringliteral}{"{} The domain divides into"{}} << domain\_instance-\/>sub\_rows << \textcolor{stringliteral}{"{} and "{}}  << domain\_instance-\/>sub\_cols << \textcolor{stringliteral}{"{} columns."{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00288}00288         cout << \textcolor{stringliteral}{"{} Total Time : "{}} << t\_max << \textcolor{stringliteral}{"{}s. Total Iterations : "{}} << it << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00289}00289         cout << \textcolor{stringliteral}{"{} Boundary Type ( 0 = Dirichlit, 1 = Neumann, 2 = Periodic) : "{}} << boundary << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00290}00290         cout << \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00291}00291         cout << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00292}00292         cout << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00293}00293         cout << \textcolor{stringliteral}{"{} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00294}00294         cout << \textcolor{stringliteral}{"{} TIMING ANALYSIS RESULTS "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00295}00295         cout << \textcolor{stringliteral}{"{} -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00296}00296         cout << \textcolor{stringliteral}{"{} Time spech by a process to setup the domain : "{}} << count\_domain\_setup << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00297}00297         cout << \textcolor{stringliteral}{"{} Time spent by a process to create MPI Data Types : "{}} << Timer-\/>time\_MPI\_create.count() << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00298}00298         cout << \textcolor{stringliteral}{"{} Time spent by a process to carry out MPI communications : "{}} << Timer-\/>time\_MPI\_comms.count() << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00299}00299         cout << \textcolor{stringliteral}{"{} Time spent by a process to finish a set of inner iterations : "{}} << Timer-\/>time\_inner\_iterations.count() << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00300}00300         cout << \textcolor{stringliteral}{"{} Time spent by a process to finish a set of edge iterations :  "{}} << Timer-\/>time\_edge\_iterations.count() << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00301}00301         cout << \textcolor{stringliteral}{"{}Total time for a processor is : "{}} << Timer-\/>time\_total.count() << \textcolor{stringliteral}{"{}s. "{}} << endl;}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00302}00302     \}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00303}00303     \textcolor{comment}{//============================================================================================================|     }}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00304}00304 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00305}00305 }
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00306}00306     \textcolor{comment}{// End MPI Functions}}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00307}00307     MPI\_Finalize();}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00308}00308     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{\Hypertarget{_main_8cpp_source_l00309}00309 \}}
+
+\end{DoxyCode}

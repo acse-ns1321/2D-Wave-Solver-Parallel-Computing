@@ -1,0 +1,243 @@
+\hypertarget{class_timing_test}{}\doxysection{Timing\+Test Class Reference}
+\label{class_timing_test}\index{TimingTest@{TimingTest}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_timing_test_af3798b0bf8b58f843f2d223266ae0882}{timing\+\_\+domain\+\_\+setup}} (int id, int p)
+\item 
+void \mbox{\hyperlink{class_timing_test_a0d0180524d7db3bf292105116c8d0ac3}{timing\+\_\+\+MPI\+\_\+\+Create\+\_\+setup}} (int id, int p)
+\item 
+void \mbox{\hyperlink{class_timing_test_a463946c60eca9d94d213dd8867858d14}{timing\+\_\+\+MPI\+\_\+comms}} (int id, int p)
+\item 
+void \mbox{\hyperlink{class_timing_test_aea21edf60ba14ac74772972f885d14a4}{timing\+\_\+inner\+\_\+iterations}} (int id, int p)
+\item 
+void \mbox{\hyperlink{class_timing_test_ab02ac779be890cbf16727644ecdd712d}{timing\+\_\+edge\+\_\+iterations}} (int id, int p)
+\item 
+void \mbox{\hyperlink{class_timing_test_afee6f8f4a47eabe89f1dce51631b5679}{timing\+\_\+total}} (int id, int p, int imax, int jmax)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_afa384ade3c7656c24746b30732a22cc0}{domain\+\_\+setup\+\_\+time}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_a77ce2c2123f15f23fe5e8b30be44aad4}{total\+\_\+time}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_a88ef9483bcf2ffc18ed1568430668bec}{mpi\+\_\+create\+\_\+time}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_ac0f73c6fc3aecdbd5ae6ac9a090b2c36}{mpi\+\_\+comms\+\_\+time}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_a2776b9c9e2d747a54217357998c13b15}{inner\+\_\+iterations\+\_\+time}}
+\item 
+vector$<$ double $>$ \mbox{\hyperlink{class_timing_test_aa9089d9161913c73ee370afe7a24e443}{edge\+\_\+iterations\+\_\+time}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_afbac74a66a5793dd7532c99d605e701d}{time\+\_\+\+MPI\+\_\+create}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_a3d3d339ecb2f7bd1110fdab7f4fdd6f1}{time\+\_\+total}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_a95cf1ac55ac8060e4ba6a2b773a28d0e}{domain\+\_\+setup}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_ac92d45df0891bbc83818bba690ded146}{time\+\_\+\+MPI\+\_\+comms}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_a7a499652171567736d836fc6678b45af}{time\+\_\+inner\+\_\+iterations}}
+\item 
+chrono\+::duration$<$ double $>$ \mbox{\hyperlink{class_timing_test_a747eb6de48bcd7c76c36f8286fe7108d}{time\+\_\+edge\+\_\+iterations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00007}{7}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timing_test_af3798b0bf8b58f843f2d223266ae0882}\label{class_timing_test_af3798b0bf8b58f843f2d223266ae0882}} 
+\index{TimingTest@{TimingTest}!timing\_domain\_setup@{timing\_domain\_setup}}
+\index{timing\_domain\_setup@{timing\_domain\_setup}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_domain\_setup()}{timing\_domain\_setup()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+domain\+\_\+setup (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+\mbox{\Hypertarget{class_timing_test_ab02ac779be890cbf16727644ecdd712d}\label{class_timing_test_ab02ac779be890cbf16727644ecdd712d}} 
+\index{TimingTest@{TimingTest}!timing\_edge\_iterations@{timing\_edge\_iterations}}
+\index{timing\_edge\_iterations@{timing\_edge\_iterations}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_edge\_iterations()}{timing\_edge\_iterations()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+edge\+\_\+iterations (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+\mbox{\Hypertarget{class_timing_test_aea21edf60ba14ac74772972f885d14a4}\label{class_timing_test_aea21edf60ba14ac74772972f885d14a4}} 
+\index{TimingTest@{TimingTest}!timing\_inner\_iterations@{timing\_inner\_iterations}}
+\index{timing\_inner\_iterations@{timing\_inner\_iterations}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_inner\_iterations()}{timing\_inner\_iterations()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+inner\+\_\+iterations (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+\mbox{\Hypertarget{class_timing_test_a463946c60eca9d94d213dd8867858d14}\label{class_timing_test_a463946c60eca9d94d213dd8867858d14}} 
+\index{TimingTest@{TimingTest}!timing\_MPI\_comms@{timing\_MPI\_comms}}
+\index{timing\_MPI\_comms@{timing\_MPI\_comms}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_MPI\_comms()}{timing\_MPI\_comms()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+\+MPI\+\_\+comms (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+\mbox{\Hypertarget{class_timing_test_a0d0180524d7db3bf292105116c8d0ac3}\label{class_timing_test_a0d0180524d7db3bf292105116c8d0ac3}} 
+\index{TimingTest@{TimingTest}!timing\_MPI\_Create\_setup@{timing\_MPI\_Create\_setup}}
+\index{timing\_MPI\_Create\_setup@{timing\_MPI\_Create\_setup}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_MPI\_Create\_setup()}{timing\_MPI\_Create\_setup()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+\+MPI\+\_\+\+Create\+\_\+setup (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+\mbox{\Hypertarget{class_timing_test_afee6f8f4a47eabe89f1dce51631b5679}\label{class_timing_test_afee6f8f4a47eabe89f1dce51631b5679}} 
+\index{TimingTest@{TimingTest}!timing\_total@{timing\_total}}
+\index{timing\_total@{timing\_total}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{timing\_total()}{timing\_total()}}
+{\footnotesize\ttfamily void Timing\+Test\+::timing\+\_\+total (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{p,  }\item[{int}]{imax,  }\item[{int}]{jmax }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{_timing_test_8cpp_source}{Timing\+Test.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timing_test_a95cf1ac55ac8060e4ba6a2b773a28d0e}\label{class_timing_test_a95cf1ac55ac8060e4ba6a2b773a28d0e}} 
+\index{TimingTest@{TimingTest}!domain\_setup@{domain\_setup}}
+\index{domain\_setup@{domain\_setup}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{domain\_setup}{domain\_setup}}
+{\footnotesize\ttfamily chrono\+::duration$<$ double$>$ Timing\+Test\+::domain\+\_\+setup}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00031}{31}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_afa384ade3c7656c24746b30732a22cc0}\label{class_timing_test_afa384ade3c7656c24746b30732a22cc0}} 
+\index{TimingTest@{TimingTest}!domain\_setup\_time@{domain\_setup\_time}}
+\index{domain\_setup\_time@{domain\_setup\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{domain\_setup\_time}{domain\_setup\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::domain\+\_\+setup\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00011}{11}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_aa9089d9161913c73ee370afe7a24e443}\label{class_timing_test_aa9089d9161913c73ee370afe7a24e443}} 
+\index{TimingTest@{TimingTest}!edge\_iterations\_time@{edge\_iterations\_time}}
+\index{edge\_iterations\_time@{edge\_iterations\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{edge\_iterations\_time}{edge\_iterations\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::edge\+\_\+iterations\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00027}{27}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a2776b9c9e2d747a54217357998c13b15}\label{class_timing_test_a2776b9c9e2d747a54217357998c13b15}} 
+\index{TimingTest@{TimingTest}!inner\_iterations\_time@{inner\_iterations\_time}}
+\index{inner\_iterations\_time@{inner\_iterations\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{inner\_iterations\_time}{inner\_iterations\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::inner\+\_\+iterations\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00023}{23}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_ac0f73c6fc3aecdbd5ae6ac9a090b2c36}\label{class_timing_test_ac0f73c6fc3aecdbd5ae6ac9a090b2c36}} 
+\index{TimingTest@{TimingTest}!mpi\_comms\_time@{mpi\_comms\_time}}
+\index{mpi\_comms\_time@{mpi\_comms\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{mpi\_comms\_time}{mpi\_comms\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::mpi\+\_\+comms\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00020}{20}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a88ef9483bcf2ffc18ed1568430668bec}\label{class_timing_test_a88ef9483bcf2ffc18ed1568430668bec}} 
+\index{TimingTest@{TimingTest}!mpi\_create\_time@{mpi\_create\_time}}
+\index{mpi\_create\_time@{mpi\_create\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{mpi\_create\_time}{mpi\_create\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::mpi\+\_\+create\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00017}{17}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a747eb6de48bcd7c76c36f8286fe7108d}\label{class_timing_test_a747eb6de48bcd7c76c36f8286fe7108d}} 
+\index{TimingTest@{TimingTest}!time\_edge\_iterations@{time\_edge\_iterations}}
+\index{time\_edge\_iterations@{time\_edge\_iterations}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{time\_edge\_iterations}{time\_edge\_iterations}}
+{\footnotesize\ttfamily chrono\+::duration$<$ double$>$ Timing\+Test\+::time\+\_\+edge\+\_\+iterations}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00034}{34}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a7a499652171567736d836fc6678b45af}\label{class_timing_test_a7a499652171567736d836fc6678b45af}} 
+\index{TimingTest@{TimingTest}!time\_inner\_iterations@{time\_inner\_iterations}}
+\index{time\_inner\_iterations@{time\_inner\_iterations}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{time\_inner\_iterations}{time\_inner\_iterations}}
+{\footnotesize\ttfamily chrono\+::duration$<$ double$>$ Timing\+Test\+::time\+\_\+inner\+\_\+iterations}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00033}{33}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_ac92d45df0891bbc83818bba690ded146}\label{class_timing_test_ac92d45df0891bbc83818bba690ded146}} 
+\index{TimingTest@{TimingTest}!time\_MPI\_comms@{time\_MPI\_comms}}
+\index{time\_MPI\_comms@{time\_MPI\_comms}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{time\_MPI\_comms}{time\_MPI\_comms}}
+{\footnotesize\ttfamily chrono\+::duration$<$double$>$ Timing\+Test\+::time\+\_\+\+MPI\+\_\+comms}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00032}{32}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_afbac74a66a5793dd7532c99d605e701d}\label{class_timing_test_afbac74a66a5793dd7532c99d605e701d}} 
+\index{TimingTest@{TimingTest}!time\_MPI\_create@{time\_MPI\_create}}
+\index{time\_MPI\_create@{time\_MPI\_create}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{time\_MPI\_create}{time\_MPI\_create}}
+{\footnotesize\ttfamily chrono\+::duration$<$ double$>$ Timing\+Test\+::time\+\_\+\+MPI\+\_\+create}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00029}{29}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a3d3d339ecb2f7bd1110fdab7f4fdd6f1}\label{class_timing_test_a3d3d339ecb2f7bd1110fdab7f4fdd6f1}} 
+\index{TimingTest@{TimingTest}!time\_total@{time\_total}}
+\index{time\_total@{time\_total}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{time\_total}{time\_total}}
+{\footnotesize\ttfamily chrono\+::duration$<$double$>$ Timing\+Test\+::time\+\_\+total}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00030}{30}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+\mbox{\Hypertarget{class_timing_test_a77ce2c2123f15f23fe5e8b30be44aad4}\label{class_timing_test_a77ce2c2123f15f23fe5e8b30be44aad4}} 
+\index{TimingTest@{TimingTest}!total\_time@{total\_time}}
+\index{total\_time@{total\_time}!TimingTest@{TimingTest}}
+\doxysubsubsection{\texorpdfstring{total\_time}{total\_time}}
+{\footnotesize\ttfamily vector$<$double$>$ Timing\+Test\+::total\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{_timing_test_8h_source_l00014}{14}} of file \mbox{\hyperlink{_timing_test_8h_source}{Timing\+Test.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+AS/Timing\+Test.\+h\item 
+AS/Timing\+Test.\+cpp\end{DoxyCompactItemize}

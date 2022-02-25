@@ -1,0 +1,444 @@
+\hypertarget{class_domain}{}\doxysection{Domain\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_domain}\index{Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_domain_a13a3edfc9e1f939deccb0507411dd1f9}{Domain}} (int n\+\_\+i, int n\+\_\+j)
+\item 
+void \mbox{\hyperlink{class_domain_ad8e5989110e5d755e5bd8b23889bbf32}{allocate\+Pointers}} ()
+\item 
+void \mbox{\hyperlink{class_domain_aaa8606d387ebcc8acf2fc7aab2112dff}{create\+Sub\+Domains}} (int p)
+\item 
+void \mbox{\hyperlink{class_domain_a12b82bd5fc42c754e101eb848f4dce84}{set\+Sub\+Domain\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_domain_abb02e4bd437455876c2f634d28cb30f0}{find\+Neighbours}} ()
+\item 
+void \mbox{\hyperlink{class_domain_aef2e0d6ddb30efb9baa9bff3e3cc0a99}{id\+\_\+to\+\_\+index}} (int id, int \&id\+\_\+row, int \&id\+\_\+column)
+\item 
+int \mbox{\hyperlink{class_domain_a23758a097bc8ec3a7fae1ca0c0b1e222}{id\+\_\+from\+\_\+index}} (int id\+\_\+row, int id\+\_\+column)
+\item 
+void \mbox{\hyperlink{class_domain_a662ba761b940d8252d4a04cdf348adbb}{swap\+Grid\+Pointers}} (T $\ast$$\ast$\&sub\+Domain2\+D\+\_\+1, T $\ast$$\ast$\&sub\+Domain2\+D\+\_\+2, T $\ast$$\ast$\&sub\+Domain2\+D\+\_\+3, T $\ast$\&sub\+Domain1\+D\+\_\+1, T $\ast$\&sub\+Domain1\+D\+\_\+2, T $\ast$\&sub\+Domain1\+D\+\_\+3)
+\item 
+void \mbox{\hyperlink{class_domain_afe4b522a90035d6678fef37138ab3771}{printsub\+Domain}} (\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ $\ast$Dom)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{class_domain_ac3aab5c1dfd8494cb956698f4fc2d0dd}{old\+\_\+grid\+\_\+1d}}
+\item 
+T $\ast$ \mbox{\hyperlink{class_domain_adfe4f5cf2998b19d4da3cdb2c5b03357}{current\+\_\+grid\+\_\+1d}}
+\item 
+T $\ast$ \mbox{\hyperlink{class_domain_a6b9bcd19a747bcf3310815cdb2bea465}{new\+\_\+grid\+\_\+1d}}
+\item 
+T $\ast$$\ast$ \mbox{\hyperlink{class_domain_aa0af3fdb4d31e5b6ade12a8a23b82b08}{old\+\_\+grid\+\_\+2d}}
+\item 
+T $\ast$$\ast$ \mbox{\hyperlink{class_domain_aa489676eced291711833ce4731474d7b}{current\+\_\+grid\+\_\+2d}}
+\item 
+T $\ast$$\ast$ \mbox{\hyperlink{class_domain_a2d6ae554dda5ac23c1f03b1b0b599bd6}{new\+\_\+grid\+\_\+2d}}
+\item 
+int \mbox{\hyperlink{class_domain_a6d12f6b6ab8a7b8d7ded76c99a93a968}{sub\+\_\+imax}}
+\item 
+int \mbox{\hyperlink{class_domain_a83f1a527f544722b1e5838bfa52d1c6d}{sub\+\_\+jmax}}
+\item 
+int \mbox{\hyperlink{class_domain_a76f81fcd82e0b4269efb82bb51efd4a7}{sub\+\_\+i}}
+\item 
+int \mbox{\hyperlink{class_domain_aec162c65d209a255a402b68cc7651a67}{sub\+\_\+j}}
+\item 
+int \mbox{\hyperlink{class_domain_afdaa56651f5bbab1f425ff2f212f8457}{sub\+\_\+rows}}
+\item 
+int \mbox{\hyperlink{class_domain_a82d751da28729af5f88a3c1f9d6526ef}{sub\+\_\+cols}}
+\item 
+int \mbox{\hyperlink{class_domain_ac83242bdeef8a966e1c1f5c4df5f8500}{global\+\_\+imax}}
+\item 
+int \mbox{\hyperlink{class_domain_a03cac3d41652baf31d17653b1aff8951}{global\+\_\+jmax}}
+\item 
+int \mbox{\hyperlink{class_domain_aa41235cd497de5c6c3129c356e2844d6}{global\+\_\+i}}
+\item 
+int \mbox{\hyperlink{class_domain_a6e0ffd4927c778ab59f700b50139c6e2}{global\+\_\+j}}
+\item 
+int $\ast$ \mbox{\hyperlink{class_domain_a6bd248dd33bb86776359fdf7de887d50}{start\+\_\+row}}
+\item 
+int $\ast$ \mbox{\hyperlink{class_domain_a0bde3d7c1ba15555bc7354044c11ac77}{num\+\_\+rows}}
+\item 
+int $\ast$ \mbox{\hyperlink{class_domain_a295c31b21fd744bae46343a35b2c51a3}{start\+\_\+column}}
+\item 
+int $\ast$ \mbox{\hyperlink{class_domain_a957853f799ea224587f4af553ab02cd7}{num\+\_\+columns}}
+\item 
+int \mbox{\hyperlink{class_domain_a526e3845a02c93e515a3665cf7baca33}{neighbours}} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Domain$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00011}{11}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_domain_aff5a8b4c86fde01e8ed3a883f7ce4a17}\label{class_domain_aff5a8b4c86fde01e8ed3a883f7ce4a17}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!Domain@{Domain}}
+\index{Domain@{Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Domain()}{Domain()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\mbox{\hyperlink{class_domain}{\+::\+Domain}}}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_a13a3edfc9e1f939deccb0507411dd1f9}\label{class_domain_a13a3edfc9e1f939deccb0507411dd1f9}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!Domain@{Domain}}
+\index{Domain@{Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Domain()}{Domain()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\mbox{\hyperlink{class_domain}{\+::\+Domain}} (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+i,  }\item[{int}]{n\+\_\+j }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_a959fdd4deb921abbec236f96570fa6d4}\label{class_domain_a959fdd4deb921abbec236f96570fa6d4}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!````~Domain@{$\sim$Domain}}
+\index{````~Domain@{$\sim$Domain}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Domain()}{~Domain()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_domain}{Domain}}}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_domain_ad8e5989110e5d755e5bd8b23889bbf32}\label{class_domain_ad8e5989110e5d755e5bd8b23889bbf32}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!allocatePointers@{allocatePointers}}
+\index{allocatePointers@{allocatePointers}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{allocatePointers()}{allocatePointers()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::allocate\+Pointers}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_aaa8606d387ebcc8acf2fc7aab2112dff}\label{class_domain_aaa8606d387ebcc8acf2fc7aab2112dff}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!createSubDomains@{createSubDomains}}
+\index{createSubDomains@{createSubDomains}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{createSubDomains()}{createSubDomains()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::create\+Sub\+Domains (\begin{DoxyParamCaption}\item[{int}]{p }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_abb02e4bd437455876c2f634d28cb30f0}\label{class_domain_abb02e4bd437455876c2f634d28cb30f0}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!findNeighbours@{findNeighbours}}
+\index{findNeighbours@{findNeighbours}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{findNeighbours()}{findNeighbours()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::find\+Neighbours}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00194}{194}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_a23758a097bc8ec3a7fae1ca0c0b1e222}\label{class_domain_a23758a097bc8ec3a7fae1ca0c0b1e222}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!id\_from\_index@{id\_from\_index}}
+\index{id\_from\_index@{id\_from\_index}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{id\_from\_index()}{id\_from\_index()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::id\+\_\+from\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+row,  }\item[{int}]{id\+\_\+column }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00289}{289}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_aef2e0d6ddb30efb9baa9bff3e3cc0a99}\label{class_domain_aef2e0d6ddb30efb9baa9bff3e3cc0a99}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!id\_to\_index@{id\_to\_index}}
+\index{id\_to\_index@{id\_to\_index}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{id\_to\_index()}{id\_to\_index()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::id\+\_\+to\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int \&}]{id\+\_\+row,  }\item[{int \&}]{id\+\_\+column }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00282}{282}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_afe4b522a90035d6678fef37138ab3771}\label{class_domain_afe4b522a90035d6678fef37138ab3771}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!printsubDomain@{printsubDomain}}
+\index{printsubDomain@{printsubDomain}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printsubDomain()}{printsubDomain()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::printsub\+Domain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$ $\ast$}]{Dom }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00301}{301}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_a12b82bd5fc42c754e101eb848f4dce84}\label{class_domain_a12b82bd5fc42c754e101eb848f4dce84}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!setSubDomainSize@{setSubDomainSize}}
+\index{setSubDomainSize@{setSubDomainSize}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setSubDomainSize()}{setSubDomainSize()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::set\+Sub\+Domain\+Size}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+\mbox{\Hypertarget{class_domain_a662ba761b940d8252d4a04cdf348adbb}\label{class_domain_a662ba761b940d8252d4a04cdf348adbb}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!swapGridPointers@{swapGridPointers}}
+\index{swapGridPointers@{swapGridPointers}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swapGridPointers()}{swapGridPointers()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::swap\+Grid\+Pointers (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$\&}]{sub\+Domain2\+D\+\_\+1,  }\item[{T $\ast$$\ast$\&}]{sub\+Domain2\+D\+\_\+2,  }\item[{T $\ast$$\ast$\&}]{sub\+Domain2\+D\+\_\+3,  }\item[{T $\ast$\&}]{sub\+Domain1\+D\+\_\+1,  }\item[{T $\ast$\&}]{sub\+Domain1\+D\+\_\+2,  }\item[{T $\ast$\&}]{sub\+Domain1\+D\+\_\+3 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{_domain_8cpp_source}{Domain.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_domain_adfe4f5cf2998b19d4da3cdb2c5b03357}\label{class_domain_adfe4f5cf2998b19d4da3cdb2c5b03357}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!current\_grid\_1d@{current\_grid\_1d}}
+\index{current\_grid\_1d@{current\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{current\_grid\_1d}{current\_grid\_1d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::current\+\_\+grid\+\_\+1d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00032}{32}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_aa489676eced291711833ce4731474d7b}\label{class_domain_aa489676eced291711833ce4731474d7b}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!current\_grid\_2d@{current\_grid\_2d}}
+\index{current\_grid\_2d@{current\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{current\_grid\_2d}{current\_grid\_2d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::current\+\_\+grid\+\_\+2d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00036}{36}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_aa41235cd497de5c6c3129c356e2844d6}\label{class_domain_aa41235cd497de5c6c3129c356e2844d6}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_i@{global\_i}}
+\index{global\_i@{global\_i}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{global\_i}{global\_i}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::global\+\_\+i}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00059}{59}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_ac83242bdeef8a966e1c1f5c4df5f8500}\label{class_domain_ac83242bdeef8a966e1c1f5c4df5f8500}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_imax@{global\_imax}}
+\index{global\_imax@{global\_imax}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{global\_imax}{global\_imax}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::global\+\_\+imax}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00056}{56}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a6e0ffd4927c778ab59f700b50139c6e2}\label{class_domain_a6e0ffd4927c778ab59f700b50139c6e2}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_j@{global\_j}}
+\index{global\_j@{global\_j}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{global\_j}{global\_j}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::global\+\_\+j}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00060}{60}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a03cac3d41652baf31d17653b1aff8951}\label{class_domain_a03cac3d41652baf31d17653b1aff8951}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!global\_jmax@{global\_jmax}}
+\index{global\_jmax@{global\_jmax}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{global\_jmax}{global\_jmax}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::global\+\_\+jmax}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00057}{57}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a526e3845a02c93e515a3665cf7baca33}\label{class_domain_a526e3845a02c93e515a3665cf7baca33}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!neighbours@{neighbours}}
+\index{neighbours@{neighbours}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{neighbours}{neighbours}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::neighbours\mbox{[}4\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00085}{85}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a6b9bcd19a747bcf3310815cdb2bea465}\label{class_domain_a6b9bcd19a747bcf3310815cdb2bea465}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!new\_grid\_1d@{new\_grid\_1d}}
+\index{new\_grid\_1d@{new\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{new\_grid\_1d}{new\_grid\_1d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::new\+\_\+grid\+\_\+1d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00033}{33}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a2d6ae554dda5ac23c1f03b1b0b599bd6}\label{class_domain_a2d6ae554dda5ac23c1f03b1b0b599bd6}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!new\_grid\_2d@{new\_grid\_2d}}
+\index{new\_grid\_2d@{new\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{new\_grid\_2d}{new\_grid\_2d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::new\+\_\+grid\+\_\+2d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00037}{37}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a957853f799ea224587f4af553ab02cd7}\label{class_domain_a957853f799ea224587f4af553ab02cd7}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!num\_columns@{num\_columns}}
+\index{num\_columns@{num\_columns}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num\_columns}{num\_columns}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::num\+\_\+columns}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00066}{66}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a0bde3d7c1ba15555bc7354044c11ac77}\label{class_domain_a0bde3d7c1ba15555bc7354044c11ac77}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!num\_rows@{num\_rows}}
+\index{num\_rows@{num\_rows}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num\_rows}{num\_rows}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::num\+\_\+rows}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00064}{64}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_ac3aab5c1dfd8494cb956698f4fc2d0dd}\label{class_domain_ac3aab5c1dfd8494cb956698f4fc2d0dd}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!old\_grid\_1d@{old\_grid\_1d}}
+\index{old\_grid\_1d@{old\_grid\_1d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{old\_grid\_1d}{old\_grid\_1d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::old\+\_\+grid\+\_\+1d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00031}{31}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_aa0af3fdb4d31e5b6ade12a8a23b82b08}\label{class_domain_aa0af3fdb4d31e5b6ade12a8a23b82b08}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!old\_grid\_2d@{old\_grid\_2d}}
+\index{old\_grid\_2d@{old\_grid\_2d}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{old\_grid\_2d}{old\_grid\_2d}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::old\+\_\+grid\+\_\+2d}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00035}{35}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a295c31b21fd744bae46343a35b2c51a3}\label{class_domain_a295c31b21fd744bae46343a35b2c51a3}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!start\_column@{start\_column}}
+\index{start\_column@{start\_column}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{start\_column}{start\_column}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::start\+\_\+column}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00065}{65}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a6bd248dd33bb86776359fdf7de887d50}\label{class_domain_a6bd248dd33bb86776359fdf7de887d50}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!start\_row@{start\_row}}
+\index{start\_row@{start\_row}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{start\_row}{start\_row}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int$\ast$ \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::start\+\_\+row}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00063}{63}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a82d751da28729af5f88a3c1f9d6526ef}\label{class_domain_a82d751da28729af5f88a3c1f9d6526ef}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_cols@{sub\_cols}}
+\index{sub\_cols@{sub\_cols}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_cols}{sub\_cols}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+cols}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00048}{48}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a76f81fcd82e0b4269efb82bb51efd4a7}\label{class_domain_a76f81fcd82e0b4269efb82bb51efd4a7}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_i@{sub\_i}}
+\index{sub\_i@{sub\_i}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_i}{sub\_i}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+i}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00044}{44}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a6d12f6b6ab8a7b8d7ded76c99a93a968}\label{class_domain_a6d12f6b6ab8a7b8d7ded76c99a93a968}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_imax@{sub\_imax}}
+\index{sub\_imax@{sub\_imax}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_imax}{sub\_imax}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+imax}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00041}{41}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_aec162c65d209a255a402b68cc7651a67}\label{class_domain_aec162c65d209a255a402b68cc7651a67}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_j@{sub\_j}}
+\index{sub\_j@{sub\_j}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_j}{sub\_j}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+j}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00045}{45}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_a83f1a527f544722b1e5838bfa52d1c6d}\label{class_domain_a83f1a527f544722b1e5838bfa52d1c6d}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_jmax@{sub\_jmax}}
+\index{sub\_jmax@{sub\_jmax}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_jmax}{sub\_jmax}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+jmax}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00042}{42}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+\mbox{\Hypertarget{class_domain_afdaa56651f5bbab1f425ff2f212f8457}\label{class_domain_afdaa56651f5bbab1f425ff2f212f8457}} 
+\index{Domain$<$ T $>$@{Domain$<$ T $>$}!sub\_rows@{sub\_rows}}
+\index{sub\_rows@{sub\_rows}!Domain$<$ T $>$@{Domain$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sub\_rows}{sub\_rows}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{class_domain}{Domain}}$<$ T $>$\+::sub\+\_\+rows}
+
+
+
+Definition at line \mbox{\hyperlink{_domain_8h_source_l00047}{47}} of file \mbox{\hyperlink{_domain_8h_source}{Domain.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+AS/Domain.\+h\item 
+AS/Domain.\+cpp\end{DoxyCompactItemize}

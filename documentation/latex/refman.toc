@@ -1,0 +1,95 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Domain$<$ T $>$ Class Template Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Domain()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Domain()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{6}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}$\sim $Domain()}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}allocatePointers()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}createSubDomains()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}findNeighbours()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}id\_from\_index()}{7}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}id\_to\_index()}{7}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}printsubDomain()}{7}{subsubsection.3.1.3.6}%
+\contentsline {subsubsection}{\numberline {3.1.3.7}setSubDomainSize()}{8}{subsubsection.3.1.3.7}%
+\contentsline {subsubsection}{\numberline {3.1.3.8}swapGridPointers()}{8}{subsubsection.3.1.3.8}%
+\contentsline {subsection}{\numberline {3.1.4}Member Data Documentation}{8}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.4.1}current\_grid\_1d}{8}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {3.1.4.2}current\_grid\_2d}{8}{subsubsection.3.1.4.2}%
+\contentsline {subsubsection}{\numberline {3.1.4.3}global\_i}{8}{subsubsection.3.1.4.3}%
+\contentsline {subsubsection}{\numberline {3.1.4.4}global\_imax}{9}{subsubsection.3.1.4.4}%
+\contentsline {subsubsection}{\numberline {3.1.4.5}global\_j}{9}{subsubsection.3.1.4.5}%
+\contentsline {subsubsection}{\numberline {3.1.4.6}global\_jmax}{9}{subsubsection.3.1.4.6}%
+\contentsline {subsubsection}{\numberline {3.1.4.7}neighbours}{9}{subsubsection.3.1.4.7}%
+\contentsline {subsubsection}{\numberline {3.1.4.8}new\_grid\_1d}{9}{subsubsection.3.1.4.8}%
+\contentsline {subsubsection}{\numberline {3.1.4.9}new\_grid\_2d}{9}{subsubsection.3.1.4.9}%
+\contentsline {subsubsection}{\numberline {3.1.4.10}num\_columns}{10}{subsubsection.3.1.4.10}%
+\contentsline {subsubsection}{\numberline {3.1.4.11}num\_rows}{10}{subsubsection.3.1.4.11}%
+\contentsline {subsubsection}{\numberline {3.1.4.12}old\_grid\_1d}{10}{subsubsection.3.1.4.12}%
+\contentsline {subsubsection}{\numberline {3.1.4.13}old\_grid\_2d}{10}{subsubsection.3.1.4.13}%
+\contentsline {subsubsection}{\numberline {3.1.4.14}start\_column}{10}{subsubsection.3.1.4.14}%
+\contentsline {subsubsection}{\numberline {3.1.4.15}start\_row}{10}{subsubsection.3.1.4.15}%
+\contentsline {subsubsection}{\numberline {3.1.4.16}sub\_cols}{11}{subsubsection.3.1.4.16}%
+\contentsline {subsubsection}{\numberline {3.1.4.17}sub\_i}{11}{subsubsection.3.1.4.17}%
+\contentsline {subsubsection}{\numberline {3.1.4.18}sub\_imax}{11}{subsubsection.3.1.4.18}%
+\contentsline {subsubsection}{\numberline {3.1.4.19}sub\_j}{11}{subsubsection.3.1.4.19}%
+\contentsline {subsubsection}{\numberline {3.1.4.20}sub\_jmax}{11}{subsubsection.3.1.4.20}%
+\contentsline {subsubsection}{\numberline {3.1.4.21}sub\_rows}{12}{subsubsection.3.1.4.21}%
+\contentsline {section}{\numberline {3.2}MPI\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data$<$ T $>$ Class Template Reference}{12}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{12}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{12}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}MPI\_Data()}{13}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}$\sim $MPI\_Data()}{13}{subsubsection.3.2.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Member Function Documentation}{13}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}CreateMPI\_Types()}{13}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}recv\_data()}{13}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}send\_data()}{13}{subsubsection.3.2.3.3}%
+\contentsline {subsection}{\numberline {3.2.4}Member Data Documentation}{14}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}Bottom\_Ghost\_Type}{14}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Bottom\_Type}{14}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}Left\_Ghost\_Type}{14}{subsubsection.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}Left\_Type}{14}{subsubsection.3.2.4.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}Right\_Ghost\_Type}{14}{subsubsection.3.2.4.5}%
+\contentsline {subsubsection}{\numberline {3.2.4.6}Right\_Type}{15}{subsubsection.3.2.4.6}%
+\contentsline {subsubsection}{\numberline {3.2.4.7}Top\_Ghost\_Type}{15}{subsubsection.3.2.4.7}%
+\contentsline {subsubsection}{\numberline {3.2.4.8}Top\_Type}{15}{subsubsection.3.2.4.8}%
+\contentsline {section}{\numberline {3.3}Timing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{15}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{16}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Member Function Documentation}{16}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}timing\_domain\_setup()}{16}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}timing\_edge\_iterations()}{16}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}timing\_inner\_iterations()}{16}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}timing\_MPI\_comms()}{16}{subsubsection.3.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}timing\_MPI\_Create\_setup()}{17}{subsubsection.3.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.3.2.6}timing\_total()}{17}{subsubsection.3.3.2.6}%
+\contentsline {subsection}{\numberline {3.3.3}Member Data Documentation}{17}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}domain\_setup}{17}{subsubsection.3.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}domain\_setup\_time}{17}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}edge\_iterations\_time}{17}{subsubsection.3.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.4}inner\_iterations\_time}{18}{subsubsection.3.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.3.5}mpi\_comms\_time}{18}{subsubsection.3.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.3.6}mpi\_create\_time}{18}{subsubsection.3.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.3.7}time\_edge\_iterations}{18}{subsubsection.3.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.3.8}time\_inner\_iterations}{18}{subsubsection.3.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.3.9}time\_MPI\_comms}{18}{subsubsection.3.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.3.10}time\_MPI\_create}{19}{subsubsection.3.3.3.10}%
+\contentsline {subsubsection}{\numberline {3.3.3.11}time\_total}{19}{subsubsection.3.3.3.11}%
+\contentsline {subsubsection}{\numberline {3.3.3.12}total\_time}{19}{subsubsection.3.3.3.12}%
+\contentsline {chapter}{\numberline {4}File Documentation}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{21}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Domain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{26}{section.4.3}%
+\contentsline {section}{\numberline {4.4}MPIDatatype.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{31}{section.4.4}%
+\contentsline {section}{\numberline {4.5}MPIDatatype.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Parameters.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Serial\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wave\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Solver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{35}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Timing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{36}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Timing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{38}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Wave\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Solver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{38}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Wave\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Solver.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{44}{section.4.11}%
